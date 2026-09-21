@@ -823,82 +823,106 @@ const pageSheets = [
   { file: 'leadership.svg', motif: 'portrait', title: 'PRINCIPAL-LED DELIVERY', code: 'LDR-01', scale: 'PORTRAIT PLATE', size: TALL },
 ];
 
-/* Which drawing stands in for which discipline, and for its two gallery
-   plates. Keyed by the ids in src/data/services.json. */
-const serviceMotifs = {
-  commercial: ['crane', 'rebar', 'facade'],
-  structural: ['tower', 'weld', 'rebar'],
-  civil: ['viaduct', 'bridge', 'plan'],
-  'oil-gas': ['refinery', 'tankfarm', 'plant'],
-  underwater: ['diver', 'pipeline', 'weld'],
-  steel: ['canopy', 'weld', 'crane'],
-  groundworks: ['piles', 'plan', 'rebar'],
-  mechanical: ['plant', 'pipeline', 'portal'],
-  digital: ['model', 'plan', 'facade'],
-  commissioning: ['loads', 'facade', 'model'],
-};
-
-/* The same, per project: the hero plate first, then one per gallery image.
-   Keyed by the ids in src/data/projects.json. */
-const projectMotifs = {
-  'harbor-gateway-tower': ['tower', 'rebar', 'crane', 'skyline'],
-  'katella-medical-pavilion': ['portal', 'crane', 'plant'],
-  'civic-center-retrofit': ['facade', 'rebar', 'weld'],
-  'carson-tank-farm': ['tankfarm', 'weld', 'piles', 'plant'],
-  'el-segundo-hydrotreater': ['refinery', 'plant', 'weld'],
-  'beacon-offshore-tieback': ['platform', 'diver', 'weld', 'pipeline'],
-  'pier-j-berth': ['diver', 'weld', 'piles', 'canopy'],
-  'terminal-island-wharf': ['canopy', 'crane', 'diver'],
-  'catalina-outfall': ['pipeline', 'diver', 'weld'],
-  'santa-ana-river-bridge': ['bridge', 'crane', 'rebar', 'plan'],
-  'sierra-dam-outlet': ['dam', 'lock', 'diver'],
-  'imperial-substation': ['substation', 'crane', 'piles'],
-};
-
-/* What a sheet calls itself, by position in the set. */
-const VIEWS = ['ELEVATION', 'DETAIL', 'SECTION', 'PLAN'];
-
-/** Every .svg an entry points at, in order: the main image then the gallery. */
-function plates(entry) {
-  const list = [entry.image];
-  (entry.gallery || []).forEach((g) => list.push(g.src));
-  return list.filter((src) => typeof src === 'string' && src.endsWith('.svg'));
-}
-
-function sheetsFor(entry, motifs, code, label) {
-  return plates(entry).map((src, i) => ({
-    file: src.replace(/^\/assets\/img\//, ''),
-    motif: (motifs && motifs[i]) || (motifs && motifs[motifs.length - 1]) || 'plan',
-    title: `${label.toUpperCase()} · ${VIEWS[i] || 'DETAIL'}`,
-    code: i === 0 ? code : `${code}/${i + 1}`,
-    scale: i === 0 ? 'SCALE 1:200' : 'SCALE 1:50',
-    size: LAND,
-  }));
-}
+/**
+ * The shared plate library.
+ *
+ * Every project and every discipline draws from these rather than owning a
+ * picture each: a wharf repair looks like a wharf repair whichever job it was
+ * on, and twenty-nine plates is a set somebody can actually go and shoot.
+ * Two rules keep the reuse from reading as a mistake — no plate appears twice
+ * on the same page, and no two projects share a hero — and both are checked
+ * below rather than trusted.
+ */
+const libSheets = [
+  { file: 'lib/steel-frame-erection.svg', motif: 'crane', title: 'STEEL FRAME ERECTION', code: 'L-01' },
+  { file: 'lib/bolt-up-height.svg', motif: 'weld', title: 'BOLTED CONNECTION · DETAIL', code: 'L-02' },
+  { file: 'lib/core-slipform.svg', motif: 'tower', title: 'CORE SLIPFORM · ELEVATION', code: 'L-03' },
+  { file: 'lib/rebar-cage.svg', motif: 'rebar', title: 'REINFORCEMENT · SECTION', code: 'L-04' },
+  { file: 'lib/curtain-wall.svg', motif: 'facade', title: 'CURTAIN WALL · ELEVATION', code: 'L-05' },
+  { file: 'lib/night-pour.svg', motif: 'loads', title: 'DECK POUR · LOAD CASE', code: 'L-06' },
+  { file: 'lib/crane-lift.svg', motif: 'tower', title: 'MODULE LIFT · RIGGING', code: 'L-07' },
+  { file: 'lib/fabrication-shop.svg', motif: 'canopy', title: 'SHOP FABRICATION · JOINT', code: 'L-08' },
+  { file: 'lib/retrofit-interior.svg', motif: 'facade', title: 'EXISTING FRAME · SURVEY', code: 'L-09' },
+  { file: 'lib/pipe-rack.svg', motif: 'plant', title: 'PIPE RACK · GENERAL ARRANGEMENT', code: 'L-10' },
+  { file: 'lib/tank-shell.svg', motif: 'tankfarm', title: 'TANK SHELL · ELEVATION', code: 'L-11' },
+  { file: 'lib/weld-habitat-tent.svg', motif: 'weld', title: 'WELD PROCEDURE · JOINT DETAIL', code: 'L-12' },
+  { file: 'lib/turnaround-scaffold.svg', motif: 'refinery', title: 'PROCESS UNIT · TURNAROUND', code: 'L-13' },
+  { file: 'lib/diver-underwater.svg', motif: 'diver', title: 'DIVE REPAIR · SECTION', code: 'L-14' },
+  { file: 'lib/dive-spread-deck.svg', motif: 'platform', title: 'SURFACE SPREAD · DIVE STATION', code: 'L-15' },
+  { file: 'lib/dive-bell-moonpool.svg', motif: 'lock', title: 'SATURATION SPREAD · MOON POOL', code: 'L-16' },
+  { file: 'lib/subsea-clamp.svg', motif: 'pipeline', title: 'SUBSEA CLAMP · SECTION', code: 'L-17' },
+  { file: 'lib/wharf-underdeck.svg', motif: 'piles', title: 'WHARF UNDERDECK · SECTION', code: 'L-18' },
+  { file: 'lib/offshore-platform.svg', motif: 'platform', title: 'FIXED PLATFORM · ELEVATION', code: 'L-19' },
+  { file: 'lib/port-wharf-cranes.svg', motif: 'portal', title: 'CONTAINER BERTH · SECTION', code: 'L-20' },
+  { file: 'lib/bridge-girder-set.svg', motif: 'bridge', title: 'GIRDER ERECTION · ELEVATION', code: 'L-21' },
+  { file: 'lib/deck-rebar-falsework.svg', motif: 'viaduct', title: 'DECK AND FALSEWORK · ELEVATION', code: 'L-22' },
+  { file: 'lib/dam-cofferdam.svg', motif: 'dam', title: 'DAM OUTLET · SECTION', code: 'L-23' },
+  { file: 'lib/channel-earthworks.svg', motif: 'plan', title: 'CHANNEL WORKS · SITE PLAN', code: 'L-24' },
+  { file: 'lib/switchyard-lattice.svg', motif: 'substation', title: 'SWITCHYARD · ELEVATION', code: 'L-25' },
+  { file: 'lib/transformer-set.svg', motif: 'crane', title: 'TRANSFORMER · SETTING OUT', code: 'L-26' },
+  { file: 'lib/piling-rig.svg', motif: 'piles', title: 'PILING · SECTION', code: 'L-27' },
+  { file: 'lib/plant-room.svg', motif: 'portal', title: 'PLANT ROOM · LAYOUT', code: 'L-28' },
+  { file: 'lib/model-review.svg', motif: 'model', title: 'FEDERATED MODEL · REVIEW', code: 'L-29' },
+].map((s) => ({ ...s, scale: 'SCALE 1:100', size: LAND }));
 
 const projects = require('../src/data/projects.json');
 const services = require('../src/data/services.json');
 
-const sheets = [
-  ...pageSheets,
-  ...services.flatMap((s) => sheetsFor(s, serviceMotifs[s.id], s.code, s.title)),
-  ...projects.flatMap((p, i) => sheetsFor(p, projectMotifs[p.id], `P-${String(i + 1).padStart(2, '0')}`, p.name)),
-];
+/* --------------------------------------------------------------- checks --- */
 
-/* A drawing every image slot points at, so the site can never ask for a file
-   that is not there. Anything missed here is a broken image on a live page. */
-const missing = []
-  .concat(services.map((s) => [s.id, s.image, serviceMotifs[s.id]]))
-  .concat(projects.map((p) => [p.id, p.image, projectMotifs[p.id]]))
-  .filter(([, , motifs]) => !motifs)
-  .map(([id]) => id);
-if (missing.length) {
-  console.error(`[artwork] no motif set for: ${missing.join(', ')}`);
+const plates = (entry) => [entry.image, ...(entry.gallery || []).map((g) => g.src)];
+const drawn = new Set([...pageSheets, ...libSheets].map((s) => `/assets/img/${s.file}`));
+const problems = [];
+
+[...projects, ...services].forEach((entry) => {
+  const list = plates(entry);
+  list
+    .filter((src) => src.endsWith('.svg') && !drawn.has(src))
+    .forEach((src) => problems.push(`${entry.id}: nothing draws ${src}`));
+  const seen = new Set();
+  list.forEach((src) => {
+    if (seen.has(src)) problems.push(`${entry.id}: ${src} appears twice on the same page`);
+    seen.add(src);
+  });
+});
+
+const heroes = new Map();
+projects.forEach((p) => {
+  if (heroes.has(p.image)) problems.push(`${p.id} and ${heroes.get(p.image)} share a hero image`);
+  heroes.set(p.image, p.id);
+});
+
+/* Until the photographs land, every plate is a drawing, and two drawings from
+   the same motif look like the same picture however different the jobs are.
+   So motifs have to be distinct within a page, and across the twelve heroes
+   the projects listing shows side by side. */
+const motifOf = new Map(libSheets.map((s) => [`/assets/img/${s.file}`, s.motif]));
+[...projects, ...services].forEach((entry) => {
+  const seen = new Map();
+  plates(entry).forEach((src) => {
+    const motif = motifOf.get(src);
+    if (!motif) return;
+    if (seen.has(motif)) problems.push(`${entry.id}: ${src} and ${seen.get(motif)} are both drawn as "${motif}"`);
+    seen.set(motif, src);
+  });
+});
+const heroMotifs = new Map();
+projects.forEach((p) => {
+  const motif = motifOf.get(p.image);
+  if (!motif) return;
+  if (heroMotifs.has(motif)) problems.push(`${p.id} and ${heroMotifs.get(motif)} have heroes drawn as "${motif}"`);
+  heroMotifs.set(motif, p.id);
+});
+
+if (problems.length) {
+  problems.forEach((line) => console.error(`[artwork] ${line}`));
   process.exit(1);
 }
 
+/* ---------------------------------------------------------------- write --- */
+
 let written = 0;
-for (const sheet of sheets) {
+for (const sheet of [...pageSheets, ...libSheets]) {
   const { w, h } = sheet.size;
   const draw = motifs[sheet.motif];
   if (!draw) {
@@ -912,4 +936,8 @@ for (const sheet of sheets) {
   written += 1;
 }
 
-console.log(`[artwork] wrote ${written} drawings to public/assets/img/`);
+const referenced = new Set([...projects, ...services].flatMap(plates));
+console.log(
+  `[artwork] wrote ${written} drawings: ${pageSheets.length} page bands and ` +
+    `${libSheets.length} library plates, carrying ${referenced.size} image slots across the site`
+);

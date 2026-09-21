@@ -91,8 +91,13 @@ for (const spec of files) {
 }
 
 report.adopted.forEach((line) => console.log(`  photo  ${line}`));
+
+/* Slots are not photographs: the library is shared, so one plate can fill five
+   slots. Counting files is the number somebody has to go and shoot. */
+const distinct = (list) => new Set(list.map((line) => line.split(': ').pop())).size;
 console.log(
-  `[photos] ${report.adopted.length} adopted, ${report.waiting.length} still on drawings` +
+  `[photos] ${distinct(report.adopted)} photograph(s) adopted into ${report.adopted.length} slot(s), ` +
+    `${distinct(report.waiting)} still to shoot` +
     (DRY ? ' (dry run, nothing written)' : `, ${written} data file(s) updated`)
 );
 if (report.waiting.length && process.argv.includes('--list')) {

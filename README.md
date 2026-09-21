@@ -67,7 +67,15 @@ stay behind as the client-rendered fallback for an id added after the last build
 
 The portfolio spans commercial building, major civil engineering, oil and gas
 facilities, marine and underwater welding, and energy work; each project carries
-two or three gallery frames under the fold, and each discipline two.
+two gallery frames under the fold, and each discipline one.
+
+Pictures come from a **shared library of twenty-nine plates** rather than one
+photograph per slot, so the whole site runs on thirty-five images instead of
+seventy-seven. `npm run artwork` enforces the two rules that keep reuse from
+reading as a mistake — no plate twice on the same page, and no two projects
+sharing a hero — and fails the build if either is broken. In the galleries,
+alternate frames are cropped off-centre so a repeated plate reads as another
+frame from the same job.
 
 ## Careers and applications
 
@@ -308,17 +316,18 @@ Two generators draw what ships in the meantime. Both are deterministic, so
 re-running one changes nothing unless the source changed:
 
 ```bash
-npm run artwork   # public/assets/img/*.svg  — page bands, 10 services, 12 projects
+npm run artwork   # 7 page bands + 29 library plates in public/assets/img/
 npm run icons     # favicon.svg, favicon.png, apple-touch-icon.png
 ```
 
-`npm run artwork` reads `projects.json` and `services.json` and draws a sheet for
-every `.svg` they point at, so a new project cannot ship with a broken image.
+`npm run artwork` checks every image the data points at, so a new project cannot
+ship with a broken image or an accidental duplicate.
 
 **Replacing the drawings with photography.** `docs/IMAGE-PROMPTS.md` is the shot
-list: one prompt per image, written for documentary site photography rather than
-stock, with the filename each one belongs at. Save the photograph beside the
-drawing it replaces, then:
+list: thirty-five prompts — six page images and the twenty-nine library plates —
+each one complete with its camera settings, written for documentary site
+photography rather than stock, and headed with the filename it belongs at. Save
+the photograph beside the drawing it replaces, then:
 
 ```bash
 npm run adopt-photos   # rewrites the data files to use the photographs

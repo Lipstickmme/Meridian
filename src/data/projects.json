@@ -7,23 +7,44 @@
     "year": 2025,
     "metric": "32",
     "metricLabel": "storeys above grade",
-    "image": "/assets/img/projects/harbor-gateway-tower.svg",
+    "image": "/assets/img/lib/steel-frame-erection.svg",
     "gallery": [
-      { "src": "/assets/img/projects/harbor-gateway-tower-02.svg", "caption": "Core slipform running ahead of the steel" },
-      { "src": "/assets/img/projects/harbor-gateway-tower-03.svg", "caption": "Moment frame bolt-up on level 19" },
-      { "src": "/assets/img/projects/harbor-gateway-tower-04.svg", "caption": "Topping out, looking back at the harbour" }
+      {
+        "src": "/assets/img/lib/core-slipform.svg",
+        "caption": "Core slipform running ahead of the steel"
+      },
+      {
+        "src": "/assets/img/lib/bolt-up-height.svg",
+        "caption": "Moment frame bolt-up, nineteen floors up"
+      }
     ],
     "client": "Waterfront development partnership",
     "status": "Completed 2025",
     "duration": "34 months",
-    "services": ["Commercial Construction", "Structural Engineering", "Digital Engineering"],
+    "services": [
+      "Commercial Construction",
+      "Structural Engineering",
+      "Digital Engineering"
+    ],
     "blurb": "A 32-storey office tower on reclaimed harbour ground, framed to ride a magnitude 7 event with its core intact.",
     "overview": "Harbor Gateway sits on reclaimed ground half a mile from the fault trace, which put seismic demand, not gravity, in charge of every member size. We ran a buckling-restrained braced frame against a full non-linear time history, tuned the core wall to take the drift, and drove the foundations through liquefiable fill to competent material. The tower was built over an operating parking structure that never closed.",
     "facts": [
-      { "k": "Frame", "v": "BRB steel + concrete core" },
-      { "k": "Gross area", "v": "612,000 sq ft" },
-      { "k": "Seismic", "v": "Risk Category II, SDC E" },
-      { "k": "Foundation", "v": "148 driven piles to 96 ft" }
+      {
+        "k": "Frame",
+        "v": "BRB steel + concrete core"
+      },
+      {
+        "k": "Gross area",
+        "v": "612,000 sq ft"
+      },
+      {
+        "k": "Seismic",
+        "v": "Risk Category II, SDC E"
+      },
+      {
+        "k": "Foundation",
+        "v": "148 driven piles to 96 ft"
+      }
     ]
   },
   {
@@ -34,22 +55,44 @@
     "year": 2024,
     "metric": "0",
     "metricLabel": "days the hospital closed",
-    "image": "/assets/img/projects/katella-medical-pavilion.svg",
+    "image": "/assets/img/lib/crane-lift.svg",
     "gallery": [
-      { "src": "/assets/img/projects/katella-medical-pavilion-02.svg", "caption": "Night pour beside the existing wing" },
-      { "src": "/assets/img/projects/katella-medical-pavilion-03.svg", "caption": "Mechanical penthouse, rigged in one lift" }
+      {
+        "src": "/assets/img/lib/night-pour.svg",
+        "caption": "Night pour beside the occupied wing"
+      },
+      {
+        "src": "/assets/img/lib/plant-room.svg",
+        "caption": "Central plant tied in across four windows"
+      }
     ],
     "client": "Regional health system",
     "status": "Completed 2024",
     "duration": "26 months",
-    "services": ["Commercial Construction", "Mechanical and Process", "Commissioning and Handover"],
+    "services": [
+      "Commercial Construction",
+      "Mechanical and Process",
+      "Commissioning and Handover"
+    ],
     "blurb": "An outpatient pavilion built hard against a working hospital, with the acute wing running the whole time.",
     "overview": "The pavilion shares a wall, a plant room and an emergency vehicle route with a hospital that could not lose a single bed. Noise, vibration and infection control governed the programme more than the structure did: heavy work ran nights, the tie-in to the central plant was staged across four two-hour windows, and every penetration was sealed and pressure-tested before the shift ended.",
     "facts": [
-      { "k": "Gross area", "v": "184,000 sq ft" },
-      { "k": "Structure", "v": "Special moment frame" },
-      { "k": "Utility tie-ins", "v": "11, all in live systems" },
-      { "k": "OSHPD review", "v": "Cleared in one cycle" }
+      {
+        "k": "Gross area",
+        "v": "184,000 sq ft"
+      },
+      {
+        "k": "Structure",
+        "v": "Special moment frame"
+      },
+      {
+        "k": "Utility tie-ins",
+        "v": "11, all in live systems"
+      },
+      {
+        "k": "OSHPD review",
+        "v": "Cleared in one cycle"
+      }
     ]
   },
   {
@@ -60,22 +103,44 @@
     "year": 2025,
     "metric": "+2",
     "metricLabel": "storeys added",
-    "image": "/assets/img/projects/civic-center-retrofit.svg",
+    "image": "/assets/img/lib/retrofit-interior.svg",
     "gallery": [
-      { "src": "/assets/img/projects/civic-center-retrofit-02.svg", "caption": "New shear wall threaded through the 1968 frame" },
-      { "src": "/assets/img/projects/civic-center-retrofit-03.svg", "caption": "Column jacket, formwork stripped" }
+      {
+        "src": "/assets/img/lib/rebar-cage.svg",
+        "caption": "New shear wall reinforcement before the pour"
+      },
+      {
+        "src": "/assets/img/lib/bolt-up-height.svg",
+        "caption": "Steel collar fixed to the 1968 frame"
+      }
     ],
     "client": "County facilities department",
     "status": "On site",
     "duration": "22 months",
-    "services": ["Structural Engineering", "Commercial Construction", "Digital Engineering"],
+    "services": [
+      "Structural Engineering",
+      "Commercial Construction",
+      "Digital Engineering"
+    ],
     "blurb": "A 1968 concrete frame strengthened to current code and given two more floors, with staff at their desks throughout.",
     "overview": "The existing frame had capacity nobody had ever calculated, so we started with a laser scan, core samples and a load test rather than an assumption. Strengthening was targeted at fourteen columns and two transfer beams, which was enough to carry the new floors and the code-level drift without touching the occupied levels. Work ran floor by floor behind temporary partitions.",
     "facts": [
-      { "k": "Built", "v": "1968, non-ductile concrete" },
-      { "k": "Retrofit", "v": "14 column jackets, 2 shear walls" },
-      { "k": "Drift reduction", "v": "41 percent" },
-      { "k": "Occupancy", "v": "Continuous" }
+      {
+        "k": "Built",
+        "v": "1968, non-ductile concrete"
+      },
+      {
+        "k": "Retrofit",
+        "v": "14 column jackets, 2 shear walls"
+      },
+      {
+        "k": "Drift reduction",
+        "v": "41 percent"
+      },
+      {
+        "k": "Occupancy",
+        "v": "Continuous"
+      }
     ]
   },
   {
@@ -86,23 +151,44 @@
     "year": 2024,
     "metric": "420,000",
     "metricLabel": "barrels of storage",
-    "image": "/assets/img/projects/carson-tank-farm.svg",
+    "image": "/assets/img/lib/tank-shell.svg",
     "gallery": [
-      { "src": "/assets/img/projects/carson-tank-farm-02.svg", "caption": "Floor plate welding inside the shell" },
-      { "src": "/assets/img/projects/carson-tank-farm-03.svg", "caption": "Secondary containment going in around the ring wall" },
-      { "src": "/assets/img/projects/carson-tank-farm-04.svg", "caption": "Manifold pipe rack before insulation" }
+      {
+        "src": "/assets/img/lib/weld-habitat-tent.svg",
+        "caption": "Shell seam welding under cover"
+      },
+      {
+        "src": "/assets/img/lib/piling-rig.svg",
+        "caption": "Ground improvement before the ring wall"
+      }
     ],
     "client": "Terminal operator",
     "status": "Completed 2024",
     "duration": "19 months",
-    "services": ["Oil and Gas Facilities", "Steel Fabrication and Erection", "Groundworks and Foundations"],
+    "services": [
+      "Oil and Gas Facilities",
+      "Steel Fabrication and Erection",
+      "Groundworks and Foundations"
+    ],
     "blurb": "Four API 650 tanks, their containment and the manifold that ties them in, built inside a terminal that never stopped shipping.",
     "overview": "Two tanks came down and four went up on the same footprint, with the terminal loading trucks through the whole programme. Ring wall foundations were designed for liquefiable fill with stone columns beneath; shells were built by the shell-jacking method to keep the welding at ground level. Every seam was vacuum-box and radiograph tested, and the manifold was hydrotested before the first tie-in was cut.",
     "facts": [
-      { "k": "Tanks", "v": "4 x 105,000 bbl, API 650" },
-      { "k": "Weld NDE", "v": "100 percent shell seams" },
-      { "k": "Ground improvement", "v": "1,180 stone columns" },
-      { "k": "Lost production", "v": "None" }
+      {
+        "k": "Tanks",
+        "v": "4 x 105,000 bbl, API 650"
+      },
+      {
+        "k": "Weld NDE",
+        "v": "100 percent shell seams"
+      },
+      {
+        "k": "Ground improvement",
+        "v": "1,180 stone columns"
+      },
+      {
+        "k": "Lost production",
+        "v": "None"
+      }
     ]
   },
   {
@@ -113,22 +199,44 @@
     "year": 2025,
     "metric": "11 days",
     "metricLabel": "total shutdown",
-    "image": "/assets/img/projects/el-segundo-hydrotreater.svg",
+    "image": "/assets/img/lib/turnaround-scaffold.svg",
     "gallery": [
-      { "src": "/assets/img/projects/el-segundo-hydrotreater-02.svg", "caption": "Reactor section from the rack, mid-turnaround" },
-      { "src": "/assets/img/projects/el-segundo-hydrotreater-03.svg", "caption": "Spool fit-up under a weld tent" }
+      {
+        "src": "/assets/img/lib/pipe-rack.svg",
+        "caption": "The rack, mid-turnaround"
+      },
+      {
+        "src": "/assets/img/lib/weld-habitat-tent.svg",
+        "caption": "Spool fit-up under a weld tent"
+      }
     ],
     "client": "Refinery operator",
     "status": "Completed 2025",
     "duration": "23 months",
-    "services": ["Oil and Gas Facilities", "Mechanical and Process", "Commissioning and Handover"],
+    "services": [
+      "Oil and Gas Facilities",
+      "Mechanical and Process",
+      "Commissioning and Handover"
+    ],
     "blurb": "A capacity revamp with 38 tie-ins into live systems, executed inside an eleven-day turnaround window.",
     "overview": "The revamp needed 38 cuts into systems that could only be opened during the annual turnaround. Every spool was fabricated, tested and laid down in erection order before the unit came off line, each tie-in was rehearsed against the scan-registered model, and the sequence was written so no two cuts competed for the same crane. The unit came back on specification on the first pass.",
     "facts": [
-      { "k": "Tie-ins", "v": "38, all in live systems" },
-      { "k": "Pipe installed", "v": "4.2 miles" },
-      { "k": "Weld reject rate", "v": "0.7 percent" },
-      { "k": "Return to spec", "v": "First pass" }
+      {
+        "k": "Tie-ins",
+        "v": "38, all in live systems"
+      },
+      {
+        "k": "Pipe installed",
+        "v": "4.2 miles"
+      },
+      {
+        "k": "Weld reject rate",
+        "v": "0.7 percent"
+      },
+      {
+        "k": "Return to spec",
+        "v": "First pass"
+      }
     ]
   },
   {
@@ -139,23 +247,44 @@
     "year": 2023,
     "metric": "412 ft",
     "metricLabel": "working depth",
-    "image": "/assets/img/projects/beacon-offshore-tieback.svg",
+    "image": "/assets/img/lib/offshore-platform.svg",
     "gallery": [
-      { "src": "/assets/img/projects/beacon-offshore-tieback-02.svg", "caption": "Saturation dive bell on the moon pool" },
-      { "src": "/assets/img/projects/beacon-offshore-tieback-03.svg", "caption": "Habitat welding on the riser clamp" },
-      { "src": "/assets/img/projects/beacon-offshore-tieback-04.svg", "caption": "Deck spread on the support vessel" }
+      {
+        "src": "/assets/img/lib/dive-bell-moonpool.svg",
+        "caption": "Saturation bell on the moon pool"
+      },
+      {
+        "src": "/assets/img/lib/diver-underwater.svg",
+        "caption": "Habitat welding on the riser clamp"
+      }
     ],
     "client": "Offshore operator",
     "status": "Completed 2023",
     "duration": "14 months",
-    "services": ["Underwater and Marine Welding", "Oil and Gas Facilities", "Structural Engineering"],
+    "services": [
+      "Underwater and Marine Welding",
+      "Oil and Gas Facilities",
+      "Structural Engineering"
+    ],
     "blurb": "A subsea tieback and riser clamp repair at 412 feet, welded dry inside a habitat by a saturation dive team.",
     "overview": "Inspection found fatigue cracking in two riser clamps on a fixed platform, in water too deep and too cold for a wet weld to meet the class. We designed the repair around a welding habitat: the clamp was dewatered, preheated and welded dry, to AWS D3.6M class A, by a saturation team living at depth for eighteen days. Every pass was video-logged and ultrasonically verified before the habitat came off.",
     "facts": [
-      { "k": "Depth", "v": "412 ft, saturation" },
-      { "k": "Weld class", "v": "AWS D3.6M class A, dry habitat" },
-      { "k": "Bottom time", "v": "18 days, 6 divers" },
-      { "k": "Production impact", "v": "Zero deferred barrels" }
+      {
+        "k": "Depth",
+        "v": "412 ft, saturation"
+      },
+      {
+        "k": "Weld class",
+        "v": "AWS D3.6M class A, dry habitat"
+      },
+      {
+        "k": "Bottom time",
+        "v": "18 days, 6 divers"
+      },
+      {
+        "k": "Production impact",
+        "v": "Zero deferred barrels"
+      }
     ]
   },
   {
@@ -166,23 +295,44 @@
     "year": 2025,
     "metric": "1,900 ft",
     "metricLabel": "of berth kept open",
-    "image": "/assets/img/projects/pier-j-berth.svg",
+    "image": "/assets/img/lib/port-wharf-cranes.svg",
     "gallery": [
-      { "src": "/assets/img/projects/pier-j-berth-02.svg", "caption": "Diver on stage, entering beside the fender line" },
-      { "src": "/assets/img/projects/pier-j-berth-03.svg", "caption": "Pile jacket set and grouted" },
-      { "src": "/assets/img/projects/pier-j-berth-04.svg", "caption": "Deck works above, dive spread below" }
+      {
+        "src": "/assets/img/lib/diver-underwater.svg",
+        "caption": "Pile jacket checked before grouting"
+      },
+      {
+        "src": "/assets/img/lib/dive-spread-deck.svg",
+        "caption": "Dive control on the barge alongside"
+      }
     ],
     "client": "Port authority",
     "status": "On site",
     "duration": "28 months",
-    "services": ["Underwater and Marine Welding", "Groundworks and Foundations", "Major Civil Engineering"],
+    "services": [
+      "Underwater and Marine Welding",
+      "Groundworks and Foundations",
+      "Major Civil Engineering"
+    ],
     "blurb": "Deepening a container berth and repairing 214 piles underneath it, without taking the berth out of service.",
     "overview": "Dredging to take post-panamax draft undermined the existing pile embedment, so every pile in the affected bay needed a jacket and a structural weld before the dredger could pass. Dive crews worked surface-supplied between vessel calls, welding wet to class B where the repair allowed and setting habitats where it did not. The berth handled ships through the entire programme.",
     "facts": [
-      { "k": "Piles repaired", "v": "214" },
-      { "k": "Dredge depth", "v": "-55 ft MLLW" },
-      { "k": "Dive hours", "v": "6,400" },
-      { "k": "Berth downtime", "v": "None" }
+      {
+        "k": "Piles repaired",
+        "v": "214"
+      },
+      {
+        "k": "Dredge depth",
+        "v": "-55 ft MLLW"
+      },
+      {
+        "k": "Dive hours",
+        "v": "6,400"
+      },
+      {
+        "k": "Berth downtime",
+        "v": "None"
+      }
     ]
   },
   {
@@ -193,22 +343,44 @@
     "year": 2024,
     "metric": "2.4x",
     "metricLabel": "crane load capacity",
-    "image": "/assets/img/projects/terminal-island-wharf.svg",
+    "image": "/assets/img/lib/wharf-underdeck.svg",
     "gallery": [
-      { "src": "/assets/img/projects/terminal-island-wharf-02.svg", "caption": "New crane beam threaded over the existing deck" },
-      { "src": "/assets/img/projects/terminal-island-wharf-03.svg", "caption": "Underdeck inspection before the strengthening scheme" }
+      {
+        "src": "/assets/img/lib/port-wharf-cranes.svg",
+        "caption": "Crane rail works along the live berth"
+      },
+      {
+        "src": "/assets/img/lib/dive-spread-deck.svg",
+        "caption": "Dive spread set for the pile jackets"
+      }
     ],
     "client": "Container terminal operator",
     "status": "Completed 2024",
     "duration": "21 months",
-    "services": ["Structural Engineering", "Underwater and Marine Welding", "Steel Fabrication and Erection"],
+    "services": [
+      "Structural Engineering",
+      "Underwater and Marine Welding",
+      "Steel Fabrication and Erection"
+    ],
     "blurb": "A 1970s wharf brought up to carry the next generation of ship-to-shore cranes, with the underdeck repaired by divers.",
     "overview": "The terminal wanted cranes 2.4 times heavier than the wharf was built for. A full underdeck survey, half of it by dive team, found chloride damage worse at the splash zone than the records suggested. We designed a new crane beam carried on supplemental piles, jacketed the worst of the existing ones, and sequenced the work so no more than one crane rail was ever out of service.",
     "facts": [
-      { "k": "Built", "v": "1974" },
-      { "k": "New piles", "v": "86, 36-inch pipe" },
-      { "k": "Jacketed piles", "v": "133" },
-      { "k": "Design life", "v": "50 years" }
+      {
+        "k": "Built",
+        "v": "1974"
+      },
+      {
+        "k": "New piles",
+        "v": "86, 36-inch pipe"
+      },
+      {
+        "k": "Jacketed piles",
+        "v": "133"
+      },
+      {
+        "k": "Design life",
+        "v": "50 years"
+      }
     ]
   },
   {
@@ -219,22 +391,44 @@
     "year": 2023,
     "metric": "1.3 miles",
     "metricLabel": "of pipeline surveyed",
-    "image": "/assets/img/projects/catalina-outfall.svg",
+    "image": "/assets/img/lib/subsea-clamp.svg",
     "gallery": [
-      { "src": "/assets/img/projects/catalina-outfall-02.svg", "caption": "ROV survey ahead of the dive" },
-      { "src": "/assets/img/projects/catalina-outfall-03.svg", "caption": "Clamp set over the damaged section" }
+      {
+        "src": "/assets/img/lib/dive-spread-deck.svg",
+        "caption": "Survey spread on the support vessel"
+      },
+      {
+        "src": "/assets/img/lib/diver-underwater.svg",
+        "caption": "Diver on the repaired section"
+      }
     ],
     "client": "Regional water district",
     "status": "Completed 2023",
     "duration": "9 months",
-    "services": ["Underwater and Marine Welding", "Mechanical and Process", "Major Civil Engineering"],
+    "services": [
+      "Underwater and Marine Welding",
+      "Mechanical and Process",
+      "Major Civil Engineering"
+    ],
     "blurb": "A damaged subsea outfall located, clamped and welded in place, with the discharge never taken off line.",
     "overview": "A dropped anchor had dented and cracked a section of outfall in 90 feet of water. We surveyed the full run by ROV, designed a split clamp that could be set and welded by divers against a live flow, and installed it in four dive days. Post-repair ultrasonic testing and a pressure survey confirmed the line back to full rated flow.",
     "facts": [
-      { "k": "Depth", "v": "90 ft, surface supplied" },
-      { "k": "Repair", "v": "Split clamp, wet weld class B" },
-      { "k": "Survey", "v": "ROV, full 1.3-mile run" },
-      { "k": "Service outage", "v": "None" }
+      {
+        "k": "Depth",
+        "v": "90 ft, surface supplied"
+      },
+      {
+        "k": "Repair",
+        "v": "Split clamp, wet weld class B"
+      },
+      {
+        "k": "Survey",
+        "v": "ROV, full 1.3-mile run"
+      },
+      {
+        "k": "Service outage",
+        "v": "None"
+      }
     ]
   },
   {
@@ -245,23 +439,44 @@
     "year": 2025,
     "metric": "640 ft",
     "metricLabel": "three-span crossing",
-    "image": "/assets/img/projects/santa-ana-river-bridge.svg",
+    "image": "/assets/img/lib/bridge-girder-set.svg",
     "gallery": [
-      { "src": "/assets/img/projects/santa-ana-river-bridge-02.svg", "caption": "Girder set over the channel, night closure" },
-      { "src": "/assets/img/projects/santa-ana-river-bridge-03.svg", "caption": "Falsework and rebar before the deck pour" },
-      { "src": "/assets/img/projects/santa-ana-river-bridge-04.svg", "caption": "Abutment works from the levee road" }
+      {
+        "src": "/assets/img/lib/deck-rebar-falsework.svg",
+        "caption": "Falsework and rebar before the deck pour"
+      },
+      {
+        "src": "/assets/img/lib/channel-earthworks.svg",
+        "caption": "Abutment works from the levee road"
+      }
     ],
     "client": "County transportation authority",
     "status": "On site",
     "duration": "31 months",
-    "services": ["Major Civil Engineering", "Structural Engineering", "Groundworks and Foundations"],
+    "services": [
+      "Major Civil Engineering",
+      "Structural Engineering",
+      "Groundworks and Foundations"
+    ],
     "blurb": "A three-span replacement crossing built over a flood control channel that has to stay clear through storm season.",
     "overview": "The existing crossing was scour-critical and two lanes short. The replacement is a three-span prestressed girder bridge on drilled shafts set back from the channel, so nothing new stands in the waterway. Falsework had to be out of the channel before each storm season, which set the pour sequence, and traffic stayed on the old structure until the new one carried load.",
     "facts": [
-      { "k": "Spans", "v": "3, 640 ft total" },
-      { "k": "Foundations", "v": "Drilled shafts, 8 ft diameter" },
-      { "k": "Design flood", "v": "100-year, clear waterway" },
-      { "k": "Lanes added", "v": "2, plus shared-use path" }
+      {
+        "k": "Spans",
+        "v": "3, 640 ft total"
+      },
+      {
+        "k": "Foundations",
+        "v": "Drilled shafts, 8 ft diameter"
+      },
+      {
+        "k": "Design flood",
+        "v": "100-year, clear waterway"
+      },
+      {
+        "k": "Lanes added",
+        "v": "2, plus shared-use path"
+      }
     ]
   },
   {
@@ -272,22 +487,44 @@
     "year": 2024,
     "metric": "1,100 cfs",
     "metricLabel": "release capacity",
-    "image": "/assets/img/projects/sierra-dam-outlet.svg",
+    "image": "/assets/img/lib/dam-cofferdam.svg",
     "gallery": [
-      { "src": "/assets/img/projects/sierra-dam-outlet-02.svg", "caption": "Intake tower works behind a cofferdam" },
-      { "src": "/assets/img/projects/sierra-dam-outlet-03.svg", "caption": "Gate slot machining in the tunnel" }
+      {
+        "src": "/assets/img/lib/diver-underwater.svg",
+        "caption": "Intake trash rack welded in place"
+      },
+      {
+        "src": "/assets/img/lib/fabrication-shop.svg",
+        "caption": "Gate frame assembled before it went in"
+      }
     ],
     "client": "Water resources agency",
     "status": "Completed 2024",
     "duration": "27 months",
-    "services": ["Major Civil Engineering", "Mechanical and Process", "Underwater and Marine Welding"],
+    "services": [
+      "Major Civil Engineering",
+      "Mechanical and Process",
+      "Underwater and Marine Welding"
+    ],
     "blurb": "New outlet works and gates for a 1950s dam, with the reservoir kept in service and the low-level intake welded underwater.",
     "overview": "The agency needed a controlled release capacity the original works could not deliver, and could not draw the reservoir down to build it. We staged the work behind a cofferdam, cut and lined a new low-level outlet, and had dive crews weld and seal the intake trash rack and guide frames in place. Gates were dry-commissioned before the cofferdam came out.",
     "facts": [
-      { "k": "Dam built", "v": "1953" },
-      { "k": "Outlet", "v": "New 84-inch lined conduit" },
-      { "k": "Gates", "v": "2 slide, 1 jet-flow" },
-      { "k": "Reservoir drawdown", "v": "None required" }
+      {
+        "k": "Dam built",
+        "v": "1953"
+      },
+      {
+        "k": "Outlet",
+        "v": "New 84-inch lined conduit"
+      },
+      {
+        "k": "Gates",
+        "v": "2 slide, 1 jet-flow"
+      },
+      {
+        "k": "Reservoir drawdown",
+        "v": "None required"
+      }
     ]
   },
   {
@@ -298,22 +535,44 @@
     "year": 2025,
     "metric": "500 kV",
     "metricLabel": "switchyard",
-    "image": "/assets/img/projects/imperial-substation.svg",
+    "image": "/assets/img/lib/switchyard-lattice.svg",
     "gallery": [
-      { "src": "/assets/img/projects/imperial-substation-02.svg", "caption": "Bus structure erection in the switchyard" },
-      { "src": "/assets/img/projects/imperial-substation-03.svg", "caption": "Transformer set on its foundation" }
+      {
+        "src": "/assets/img/lib/transformer-set.svg",
+        "caption": "Transformer set on its foundation"
+      },
+      {
+        "src": "/assets/img/lib/piling-rig.svg",
+        "caption": "Drilled piers below the active zone"
+      }
     ],
     "client": "Transmission utility",
     "status": "On site",
     "duration": "24 months",
-    "services": ["Steel Fabrication and Erection", "Groundworks and Foundations", "Commissioning and Handover"],
+    "services": [
+      "Steel Fabrication and Erection",
+      "Groundworks and Foundations",
+      "Commissioning and Handover"
+    ],
     "blurb": "A 500 kV switchyard on expansive desert soils, tied into a line that stays energised.",
     "overview": "The site sits on soils that swell and shrink through a 40 degree annual range, which rules out shallow pads for equipment that cannot tolerate differential movement. Every structure is on drilled piers below the active zone. Steel was galvanised and match-marked in the shop so the yard crew never waited on a fit-up, and energisation was staged bay by bay against a line that could not be dropped.",
     "facts": [
-      { "k": "Voltage", "v": "500 kV / 230 kV" },
-      { "k": "Structures", "v": "64, hot-dip galvanised" },
-      { "k": "Foundations", "v": "Drilled piers to 28 ft" },
-      { "k": "Outage taken", "v": "One 6-hour window" }
+      {
+        "k": "Voltage",
+        "v": "500 kV / 230 kV"
+      },
+      {
+        "k": "Structures",
+        "v": "64, hot-dip galvanised"
+      },
+      {
+        "k": "Foundations",
+        "v": "Drilled piers to 28 ft"
+      },
+      {
+        "k": "Outage taken",
+        "v": "One 6-hour window"
+      }
     ]
   }
 ]

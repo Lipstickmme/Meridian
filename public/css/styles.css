@@ -2095,3 +2095,28 @@ form .btn:not(.ghost):hover { background: var(--meridian-flare-soft) !important;
   color: var(--meridian-ink) !important;
   border-color: var(--meridian-ink) !important;
 }
+
+/* =========================================================================
+   Shared photography
+   Thirty-five plates carry the whole site, so the same picture turns up on
+   more than one page. The build already guarantees a plate never appears
+   twice on one page and no two projects share a hero; this is the rest of
+   the job — alternate frames are cropped off-centre, so a plate a visitor
+   has seen before reads as another frame from the same job rather than the
+   same file pasted twice.
+   ========================================================================= */
+.gallery-item:nth-child(2n) img { object-position: 64% 42%; }
+.gallery-item:nth-child(3n) img { object-position: 36% 58%; }
+.cards-grid .card:nth-child(2n) .thumb img { object-position: 58% 46%; }
+.cards-grid .card:nth-child(3n) .thumb img { object-position: 42% 54%; }
+.page-header-figure img { object-position: 50% 46%; }
+
+/* The metric badge sat on the bottom edge of the hero figure, which is exactly
+   where the placeholder drawings carry their own yellow title block. Top-left
+   keeps the two apart, and reads the same way once a photograph replaces the
+   drawing. */
+.figure-metric {
+  top: 0; bottom: auto;
+  border-top: 0;
+  border-bottom: 3px solid var(--meridian-ink);
+}

@@ -4,189 +4,349 @@
     "code": "S-01",
     "title": "Commercial Construction",
     "summary": "Ground-up offices, medical and civic buildings delivered by the same people who engineered them.",
-    "capabilities": ["Ground-up delivery", "Tenant-occupied works", "Core and shell", "Seismic retrofit"],
-    "image": "/assets/img/services/commercial.svg",
+    "capabilities": [
+      "Ground-up delivery",
+      "Tenant-occupied works",
+      "Core and shell",
+      "Seismic retrofit"
+    ],
+    "image": "/assets/img/lib/curtain-wall.svg",
     "gallery": [
-      { "src": "/assets/img/services/commercial-02.svg", "caption": "Frame topping out, downtown site" },
-      { "src": "/assets/img/services/commercial-03.svg", "caption": "Curtain wall going on behind the frame" }
+      {
+        "src": "/assets/img/lib/steel-frame-erection.svg",
+        "caption": "Frame and deck ahead of the envelope"
+      }
     ],
     "lede": "A commercial building is decided by the things nobody photographs: the frame, the shafts, and how early the trades can start.",
     "body": [
       "We take commercial work from entitlement drawings through to the certificate of occupancy, holding the frame, envelope and systems as one package rather than three that meet on site and argue.",
       "Most of our commercial work is on constrained urban sites, next to something that has to stay open. Logistics, crane positions and street closures are designed at the same time as the structure, because on a tight site the build sequence is the design."
     ],
-    "deliverables": ["Scheme and permit drawings", "GMP estimate and programme", "Site management and QA", "Closeout and O&M package"],
-    "sectors": ["Commercial", "Healthcare", "Civic"]
+    "deliverables": [
+      "Scheme and permit drawings",
+      "GMP estimate and programme",
+      "Site management and QA",
+      "Closeout and O&M package"
+    ],
+    "sectors": [
+      "Commercial",
+      "Healthcare",
+      "Civic"
+    ]
   },
   {
     "id": "structural",
     "code": "S-02",
     "title": "Structural Engineering",
     "summary": "Load-path analysis, seismic detailing and frame design that let architecture reach further on less material.",
-    "capabilities": ["Finite element analysis", "Seismic and wind design", "Steel, concrete and timber", "Retrofit and assessment"],
-    "image": "/assets/img/services/structural.svg",
+    "capabilities": [
+      "Finite element analysis",
+      "Seismic and wind design",
+      "Steel, concrete and timber",
+      "Retrofit and assessment"
+    ],
+    "image": "/assets/img/lib/bolt-up-height.svg",
     "gallery": [
-      { "src": "/assets/img/services/structural-02.svg", "caption": "Moment frame connection, shop assembled" },
-      { "src": "/assets/img/services/structural-03.svg", "caption": "Rebar cage before the pour" }
+      {
+        "src": "/assets/img/lib/rebar-cage.svg",
+        "caption": "Rebar cage tied out before the pour"
+      }
     ],
     "lede": "Every scheme starts with the load path. Get that right and the rest of the building gets lighter, cheaper and easier to build.",
     "body": [
       "We size and detail frames in steel, concrete and timber, from single-storey portal sheds to forty-storey towers, on sites where seismic demand sets the member sizes rather than gravity.",
       "Assessment work is a large part of what we do. Owners come to us with a structure that has to carry more than it was built for, and the answer is usually a targeted strengthening scheme rather than a replacement."
     ],
-    "deliverables": ["Scheme design and options report", "Full analysis model and calculations", "Fabrication and rebar drawings", "Site queries and inspection"],
-    "sectors": ["Commercial", "Industrial", "Infrastructure"]
+    "deliverables": [
+      "Scheme design and options report",
+      "Full analysis model and calculations",
+      "Fabrication and rebar drawings",
+      "Site queries and inspection"
+    ],
+    "sectors": [
+      "Commercial",
+      "Industrial",
+      "Infrastructure"
+    ]
   },
   {
     "id": "civil",
     "code": "S-03",
     "title": "Major Civil Engineering",
     "summary": "Bridges, dams, highways and drainage engineered for a hundred-year horizon and a changing climate.",
-    "capabilities": ["Bridges and crossings", "Dams and outlet works", "Highway and transit", "Stormwater and flood"],
-    "image": "/assets/img/services/civil.svg",
+    "capabilities": [
+      "Bridges and crossings",
+      "Dams and outlet works",
+      "Highway and transit",
+      "Stormwater and flood"
+    ],
+    "image": "/assets/img/lib/deck-rebar-falsework.svg",
     "gallery": [
-      { "src": "/assets/img/services/civil-02.svg", "caption": "Falsework under a deck pour" },
-      { "src": "/assets/img/services/civil-03.svg", "caption": "Channel works from the levee road" }
+      {
+        "src": "/assets/img/lib/channel-earthworks.svg",
+        "caption": "Channel and levee works"
+      }
     ],
     "lede": "Ground is the least forgiving part of any project. We survey it, model it, and design what sits on it.",
     "body": [
       "Our civil team takes a site from topographic survey through earthworks, drainage and pavement design to the point where a contractor can price it without a list of assumptions.",
       "Flood and stormwater work is modelled against the rainfall the site will see in fifty years, not the rainfall it saw last year. That changes attenuation volumes, and it is cheaper to find out at design stage than at the first storm."
     ],
-    "deliverables": ["Site and drainage strategy", "Earthworks and pavement design", "Flood modelling and permit support", "Construction issue drawings"],
-    "sectors": ["Infrastructure", "Transit", "Water"]
+    "deliverables": [
+      "Site and drainage strategy",
+      "Earthworks and pavement design",
+      "Flood modelling and permit support",
+      "Construction issue drawings"
+    ],
+    "sectors": [
+      "Infrastructure",
+      "Transit",
+      "Water"
+    ]
   },
   {
     "id": "oil-gas",
     "code": "S-04",
     "title": "Oil and Gas Facilities",
     "summary": "Tankage, piping and process units built, revamped and tied in on sites that stay in production.",
-    "capabilities": ["Tank farms and bunding", "Process piping and stress", "Turnaround and tie-ins", "API inspection support"],
-    "image": "/assets/img/services/oil-gas.svg",
+    "capabilities": [
+      "Tank farms and bunding",
+      "Process piping and stress",
+      "Turnaround and tie-ins",
+      "API inspection support"
+    ],
+    "image": "/assets/img/lib/pipe-rack.svg",
     "gallery": [
-      { "src": "/assets/img/services/oil-gas-02.svg", "caption": "Pipe rack erection alongside a live unit" },
-      { "src": "/assets/img/services/oil-gas-03.svg", "caption": "Tank floor plate welding under cover" }
+      {
+        "src": "/assets/img/lib/tank-shell.svg",
+        "caption": "Tank shell under construction"
+      }
     ],
     "lede": "Nobody builds a refinery from scratch any more. The work is adding to one while it runs, and the shutdown window is the whole programme.",
     "body": [
       "We design and build tankage, piping and structural steel inside operating facilities, to API, ASME and the operator's own standards, with every weld traceable to a procedure and a welder.",
       "Turnaround work is planned backwards from the window that actually exists. Tie-ins are rehearsed on the model, spools are fabricated and tested before the unit comes down, and the critical path is measured in hours rather than days."
     ],
-    "deliverables": ["P&ID and line list development", "Spool drawings and weld maps", "Turnaround execution plan", "Hydrotest and NDE records"],
-    "sectors": ["Oil and Gas", "Energy", "Industrial"]
+    "deliverables": [
+      "P&ID and line list development",
+      "Spool drawings and weld maps",
+      "Turnaround execution plan",
+      "Hydrotest and NDE records"
+    ],
+    "sectors": [
+      "Oil and Gas",
+      "Energy",
+      "Industrial"
+    ]
   },
   {
     "id": "underwater",
     "code": "S-05",
     "title": "Underwater and Marine Welding",
     "summary": "Commercial diving, wet and hyperbaric welding, and pile repair on structures that cannot be lifted out of the water.",
-    "capabilities": ["Wet and hyperbaric welding", "Pile and jacket repair", "Subsea pipeline tie-ins", "Dive inspection and NDT"],
-    "image": "/assets/img/services/underwater.svg",
+    "capabilities": [
+      "Wet and hyperbaric welding",
+      "Pile and jacket repair",
+      "Subsea pipeline tie-ins",
+      "Dive inspection and NDT"
+    ],
+    "image": "/assets/img/lib/diver-underwater.svg",
     "gallery": [
-      { "src": "/assets/img/services/underwater-02.svg", "caption": "Surface-supplied diver entering the water" },
-      { "src": "/assets/img/services/underwater-03.svg", "caption": "Habitat set for a dry hyperbaric weld" }
+      {
+        "src": "/assets/img/lib/dive-spread-deck.svg",
+        "caption": "Surface spread and dive control"
+      }
     ],
     "lede": "A wharf does not come out of the water to be repaired. The repair goes down to it, and the weld has to pass the same inspection as one made in a shop.",
     "body": [
       "Our dive teams work surface-supplied to AWS D3.6M class A and B, on pile jackets, wharf structures, intakes, gates and subsea pipe. Wet welds where the class allows, a dry habitat where it does not.",
       "Every dive is planned with the structural engineer who designed the repair, so the diver is not interpreting a drawing at thirty feet. Inspection is video-logged and ultrasonically verified, and the record goes to the owner with the as-built."
     ],
-    "deliverables": ["Dive and repair procedure", "Welder and procedure qualification records", "Video and UT inspection log", "As-built repair drawings"],
-    "sectors": ["Marine", "Oil and Gas", "Water"]
+    "deliverables": [
+      "Dive and repair procedure",
+      "Welder and procedure qualification records",
+      "Video and UT inspection log",
+      "As-built repair drawings"
+    ],
+    "sectors": [
+      "Marine",
+      "Oil and Gas",
+      "Water"
+    ]
   },
   {
     "id": "steel",
     "code": "S-06",
     "title": "Steel Fabrication and Erection",
     "summary": "Connection design, shop detailing and erection sequencing, from the drawing office to the last bolt.",
-    "capabilities": ["Connection design", "Shop detailing", "Erection sequencing", "Temporary works"],
-    "image": "/assets/img/services/steel.svg",
+    "capabilities": [
+      "Connection design",
+      "Shop detailing",
+      "Erection sequencing",
+      "Temporary works"
+    ],
+    "image": "/assets/img/lib/fabrication-shop.svg",
     "gallery": [
-      { "src": "/assets/img/services/steel-02.svg", "caption": "Shop floor, girder assembly" },
-      { "src": "/assets/img/services/steel-03.svg", "caption": "Bolt-up at height on the erection front" }
+      {
+        "src": "/assets/img/lib/bolt-up-height.svg",
+        "caption": "Bolt-up on the erection front"
+      }
     ],
     "lede": "Steel is decided in the connections. Design them early and the frame goes up in the order the crane wants.",
     "body": [
       "We detail connections to the fabricator's shop standards rather than a generic library, which cuts weld volume and keeps pieces inside the transport envelope.",
       "Erection sequence is designed alongside the frame, with the temporary stability case checked at every stage, so nothing on site waits on a stability check that was never done."
     ],
-    "deliverables": ["Connection calculations", "Shop and assembly drawings", "Erection sequence and stability case", "Temporary works design"],
-    "sectors": ["Commercial", "Industrial", "Infrastructure"]
+    "deliverables": [
+      "Connection calculations",
+      "Shop and assembly drawings",
+      "Erection sequence and stability case",
+      "Temporary works design"
+    ],
+    "sectors": [
+      "Commercial",
+      "Industrial",
+      "Infrastructure"
+    ]
   },
   {
     "id": "groundworks",
     "code": "S-07",
     "title": "Groundworks and Foundations",
     "summary": "Piling, rafts and retaining structures designed against the ground that is actually there.",
-    "capabilities": ["Piling and raft design", "Retaining structures", "Ground improvement", "Liquefaction mitigation"],
-    "image": "/assets/img/services/groundworks.svg",
+    "capabilities": [
+      "Piling and raft design",
+      "Retaining structures",
+      "Ground improvement",
+      "Liquefaction mitigation"
+    ],
+    "image": "/assets/img/lib/piling-rig.svg",
     "gallery": [
-      { "src": "/assets/img/services/groundworks-02.svg", "caption": "Rig setting out on a piling mat" },
-      { "src": "/assets/img/services/groundworks-03.svg", "caption": "Shoring and dewatering in an open cut" }
+      {
+        "src": "/assets/img/lib/rebar-cage.svg",
+        "caption": "Pile cap reinforcement before the pour"
+      }
     ],
     "lede": "The cheapest foundation is the one that matches the ground investigation, not the one that matches the last job.",
     "body": [
       "We specify and interpret ground investigation, then design the foundation that suits it, whether that is a raft on improved ground or driven piles to bedrock through liquefiable fill.",
       "Settlement is checked against the structure above, because a slab that moves within tolerance still cracks a facade that does not."
     ],
-    "deliverables": ["Ground investigation specification", "Foundation design and calculations", "Settlement and liquefaction analysis", "Rebar and piling drawings"],
-    "sectors": ["Commercial", "Industrial", "Marine"]
+    "deliverables": [
+      "Ground investigation specification",
+      "Foundation design and calculations",
+      "Settlement and liquefaction analysis",
+      "Rebar and piling drawings"
+    ],
+    "sectors": [
+      "Commercial",
+      "Industrial",
+      "Marine"
+    ]
   },
   {
     "id": "mechanical",
     "code": "S-08",
     "title": "Mechanical and Process",
     "summary": "Piping, thermal systems and plant layouts tuned for throughput, redundancy and quiet operation.",
-    "capabilities": ["Process piping and stress", "HVAC and ventilation", "Energy modelling", "Plant layout"],
-    "image": "/assets/img/services/mechanical.svg",
+    "capabilities": [
+      "Process piping and stress",
+      "HVAC and ventilation",
+      "Energy modelling",
+      "Plant layout"
+    ],
+    "image": "/assets/img/lib/plant-room.svg",
     "gallery": [
-      { "src": "/assets/img/services/mechanical-02.svg", "caption": "Pump skid set and aligned" },
-      { "src": "/assets/img/services/mechanical-03.svg", "caption": "Rooftop plant on a commercial build" }
+      {
+        "src": "/assets/img/lib/pipe-rack.svg",
+        "caption": "Process piping on the rack"
+      }
     ],
     "lede": "Process plant lives or dies on layout. Pipe runs, access and maintenance decide the operating cost for the next thirty years.",
     "body": [
       "We design piping systems and their supports, run stress analysis on hot lines, and lay out plant so that the units needing weekly attention are the ones a fitter can actually reach.",
       "Energy work is measured, not assumed. We meter the existing plant first, then model the change, so the saving in the report is the saving on the bill."
     ],
-    "deliverables": ["P&ID and line lists", "Pipe stress and support design", "Plant layout and access review", "Energy model and measured baseline"],
-    "sectors": ["Industrial", "Energy", "Commercial"]
+    "deliverables": [
+      "P&ID and line lists",
+      "Pipe stress and support design",
+      "Plant layout and access review",
+      "Energy model and measured baseline"
+    ],
+    "sectors": [
+      "Industrial",
+      "Energy",
+      "Commercial"
+    ]
   },
   {
     "id": "digital",
     "code": "S-09",
     "title": "Digital Engineering",
     "summary": "One coordinated model every discipline works in, and that is still worth opening after handover.",
-    "capabilities": ["BIM and VDC", "Parametric design", "Digital twins", "Clash and 4D scheduling"],
-    "image": "/assets/img/services/digital.svg",
+    "capabilities": [
+      "BIM and VDC",
+      "Parametric design",
+      "Digital twins",
+      "Clash and 4D scheduling"
+    ],
+    "image": "/assets/img/lib/model-review.svg",
     "gallery": [
-      { "src": "/assets/img/services/digital-02.svg", "caption": "Coordination review around the model" },
-      { "src": "/assets/img/services/digital-03.svg", "caption": "Laser scan registered against the design model" }
+      {
+        "src": "/assets/img/lib/retrofit-interior.svg",
+        "caption": "Scan of the existing structure, before modelling"
+      }
     ],
     "lede": "A model is worth having when the site team opens it. Everything else is a picture of a building.",
     "body": [
       "We run federated models across structure, civils, mechanical and electrical, with a clash routine that closes issues rather than counting them.",
       "Parametric work pays for itself on repetitive geometry: a node family that resolves itself against member sizes saves weeks of drafting on a diagrid or a long viaduct."
     ],
-    "deliverables": ["Federated model and BEP", "Clash reports and resolution log", "4D sequence for the build", "Asset data handover"],
-    "sectors": ["Commercial", "Infrastructure", "Industrial"]
+    "deliverables": [
+      "Federated model and BEP",
+      "Clash reports and resolution log",
+      "4D sequence for the build",
+      "Asset data handover"
+    ],
+    "sectors": [
+      "Commercial",
+      "Infrastructure",
+      "Industrial"
+    ]
   },
   {
     "id": "commissioning",
     "code": "S-10",
     "title": "Commissioning and Handover",
     "summary": "Proving the thing works, and leaving the operator with records they can actually use.",
-    "capabilities": ["Commissioning management", "Performance testing", "Operator training", "As-built and asset data"],
-    "image": "/assets/img/services/commissioning.svg",
+    "capabilities": [
+      "Commissioning management",
+      "Performance testing",
+      "Operator training",
+      "As-built and asset data"
+    ],
+    "image": "/assets/img/lib/plant-room.svg",
     "gallery": [
-      { "src": "/assets/img/services/commissioning-02.svg", "caption": "Witness testing against the instrument schedule" },
-      { "src": "/assets/img/services/commissioning-03.svg", "caption": "Control room at first run" }
+      {
+        "src": "/assets/img/lib/model-review.svg",
+        "caption": "Records and model walked through at handover"
+      }
     ],
     "lede": "A project ends when the operator can run it without ringing us, not when the last valve is fitted.",
     "body": [
       "Commissioning is planned from design stage, so the instrumentation needed to prove performance is in the drawings rather than added later.",
       "Handover includes the as-built model, the test records and time with the people who will operate it. Most of the value of a digital model is realised after substantial completion."
     ],
-    "deliverables": ["Commissioning plan and witness schedule", "Performance test records", "As-built model and asset register", "Operator training"],
-    "sectors": ["Industrial", "Energy", "Commercial"]
+    "deliverables": [
+      "Commissioning plan and witness schedule",
+      "Performance test records",
+      "As-built model and asset register",
+      "Operator training"
+    ],
+    "sectors": [
+      "Industrial",
+      "Energy",
+      "Commercial"
+    ]
   }
 ]

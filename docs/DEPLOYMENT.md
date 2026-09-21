@@ -72,15 +72,17 @@ type, in `src/site/layout.js` and styled under `.brand-lockup` in
 `apple-touch-icon.png` from the same geometry, in `scripts/make-icons.js`.
 
 **Placeholder drawings.** `npm run artwork` redraws every placeholder in
-`public/assets/img/` from `scripts/make-artwork.js` — the page bands, thirty
-service sheets and forty-one project sheets, read straight from the data files.
-Change the palette at the top of that file and they all follow.
+`public/assets/img/` from `scripts/make-artwork.js`: seven page bands and the
+twenty-nine plates in `public/assets/img/lib/` that every project and discipline
+shares. Change the palette at the top of that file and they all follow. The
+script also checks the data — a missing drawing, a plate used twice on one page,
+or two projects sharing a hero all fail it.
 
-**Project and service photography.** `docs/IMAGE-PROMPTS.md` carries a prompt for
-every image on the site, with the filename it belongs at. Save the photograph
-beside the drawing it replaces (`projects/pier-j-berth-02.jpg` next to
-`projects/pier-j-berth-02.svg`), then run `npm run adopt-photos` to point the
-data files at it and `npm run build`.
+**Photography.** `docs/IMAGE-PROMPTS.md` carries thirty-five prompts, one per
+image: six page images and the twenty-nine library plates. Save the photograph
+beside the drawing it replaces (`lib/diver-underwater.jpg` next to
+`lib/diver-underwater.svg`), then run `npm run adopt-photos` to point the data
+files at it and `npm run build`.
 
 Notes:
 
