@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact us | Merkel Constructions</title>
-  <meta name="description" content="Contact Merkel Constructions to start a project. A principal engineer replies within two working days." />
-  <meta name="theme-color" content="#fafaf9" />
-  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <title>Contact us | Meridian Construction</title>
+  <meta name="description" content="Contact Meridian Construction to start a project. A principal engineer answers within two working days." />
+  <meta name="theme-color" content="#0a1a24" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="/favicon.png" type="image/png" sizes="512x512" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/styles.css" />
   
 </head>
@@ -19,9 +19,13 @@
   <div class="scroll-progress" id="progress"></div>
 
   <header class="nav" id="nav">
-    <a class="brand" href="/" aria-label="Merkel Constructions home">
-      <img class="brand-logo" src="/assets/brand/merkel-constructions-wordmark-light.png" alt="Merkel Constructions" width="1048" height="203" />
-    </a>
+    <a class="brand" href="/" aria-label="Meridian Construction home"><span class="brand-lockup">
+      <svg class="brand-mark" viewBox="0 0 48 48" width="36" height="36" aria-hidden="true" focusable="false">
+        <path d="M8 38V12l16 13 16-13v26" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>
+        <path d="M4 43h40" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+      </svg>
+      <span class="brand-word"><b>Meridian</b><span>Construction</span></span>
+    </span></a>
     <nav class="nav-links" id="navlinks">
       <a href="/projects">Projects</a>
       <a href="/services">Services</a>
@@ -35,23 +39,28 @@
   </header>
 
   
-  <header class="page-header" style="--ph-image:url('/assets/img/m4.webp')">
+  <header class="page-header" style="--ph-image:url('/assets/img/contact.svg')">
     <div class="page-header-media" aria-hidden="true"></div>
     <div class="wrap page-header-inner">
       <span class="eyebrow">Start a project</span>
-      <h1 data-reveal>Contact us.</h1>
-      <p data-reveal>Send us the drawing set, the constraint you keep running into, or a paragraph on the site. A principal engineer replies within two working days.</p>
+      <h1 data-reveal>Talk to an engineer.</h1>
+      <p data-reveal>Send the drawing set, the constraint you keep running into, or one paragraph about the site. A principal engineer answers within two working days.</p>
     </div>
   </header>
   <section class="section-pad">
     <div class="wrap contact-grid">
       <div class="contact-info" data-reveal>
         <div class="contact-detail">
-          <div class="row"><div class="k">Email</div><div class="val"><a href="mailto:info@blueprinthavenltd.com" data-site="email">info@blueprinthavenltd.com</a></div></div>
-          <div class="row"><div class="k">Hours</div><div class="val" data-site="hours">Monday to Friday, 09:00 to 18:00 CET</div></div>
+          <div class="row"><div class="k">Email</div><div class="val"><a href="mailto:hello@meridianconstruction.com" data-site="email">hello@meridianconstruction.com</a></div></div>
+          <!-- Address and telephone are blank until the desk sets them under
+               Settings, so each row appears only once there is something to
+               put in it rather than showing an empty label. -->
+          <div class="row" data-site-row="phone" hidden><div class="k">Telephone</div><div class="val"><a href="tel:" data-site="phone"></a></div></div>
+          <div class="row" data-site-row="address" hidden><div class="k">Studio</div><div class="val" data-site="address"></div></div>
+          <div class="row"><div class="k">Hours</div><div class="val" data-site="hours">Monday to Friday, 08:00 to 17:30 CET</div></div>
         </div>
         <div class="contact-note">
-          <p>Every enquiry lands on the studio desk and a principal engineer picks it up. If you would rather talk now, the live chat in the corner reaches the same people.</p>
+          <p>Every enquiry lands on the studio desk and a principal engineer picks it up. If you would rather talk now, the live chat in the corner reaches the same desk and the same people.</p>
         </div>
       </div>
 
@@ -68,16 +77,17 @@
               <option value="">Select</option>
               <option>Structural</option>
               <option>Civil &amp; Infrastructure</option>
-              <option>Mechanical</option>
+              <option>Mechanical &amp; Process</option>
               <option>Digital Engineering</option>
+              <option>Construction &amp; delivery</option>
               <option>Not sure yet</option>
             </select><div class="err" data-err="service"></div>
           </div>
         </div>
-        <div class="field"><label for="contact-form-message">Project brief</label><textarea id="contact-form-message" name="message" placeholder="What are you building, and where does it get hard?" required></textarea><div class="err" data-err="message"></div></div>
+        <div class="field"><label for="contact-form-message">Project brief</label><textarea id="contact-form-message" name="message" placeholder="What are you building, where is the site, and which part of it worries you?" required></textarea><div class="err" data-err="message"></div></div>
         <div class="honeypot" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off" /></label></div>
         <div class="form-status" data-form-status role="status" aria-live="polite"></div>
-        <button type="submit" class="btn" data-submit>Send enquiry <span class="arw">&rsaquo;</span></button>
+        <button type="submit" class="btn" data-submit>Send the brief <span class="arw">&rsaquo;</span></button>
       </form>
     </div>
   </section>
@@ -85,8 +95,14 @@
   <footer class="footer">
     <div class="wrap footer-top">
       <div class="footer-brand">
-        <img class="brand-logo footer-logo" src="/assets/brand/merkel-constructions-wordmark-light.png" alt="Merkel Constructions" width="1048" height="203" />
-        <p>Engineering for buildings and infrastructure.</p>
+        <span class="brand footer-brand-mark"><span class="brand-lockup">
+      <svg class="brand-mark" viewBox="0 0 48 48" width="34" height="34" aria-hidden="true" focusable="false">
+        <path d="M8 38V12l16 13 16-13v26" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>
+        <path d="M4 43h40" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+      </svg>
+      <span class="brand-word"><b>Meridian</b><span>Construction</span></span>
+    </span></span>
+        <p>Engineering and construction for the things that have to keep working.</p>
       </div>
       <div class="col">
         <h5>Company</h5>
@@ -97,12 +113,13 @@
       </div>
       <div class="col">
         <h5>Contact</h5>
-        <a href="mailto:info@blueprinthavenltd.com" data-site="email">info@blueprinthavenltd.com</a>
+        <a href="mailto:hello@meridianconstruction.com" data-site="email">hello@meridianconstruction.com</a>
         <a href="/contact">Contact us</a>
       </div>
     </div>
     <div class="wrap footer-bottom">
-      <span>&copy; 2026 Merkel Constructions B.V.</span>
+      <span>&copy; 2026 Meridian Construction Group</span>
+      <span class="footer-note">Drawn, engineered and built in-house.</span>
     </div>
   </footer>
 
@@ -116,15 +133,15 @@
         <div class="chat-head-id">
           <span class="dot"></span>
           <div>
-            <strong>Merkel Studio</strong>
-            <small>Typically replies in a few minutes</small>
+            <strong>Meridian Construction</strong>
+            <small>An engineer usually answers within minutes</small>
           </div>
         </div>
         <button class="chat-min" id="chat-min" aria-label="Minimise chat">&minus;</button>
       </div>
       <div class="chat-log" id="chat-log"></div>
       <form class="chat-form" id="chat-form">
-        <input type="text" id="chat-input" name="text" placeholder="Ask us anything" autocomplete="off" maxlength="2000" />
+        <input type="text" id="chat-input" name="text" placeholder="Ask an engineer" autocomplete="off" maxlength="2000" />
         <button type="submit" aria-label="Send message">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
         </button>

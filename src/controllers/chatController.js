@@ -14,27 +14,27 @@ function autoReply(text) {
   const has = (...words) => words.some((w) => t.includes(w));
 
   if (has('hello', 'hi ', 'hey', 'good morning', 'good afternoon') || t === 'hi') {
-    return "Hi, you're through to Merkel Constructions. What are you building, and how can we help?";
+    return "Hi, you're through to Meridian Construction. What are you building, and where does it get difficult?";
   }
   if (has('career', 'job', 'hiring', 'vacancy', 'apply', 'position', 'role')) {
-    return 'We are hiring across structural, civil, mechanical and digital teams. You can see open roles on our Careers page, or tell me which discipline interests you.';
+    return 'We are hiring across the structural, civil, mechanical and digital teams, and on site. Open roles are on our Careers page, or tell me which discipline you work in.';
   }
   if (has('quote', 'cost', 'price', 'fee', 'budget')) {
-    return 'Fees depend on scope and stage. If you share a short project brief along with your email, a principal engineer will come back to you with a considered response.';
+    return 'Fees follow scope and stage. Leave a short brief and your email and a principal engineer will come back with a considered answer rather than a number pulled out of the air.';
   }
   if (has('project', 'portfolio', 'work', 'reference', 'example')) {
-    return 'You can browse selected projects on our Projects page, spanning towers, bridges, industrial plant and transit. Is there a sector you would like to see?';
+    return 'Selected projects are on our Projects page: towers, crossings, process plant, transit and industrial delivery. Is there a sector you would like to see?';
   }
   if (has('bridge', 'structural', 'seismic', 'civil', 'mechanical', 'hvac', 'bim', 'digital twin', 'facade')) {
-    return 'That is squarely in our wheelhouse. Share a few details about the project and where it gets difficult, and we will point you to the right engineer.';
+    return 'That is work we do every week. Tell me a little about the project and the part of it that worries you, and I will put you in front of the right engineer.';
   }
   if (has('contact', 'call', 'phone', 'email', 'meet', 'speak')) {
-    return 'The fastest route is the contact page, or email studio@merkelconstructions.com. Leave your email here and we will reach out within two working days.';
+    return 'The quickest route is the contact page, or email hello@meridianconstruction.com. Leave your address here and we will come back within two working days.';
   }
   if (has('thanks', 'thank you', 'cheers', 'great')) {
     return 'Any time. Anything else I can help with?';
   }
-  return "Thanks for the message. A member of the studio will follow up. If you leave your email and a one-line brief, we'll route it to the right engineer.";
+  return "Thanks for the message. Someone from the studio will pick this up. Leave your email and a one-line brief and it goes straight to the engineer who covers it.";
 }
 
 /**
@@ -64,7 +64,7 @@ exports.postMessage = async (req, res, next) => {
     try {
       handedOver = await chatStore.isHandedOver(sessionId);
     } catch (err) {
-      console.error('[merkel] chat handover check failed:', err.message);
+      console.error('[meridian] chat handover check failed:', err.message);
     }
 
     const reply = handedOver ? null : { role: 'agent', text: autoReply(text), at: new Date(Date.now() + 1).toISOString() };
@@ -75,7 +75,7 @@ exports.postMessage = async (req, res, next) => {
       await chatStore.append(sessionId, messages);
     } catch (err) {
       stored = false;
-      console.error('[merkel] failed to persist chat message:', err.message);
+      console.error('[meridian] failed to persist chat message:', err.message);
     }
 
     // Route the visitor's message to the inbox so a human can pick it up.
@@ -116,7 +116,7 @@ exports.notifyMessage = async (req, res, next) => {
         replied = true;
       }
     } catch (err) {
-      console.error('[merkel] failed to post chat reply:', err.message);
+      console.error('[meridian] failed to post chat reply:', err.message);
     }
 
     await notify.chatMessage(sessionId, text);
@@ -139,7 +139,7 @@ exports.getHistory = async (req, res, next) => {
       convo = await chatStore.load(sessionId);
     } catch (err) {
       // A storage fault should cost the visitor their history, not the widget.
-      console.error('[merkel] failed to load chat history:', err.message);
+      console.error('[meridian] failed to load chat history:', err.message);
     }
     return res.json({ sessionId, messages: convo.messages });
   } catch (err) {

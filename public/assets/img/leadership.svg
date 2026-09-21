@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="900" viewBox="0 0 760 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="PRINCIPAL-LED DELIVERY">
+  <defs>
+    <linearGradient id="ground" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#0c1f2b"/><stop offset="0.55" stop-color="#081722"/><stop offset="1" stop-color="#050e15"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="rgba(231,237,239,0.12)" stroke-width="1"/>
+    </pattern>
+    <pattern id="grid-fine" width="8" height="8" patternUnits="userSpaceOnUse">
+      <path d="M8 0H0V8" fill="none" stroke="rgba(231,237,239,0.05)" stroke-width="0.6"/>
+    </pattern>
+    <linearGradient id="wash" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3f9cb4" stop-opacity="0.42"/><stop offset="1" stop-color="#3f9cb4" stop-opacity="0.04"/>
+    </linearGradient>
+  </defs>
+  <rect width="760" height="900" fill="url(#ground)"/>
+  <rect width="760" height="900" fill="url(#grid-fine)"/>
+  <rect width="760" height="900" fill="url(#grid)"/>
+  <rect x="16" y="16" width="728" height="868" fill="none" stroke="rgba(231,237,239,0.22)" stroke-width="1"/>
+  <line x1="16" y1="838" x2="744" y2="838" stroke="rgba(231,237,239,0.22)" stroke-width="1"/>
+  <text x="34" y="870" fill="#e7edef" font-family="'IBM Plex Mono',monospace" font-size="16" letter-spacing="2.5" opacity="0.88">PRINCIPAL-LED DELIVERY</text>
+  <text x="726" y="870" text-anchor="end" fill="#d9a441" font-family="'IBM Plex Mono',monospace" font-size="13" letter-spacing="2" opacity="0.9">MERIDIAN</text>
+  <text x="34" y="46" fill="#3f9cb4" font-family="'IBM Plex Mono',monospace" font-size="13" letter-spacing="3">LDR-01</text>
+  <text x="726" y="46" text-anchor="end" fill="rgba(231,237,239,0.22)" font-family="'IBM Plex Mono',monospace" font-size="12" letter-spacing="2">PORTRAIT PLATE</text>
+  <rect x="91.2" y="126" width="577.6" height="630" fill="url(#wash)" opacity="0.28" stroke="rgba(231,237,239,0.22)" stroke-width="1"/>
+  <path d="M91.2 160V126H125.2" fill="none" stroke="#d9a441" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M668.8 160V126H634.8" fill="none" stroke="#d9a441" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M91.2 722V756H125.2" fill="none" stroke="#d9a441" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M668.8 722V756H634.8" fill="none" stroke="#d9a441" stroke-width="2.4" stroke-linecap="round"/>
+  <circle cx="380" cy="342" r="103.5" fill="none" stroke="#e7edef" stroke-width="2.6"/>
+  <path d="M182.4 756q0 -234 197.6 -234q197.6 0 197.6 234" fill="none" stroke="#e7edef" stroke-width="2.6" opacity="1"/>
+  <path d="M182.4 756q0 -234 197.6 -234q197.6 0 197.6 234Z" fill="url(#wash)" opacity="0.35"/>
+  <path d="M380 106V776" fill="none" stroke="#3f9cb4" stroke-width="1.4" stroke-linecap="round"/>
+  <path d="M91.2 342H668.8" fill="none" stroke="#3f9cb4" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M91.2 590.4H668.8" fill="none" stroke="#d9a441" stroke-width="2" stroke-linecap="round"/>
+  <path d="M77.2 126h14" fill="none" stroke="#e7edef" stroke-width="1" opacity="0.35"/>
+  <path d="M668.8 126h14" fill="none" stroke="#e7edef" stroke-width="1" opacity="0.35"/>
+  <path d="M77.2 196h14" fill="none" stroke="#e7edef" stroke-width="1" opacity="0.35"/>
+  <path d="M668.8 196h14" fill="none" stroke="#e7edef" stroke-width="1" opacity="0.35"/>
+  <path d="M77.2 266h14" fill="none" stroke="#e7edef" stroke-width="1" opacity="0.35"/>
+  <path d="M668.8 266h14" fill="none" stroke="#e7edef" stroke-width="1" opacity="0.35"/>
+  <path d="M77.2 336h14" fill="none" stroke="#e7edef" stroke-width="1" opacity="0.35"/>
+  <path d="M668.8 336h14" fill="none" stroke="#e7edef" stroke-width="1" opacity="0.35"/>
+  <path d="M77.2 406h14" fill="none" stroke="#e7edef" stroke-width="1" opacity="0.35"/>
+  <path d="M668.8 406h14" fill="none" stroke="#e7edef" stroke-width="1" opacity="0.35"/>
+  <path d="M77.2 476h14" fill="none" stroke="#e7edef" stroke-width="1" opacity="0.35"/>
+  <path d="M668.8 476h14" fill="none" stroke="#e7edef" stroke-width="1" opacity="0.35"/>
+  <path d="M77.2 546h14" fill="none" stroke="#e7edef" stroke-width="1" opacity="0.35"/>
+  <path d="M668.8 546h14" fill="none" stroke="#e7edef" stroke-width="1" opacity="0.35"/>
+  <path d="M77.2 616h14" fill="none" stroke="#e7edef" stroke-width="1" opacity="0.35"/>
+  <path d="M668.8 616h14" fill="none" stroke="#e7edef" stroke-width="1" opacity="0.35"/>
+  <path d="M77.2 686h14" fill="none" stroke="#e7edef" stroke-width="1" opacity="0.35"/>
+  <path d="M668.8 686h14" fill="none" stroke="#e7edef" stroke-width="1" opacity="0.35"/>
+</svg>

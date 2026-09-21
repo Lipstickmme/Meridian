@@ -1,10 +1,11 @@
 'use strict';
 
 /* =========================================================================
-   Merkel Constructions shared frontend.
-   Exposes helpers on window.MERKEL for per-page scripts, drives shared UI
-   (nav, hero slideshow, reveals, counters, contact form) and hydrates the
-   home page. Data comes from the Express API with seed-data fallbacks.
+   Meridian Construction shared frontend.
+   Exposes helpers on window.MERIDIAN for per-page scripts, drives shared UI
+   (nav, hero slideshow, reveals, counters, enquiry form) and hydrates the
+   home page. Data comes from the Express API, with the seed data below as a
+   fallback so a page never renders empty when the API is unreachable.
    ========================================================================= */
 
 (function () {
@@ -23,16 +24,16 @@
   }
 
   const FALLBACK_SERVICES = [
-    { code: 'S-01', title: 'Structural Engineering', summary: 'Load-path analysis, seismic detailing and high-rise frame design that let architecture reach further with less material.', capabilities: ['Finite element analysis', 'Seismic & wind design', 'Steel, concrete & timber', 'Retrofit & assessment'] },
-    { code: 'S-02', title: 'Civil & Infrastructure', summary: 'Roads, bridges, drainage and site works engineered for a hundred-year horizon and a changing climate.', capabilities: ['Highway & transit', 'Stormwater & flood', 'Bridges & culverts', 'Land development'] },
-    { code: 'S-03', title: 'Mechanical Systems', summary: 'HVAC, process piping and thermal systems tuned for efficiency, redundancy and quiet, reliable operation.', capabilities: ['HVAC & ventilation', 'Process & plant', 'Energy modelling', 'Commissioning'] },
-    { code: 'S-04', title: 'Digital Engineering', summary: 'BIM coordination, parametric design and digital twins that keep every discipline working from one source of truth.', capabilities: ['BIM / VDC', 'Parametric design', 'Digital twins', 'Clash & 4D scheduling'] }
+    { code: 'S-01', title: 'Structural Engineering', summary: 'Load-path analysis, seismic detailing and frame design that let architecture reach further on less material.', capabilities: ['Finite element analysis', 'Seismic & wind design', 'Steel, concrete & timber', 'Retrofit & assessment'] },
+    { code: 'S-02', title: 'Civil & Infrastructure', summary: 'Roads, crossings, drainage and site works engineered for a hundred-year horizon and a changing climate.', capabilities: ['Highway & transit', 'Stormwater & flood', 'Bridges & culverts', 'Land development'] },
+    { code: 'S-03', title: 'Mechanical & Process', summary: 'Piping, thermal systems and plant layouts tuned for throughput, redundancy and quiet operation.', capabilities: ['Process piping & stress', 'HVAC & ventilation', 'Energy modelling', 'Plant layout'] },
+    { code: 'S-04', title: 'Digital Engineering', summary: 'One coordinated model every discipline works in, and that is still worth opening after handover.', capabilities: ['BIM / VDC', 'Parametric design', 'Digital twins', 'Clash & 4D scheduling'] }
   ];
   const FALLBACK_PROJECTS = [
-    { id: 'helix-tower', name: 'Helix Tower', sector: 'Commercial', location: 'Hamburg, DE', year: 2025, metric: '184 m', metricLabel: 'structural height', image: '/assets/img/merkel3.webp', blurb: 'A diagrid super-structure that cut steel tonnage by 22 percent against a conventional frame.' },
-    { id: 'north-crossing', name: 'North Crossing', sector: 'Infrastructure', location: 'Aarhus, DK', year: 2024, metric: '410 m', metricLabel: 'cable-stayed span', image: '/assets/img/merkel1.webp', blurb: 'A twin-pylon bridge engineered for extreme fjord wind loading and marine durability.' },
-    { id: 'atlas-plant', name: 'Atlas Process Plant', sector: 'Industrial', location: 'Duisburg, DE', year: 2024, metric: '38%', metricLabel: 'energy reduction', image: '/assets/img/merkel4.webp', blurb: 'A heat-recovery redesign of a continuous process line, recommissioned with zero downtime.' },
-    { id: 'meridian-transit', name: 'Meridian Transit Hub', sector: 'Transit', location: 'Lyon, FR', year: 2023, metric: '60k / day', metricLabel: 'passenger capacity', image: '/assets/img/merkel2.webp', blurb: 'A long-span steel canopy and below-grade concourse delivered on a live rail corridor.' }
+    { id: 'helix-tower', name: 'Helix Tower', sector: 'Commercial', location: 'Hamburg, DE', year: 2025, metric: '184 m', metricLabel: 'structural height', image: '/assets/img/proj-helix-tower.svg', blurb: 'A diagrid superstructure that took 22 percent of the steel out of a conventional frame.' },
+    { id: 'north-crossing', name: 'North Crossing', sector: 'Infrastructure', location: 'Aarhus, DK', year: 2024, metric: '410 m', metricLabel: 'cable-stayed span', image: '/assets/img/proj-north-crossing.svg', blurb: 'A twin-pylon crossing carrying road and light rail over a fjord that sees severe cross winds.' },
+    { id: 'atlas-plant', name: 'Atlas Process Plant', sector: 'Industrial', location: 'Duisburg, DE', year: 2024, metric: '38%', metricLabel: 'energy reduction', image: '/assets/img/proj-atlas-plant.svg', blurb: 'A heat-recovery redesign of a continuous process line, recommissioned without stopping production.' },
+    { id: 'rhone-transit', name: 'Rhone Transit Hub', sector: 'Transit', location: 'Lyon, FR', year: 2023, metric: '96 m', metricLabel: 'clear-span canopy', image: '/assets/img/proj-rhone-transit.svg', blurb: 'A long-span steel canopy and below-grade concourse built over live tracks.' }
   ];
 
   function projectCard(p) {
@@ -123,7 +124,7 @@
     }
   }
 
-  window.MERKEL = { $, $$, esc, fetchJSON, reduceMotion, projectCard, observeReveals, FALLBACK_PROJECTS, site };
+  window.MERIDIAN = { $, $$, esc, fetchJSON, reduceMotion, projectCard, observeReveals, FALLBACK_PROJECTS, site };
 
   /* Nav, scroll progress, underlay parallax, chapter rail ----------------- */
   const nav = $('#nav');
@@ -369,7 +370,7 @@
       try {
         const res = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(payload) });
         const data = await res.json().catch(() => ({}));
-        if (res.ok) { form.reset(); statusEl.className = 'form-status ok'; statusEl.textContent = data.message || 'Thank you. Your enquiry has reached our engineers.'; }
+        if (res.ok) { form.reset(); statusEl.className = 'form-status ok'; statusEl.textContent = data.message || 'Thank you. Your brief is on the studio desk and an engineer will answer it.'; }
         else if (res.status === 422 && data.fields) { Object.entries(data.fields).forEach(([k, v]) => setErr(k, v)); statusEl.className = 'form-status bad'; statusEl.textContent = 'Please correct the highlighted fields.'; }
         else if (res.status === 429) { statusEl.className = 'form-status bad'; statusEl.textContent = 'Too many attempts. Please wait a moment and try again.'; }
         else { statusEl.className = 'form-status bad'; statusEl.textContent = data.message || `Something went wrong. Please email ${site.email}.`; }

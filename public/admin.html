@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Studio desk | Merkel Constructions</title>
+  <title>Studio desk | Meridian Construction</title>
   <meta name="description" content="Staff dashboard." />
   <meta name="robots" content="noindex, nofollow" />
-  <meta name="theme-color" content="#fafaf9" />
-  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <meta name="theme-color" content="#0a1a24" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="/favicon.png" type="image/png" sizes="512x512" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/styles.css" />
   <link rel="stylesheet" href="/css/admin.css" />
 </head>
@@ -25,7 +25,7 @@
 
     <section class="admin-gate" id="admin-unconfigured" hidden>
       <div class="admin-card">
-        <span class="eyebrow">Merkel / Studio desk</span>
+        <span class="eyebrow">Meridian / Studio desk</span>
         <h1>Backend not connected.</h1>
         <div id="admin-missing"></div>
         <p class="admin-note">Set it in the deployment's environment variables and reload. Nothing needs rebuilding, but the change only reaches a running deployment after a redeploy.</p>
@@ -36,9 +36,9 @@
 
     <section class="admin-gate" id="admin-login" hidden>
       <form class="admin-card" id="login-form" novalidate>
-        <span class="eyebrow">Merkel / Studio desk</span>
+        <span class="eyebrow">Meridian / Studio desk</span>
         <h1>Staff sign in.</h1>
-        <p class="admin-note" id="login-note">Enquiries, live chat and studio mail in one place.</p>
+        <p class="admin-note" id="login-note">Enquiries, applications, live chat and studio mail on one desk.</p>
         <div class="field"><label for="login-email">Email</label><input type="email" id="login-email" name="email" autocomplete="username" required /></div>
         <div class="field"><label for="login-password">Password</label><input type="password" id="login-password" name="password" autocomplete="current-password" required /></div>
         <div class="err" id="login-error" role="alert"></div>
@@ -50,7 +50,11 @@
     <div class="admin-shell" id="admin-shell" hidden>
       <header class="admin-bar">
         <a class="admin-brand" href="/">
-          <img src="/assets/brand/merkel-constructions-wordmark.png" alt="Merkel Constructions" width="1048" height="203" />
+          <svg class="brand-mark" viewBox="0 0 48 48" width="28" height="28" aria-hidden="true" focusable="false">
+            <path d="M8 38V12l16 13 16-13v26" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>
+            <path d="M4 43h40" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+          </svg>
+          <b class="admin-brand-word">Meridian</b>
           <span>Studio desk</span>
         </a>
         <div class="admin-bar-end">

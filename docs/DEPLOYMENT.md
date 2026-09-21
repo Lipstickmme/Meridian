@@ -1,4 +1,4 @@
-# Deploying Merkel Constructions to Vercel
+# Deploying Meridian Construction to Vercel
 
 A step-by-step guide for the workflow: replace the images, fork to your GitHub,
 deploy on Vercel, then switch the backend on.
@@ -30,22 +30,22 @@ and local JSON files otherwise, so development works offline with no setup.
 
 All current artwork is generated blueprint-style placeholder SVG. The five
 page-level images need no code change at all: **drop them into
-`public/assets/img/` named `merkel1` to `merkel5`** and the next build picks them
+`public/assets/img/` named `meridian1` to `meridian5`** and the next build picks them
 up. Any of `.webp`, `.avif`, `.jpg`, `.jpeg`, `.png` works, and `.webp` is chosen
 first if more than one is present.
 
 | File | Where it appears | Suggested size |
 | ---- | ---------------- | -------------- |
-| `merkel1` | The underlay behind every page, and the first hero slide | 2400 x 1400 |
-| `merkel2` | Capabilities chapter, and the second hero slide | 1920 x 1200 |
-| `merkel3` | Practice chapter, the third hero slide, and the `/careers` header | 1920 x 1200 |
-| `merkel4` | Selected work chapter and the `/projects` header | 1920 x 1200 |
-| `merkel5` | Contact chapter and the `/contact` header | 1920 x 1200 |
+| `meridian1` | The underlay behind every page, and the first hero slide | 2400 x 1400 |
+| `meridian2` | Capabilities chapter, and the second hero slide | 1920 x 1200 |
+| `meridian3` | Practice chapter, the third hero slide, and the `/careers` header | 1920 x 1200 |
+| `meridian4` | Selected work chapter and the `/projects` header | 1920 x 1200 |
+| `meridian5` | Contact chapter and the `/contact` header | 1920 x 1200 |
 
 Project and service artwork is named per item in `src/data/projects.json` and
 `src/data/services.json`, so those take any filename you like.
 
-`merkel1` carries the most weight: it is fixed behind the whole site, so pick the
+`meridian1` carries the most weight: it is fixed behind the whole site, so pick the
 one that reads as the studio's signature and has calm space rather than busy
 detail in the middle, where headlines sit.
 
@@ -57,14 +57,28 @@ while you are still collecting artwork, and swapping any single slot is one line
 project; used for the card thumbnail and the detail-page figure). Suggested size
 1200 x 820.
 
-**CEO portrait.** Edit the `image` field in `src/data/leadership.json`. Suggested
-size 760 x 950 (4:5 portrait).
+**Leadership portrait.** Edit `src/data/leadership.json`: put your principal's
+name in `name`, their words in `quote`, and a portrait in `image`. Suggested size
+760 x 950 (4:5 portrait). While `name` is empty the chapter credits the
+`attribution` line instead, so the page never invents a person.
 
-**Logo.** Already your artwork, in `public/assets/brand/`.
+**Logo.** The wordmark is drawn in the page, not uploaded: an inline mark plus
+type, in `src/site/layout.js` and styled under `.brand-lockup` in
+`public/css/styles.css`. To use your own logo file instead, put it in
+`public/assets/brand/` and swap the `<span class="brand-lockup">` block for an
+`<img>`; nothing else depends on it.
+
+**Site icon.** `npm run icons` redraws `favicon.svg`, `favicon.png` and
+`apple-touch-icon.png` from the same geometry, in `scripts/make-icons.js`.
+
+**Placeholder drawings.** `npm run artwork` redraws every placeholder in
+`public/assets/img/` from `scripts/make-artwork.js` — the page bands, the eight
+service sheets and the twelve project sheets. Change the palette at the top of
+that file and they all follow.
 
 Notes:
 
-- Names are matched without regard to case, so `Merkel3.png` and `merkel3.png`
+- Names are matched without regard to case, so `Meridian3.png` and `meridian3.png`
   both work. That matters: the deploy runs on Linux, where the two are
   different files.
 - Keep files under about 400 KB each. The underlay is fetched on every page, so
@@ -74,8 +88,10 @@ Notes:
   with no visible difference behind the scrim.
 - If a number is missing, its slot borrows another supplied photograph rather
   than dropping back to a placeholder drawing, so the site never mixes the two.
-- Everything sits behind a dark scrim, so pick images that stay readable when
-  darkened; a bright sky behind white type is the usual regret.
+- Only the hero sits over type, so that is the one to choose for calm space in
+  the middle; the chapter bands carry no words over them.
+- Photography is shown at a light desaturation (`grayscale(.25)`) so pictures
+  from different shoots sit together. Tune it on `.chapter-media img`.
 - `public/js/main.js` has a small `FALLBACK_PROJECTS` list used only if the API is
   unreachable. Update those paths too if you rename project image files (optional).
 - Run `npm run build` after adding files, or let Vercel do it on deploy. The build
@@ -165,7 +181,7 @@ come next.
 
 6. **Redeploy** so the function picks the variables up.
 
-The function logs `[merkel] storage: Supabase` on the next request. Confirm what the
+The function logs `[meridian] storage: Supabase` on the next request. Confirm what the
 running server can actually see with:
 
 ```bash
@@ -240,7 +256,7 @@ The page refreshes itself every few seconds while it is the visible tab.
    | ---- | ----- |
    | `RESEND_API_KEY` | the key you copied |
    | `FORM_TO` | where enquiries land (comma-separate for several) |
-   | `FORM_FROM` | `Merkel Website <onboarding@resend.dev>` to start |
+   | `FORM_FROM` | `Meridian Website <onboarding@resend.dev>` to start |
 
 4. **Redeploy.**
 
@@ -250,7 +266,7 @@ directly. Set `CHAT_NOTIFY=off` to keep enquiry emails but stop chat emails.
 
 For production, verify your domain in Resend (**Domains, Add Domain**, then add the
 DNS records) and change `FORM_FROM` to something like
-`Merkel Website <studio@yourdomain.com>`. Mail from a verified domain is far less
+`Meridian Website <studio@yourdomain.com>`. Mail from a verified domain is far less
 likely to be treated as spam.
 
 ---

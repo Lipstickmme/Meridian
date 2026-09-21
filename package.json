@@ -1,7 +1,7 @@
 {
-  "name": "merkel-constructions",
+  "name": "meridian-construction",
   "version": "1.0.0",
-  "description": "Merkel Constructions corporate website and API server",
+  "description": "Meridian Construction corporate website and API server",
   "main": "server.js",
   "type": "commonjs",
   "scripts": {
@@ -9,6 +9,8 @@
     "dev": "node scripts/build-pages.js && node --watch server.js",
     "build": "node scripts/build-pages.js",
     "prestart": "node scripts/build-pages.js",
+    "artwork": "node scripts/make-artwork.js",
+    "icons": "node scripts/make-icons.js",
     "check:vercel": "node scripts/check-vercel-upload.js",
     "test": "node test/api.test.js",
     "test:browser": "node test/browser.test.js && node test/fallback.test.js"
@@ -17,11 +19,12 @@
     "node": ">=18"
   },
   "keywords": [
+    "construction",
     "engineering",
     "express",
     "website"
   ],
-  "author": "Merkel Constructions",
+  "author": "Meridian Construction",
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {

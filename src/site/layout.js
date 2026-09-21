@@ -46,16 +46,17 @@ function contactForm(id = 'contact-form') {
               <option value="">Select</option>
               <option>Structural</option>
               <option>Civil &amp; Infrastructure</option>
-              <option>Mechanical</option>
+              <option>Mechanical &amp; Process</option>
               <option>Digital Engineering</option>
+              <option>Construction &amp; delivery</option>
               <option>Not sure yet</option>
             </select><div class="err" data-err="service"></div>
           </div>
         </div>
-        <div class="field"><label for="${id}-message">Project brief</label><textarea id="${id}-message" name="message" placeholder="What are you building, and where does it get hard?" required></textarea><div class="err" data-err="message"></div></div>
+        <div class="field"><label for="${id}-message">Project brief</label><textarea id="${id}-message" name="message" placeholder="What are you building, where is the site, and which part of it worries you?" required></textarea><div class="err" data-err="message"></div></div>
         <div class="honeypot" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off" /></label></div>
         <div class="form-status" data-form-status role="status" aria-live="polite"></div>
-        <button type="submit" class="btn" data-submit>Send enquiry <span class="arw">&rsaquo;</span></button>
+        <button type="submit" class="btn" data-submit>Send the brief <span class="arw">&rsaquo;</span></button>
       </form>`;
 }
 
@@ -67,16 +68,32 @@ function head({ title, description, noindex = false, styles = [] }) {
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>${title}</title>
   <meta name="description" content="${description}" />${noindex ? '\n  <meta name="robots" content="noindex, nofollow" />' : ''}
-  <meta name="theme-color" content="#fafaf9" />
-  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <meta name="theme-color" content="#0a1a24" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="/favicon.png" type="image/png" sizes="512x512" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/styles.css" />
   ${styles.map((href) => `<link rel="stylesheet" href="${href}" />`).join('\n  ')}
 </head>`;
+}
+
+/**
+ * The wordmark. Drawn rather than uploaded: an inline mark plus type in the
+ * site's own faces, so it is sharp at any size, takes the colour of whatever
+ * surface it sits on, and costs no image request. One definition, used by the
+ * nav and the footer, so the two can never drift apart.
+ */
+function brandLockup(size = 36) {
+  return `<span class="brand-lockup">
+      <svg class="brand-mark" viewBox="0 0 48 48" width="${size}" height="${size}" aria-hidden="true" focusable="false">
+        <path d="M8 38V12l16 13 16-13v26" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>
+        <path d="M4 43h40" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+      </svg>
+      <span class="brand-word"><b>Meridian</b><span>Construction</span></span>
+    </span>`;
 }
 
 function nav(active = '') {
@@ -84,9 +101,7 @@ function nav(active = '') {
     `<a href="${href}"${key === active ? ' class="is-active"' : ''}>${label}</a>`;
   return `
   <header class="nav" id="nav">
-    <a class="brand" href="/" aria-label="Merkel Constructions home">
-      <img class="brand-logo" src="/assets/brand/merkel-constructions-wordmark-light.png" alt="Merkel Constructions" width="1048" height="203" />
-    </a>
+    <a class="brand" href="/" aria-label="Meridian Construction home">${brandLockup()}</a>
     <nav class="nav-links" id="navlinks">
       ${link('/projects', 'Projects', 'projects')}
       ${link('/services', 'Services', 'services')}
@@ -105,8 +120,8 @@ function footer() {
   <footer class="footer">
     <div class="wrap footer-top">
       <div class="footer-brand">
-        <img class="brand-logo footer-logo" src="/assets/brand/merkel-constructions-wordmark-light.png" alt="Merkel Constructions" width="1048" height="203" />
-        <p>Engineering for buildings and infrastructure.</p>
+        <span class="brand footer-brand-mark">${brandLockup(34)}</span>
+        <p>Engineering and construction for the things that have to keep working.</p>
       </div>
       <div class="col">
         <h5>Company</h5>
@@ -122,7 +137,8 @@ function footer() {
       </div>
     </div>
     <div class="wrap footer-bottom">
-      <span>&copy; ${YEAR} Merkel Constructions B.V.</span>
+      <span>&copy; ${YEAR} Meridian Construction Group</span>
+      <span class="footer-note">Drawn, engineered and built in-house.</span>
     </div>
   </footer>`;
 }
@@ -139,15 +155,15 @@ function chatWidget() {
         <div class="chat-head-id">
           <span class="dot"></span>
           <div>
-            <strong>Merkel Studio</strong>
-            <small>Typically replies in a few minutes</small>
+            <strong>Meridian Construction</strong>
+            <small>An engineer usually answers within minutes</small>
           </div>
         </div>
         <button class="chat-min" id="chat-min" aria-label="Minimise chat">&minus;</button>
       </div>
       <div class="chat-log" id="chat-log"></div>
       <form class="chat-form" id="chat-form">
-        <input type="text" id="chat-input" name="text" placeholder="Ask us anything" autocomplete="off" maxlength="2000" />
+        <input type="text" id="chat-input" name="text" placeholder="Ask an engineer" autocomplete="off" maxlength="2000" />
         <button type="submit" aria-label="Send message">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
         </button>
@@ -194,4 +210,4 @@ function page(opts) {
   ].join('\n');
 }
 
-module.exports = { page, nav, footer, chatWidget, head, contactForm, underlay };
+module.exports = { page, nav, footer, chatWidget, head, contactForm, underlay, brandLockup };

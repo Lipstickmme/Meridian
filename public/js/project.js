@@ -1,7 +1,7 @@
 'use strict';
 
 (function () {
-  const M = window.MERKEL; if (!M) return;
+  const M = window.MERIDIAN; if (!M) return;
   const root = document.getElementById('project-detail');
   if (!root) return;
   const esc = M.esc;
@@ -18,7 +18,7 @@
   }
 
   function render(project, next) {
-    document.title = project.name + ' | Merkel Constructions';
+    document.title = project.name + ' | Meridian Construction';
     const facts = (project.facts || []).map((f) => `<div class="fact"><span class="k">${esc(f.k)}</span><span class="v">${esc(f.v)}</span></div>`).join('');
     const services = (project.services || []).map((s) => `<span>${esc(s)}</span>`).join('');
     root.innerHTML = `

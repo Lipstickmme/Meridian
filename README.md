@@ -1,6 +1,6 @@
-# Merkel Constructions
+# Meridian Construction
 
-Corporate website and API server for **Merkel Constructions**, a multidisciplinary
+Corporate website and API server for **Meridian Construction**, a multidisciplinary
 construction and engineering practice. A dependency-light Node/Express backend serves a
 multi-page frontend and a small JSON API that powers the content, plus a working
 live-chat endpoint.
@@ -49,7 +49,7 @@ all of it stops under `prefers-reduced-motion`.
 | 1 | Hero | Slideshow, the two calls to action, and the practice readout |
 | 2 | Capabilities | The four disciplines, from `/api/services` |
 | 3 | Practice | Counters for the numbers the studio is held to |
-| 4 | Leadership | The founding principal |
+| 4 | Leadership | How the practice is run, and who answers for it |
 | 5 | Selected work | Three featured projects, from `/api/projects` |
 | 6 | Contact | The enquiry form itself, not a link to one |
 
@@ -142,7 +142,7 @@ Two halves of one conversation:
 | GET    | `/api/projects?sector=`   | Project listing, optional sector filter       |
 | GET    | `/api/projects/:id`       | Single project + the next project             |
 | GET    | `/api/careers?team=`      | Open roles, optional team filter              |
-| GET    | `/api/leadership`         | Studio leadership (CEO)                        |
+| GET    | `/api/leadership`         | Practice leadership                            |
 | GET    | `/api/team`               | Studio principals                             |
 | POST   | `/api/contact`            | Submit an enquiry (validated + rate-limited)  |
 | GET    | `/api/site`               | The studio's contact details, editable from the desk |
@@ -188,24 +188,34 @@ npm run test:browser                    # CHROME_PATH=... if it is not on the de
 
 - Pages share one layout (`src/site/layout.js`) rendered to static HTML at build
   time, so the nav, footer and chat widget stay consistent with no client-side flash.
-- The site is light: off-white ground, ink type, one signal blue. Photography runs
-  at full strength, and where words sit over a picture the ground fades in behind
-  them rather than a dark sheet being laid over the picture. `--bg-rgb` is the one
-  token every one of those washes reads from, so the whole site's brightness is a
-  single edit.
-- The home hero runs a **photographic slideshow** (crossfade plus a slow Ken Burns
-  zoom) with clickable indicators; motion drops under `prefers-reduced-motion`.
+- The palette is four colours, set as `--meridian-ink` / `-paper` / `-signal` /
+  `-flare` at the foot of `public/css/styles.css`: deep marine, warm limestone,
+  a signal teal for anything that points, and brass for anything that measures
+  (scale bars, the practice readout, the rules under the section artwork).
+  Change them there and the whole site follows. Type is Archivo over Inter, with
+  IBM Plex Mono standing in for drawing annotation.
+- Imagery runs at full strength, and where words sit over a picture the ground
+  fades in behind them rather than a dark sheet being laid over the picture.
+  `--bg-rgb` is the one token every one of those washes reads from.
+- The home hero runs a **slideshow** of three plates (crossfade plus a slow Ken
+  Burns zoom) with clickable indicators; motion drops under
+  `prefers-reduced-motion`. Drop `meridian1` to `meridian3` in and they become
+  photographs with no other change.
 - Projects, careers and leadership content are rendered from the API, with embedded
   seed data as a fallback so pages never render empty.
-- The brand wordmark is a transparent PNG keyed from the supplied logo card, with
-  the navy in the mark preserved by un-premultiplying it off the paper colour
-  rather than flattening every ink pixel to black.
+- The wordmark is drawn rather than uploaded: an inline SVG mark plus type in the
+  site's own faces (`.brand-lockup`), so it stays sharp at any size, takes the
+  colour of the surface it sits on, and costs no image request. The same geometry
+  is rasterised into the site icon by `npm run icons`.
 - Headings reveal with transform and opacity, never a `clip-path` wipe: clipping a
   heading to nothing leaves it with no rendered area, and IntersectionObserver then
   never reports it visible, so the reveal never fires. A browser test asserts every
   `[data-reveal]` on the landing page ends up visible.
-- Section and project imagery lives in `public/assets/img/` as blueprint-style SVGs;
-  swap these for real photography when available.
+- Section, service and project imagery lives in `public/assets/img/` as
+  blueprint-style SVGs drawn by `npm run artwork`: a cyanotype ground, a survey
+  grid, a title block and the structure in thin white line. They are honest
+  placeholders rather than stock photographs of buildings this practice did not
+  build, and real photography takes over from them as a file drop.
 
 ## Deploying
 
@@ -263,19 +273,29 @@ without it, writes go to `/tmp` and do not survive between requests.
 
 ## Images
 
-Page-level artwork is a file drop, not a code change: put `merkel1` to `merkel5`
+Page-level artwork is a file drop, not a code change: put `meridian1` to `meridian5`
 into `public/assets/img/` (any of `.webp`, `.avif`, `.jpg`, `.jpeg`, `.png`) and the
 next build uses them. Names are matched without regard to case, and `.webp` wins
 when both a PNG and a WebP of the same name are present, so adding an optimised
-copy beside a heavy original is enough to serve it. `merkel1` becomes the underlay behind every page; the rest
+copy beside a heavy original is enough to serve it. `meridian1` becomes the underlay behind every page; the rest
 take a chapter each.
 
 `src/data/images.json` holds the mapping, where every slot names the file it prefers
 and the placeholder it falls back on, and `src/site/images.js` resolves them at build
 time. So the site never shows a broken image while artwork is still being collected,
 and the build prints which real files it picked up. Per-project images live in
-`src/data/projects.json` and the CEO portrait in `src/data/leadership.json`. See the
+`src/data/projects.json` and the leadership portrait in `src/data/leadership.json`,
+whose `name` is deliberately empty until a real principal fills it in: while it is,
+the leadership chapter credits the practice rather than inventing a person. See the
 table in [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md#step-1-add-your-images).
+
+Two generators draw what ships in the meantime. Both are deterministic, so
+re-running one changes nothing unless the source changed:
+
+```bash
+npm run artwork   # public/assets/img/*.svg  — page bands, services, projects
+npm run icons     # favicon.svg, favicon.png, apple-touch-icon.png
+```
 
 ## Configuration
 

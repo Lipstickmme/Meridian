@@ -32,23 +32,27 @@ function chapter({ id, label, image, tone = '', inner }) {
   </section>`;
 }
 
-/* ---------- Landing ---------- */
-const ceo = leadership[0];
+/* ---------- Landing ----------
+   The leadership chapter runs off the first entry in leadership.json. Until a
+   principal's own name is filled in there, the chapter credits the practice
+   rather than inventing a person, so nothing on the page is made up. */
+const principal = leadership[0];
+const principalName = principal.name || principal.attribution || 'Meridian Construction';
 
 const heroSection = `
-  <section class="hero chapter" id="top" data-chapter="Merkel">
+  <section class="hero chapter" id="top" data-chapter="Meridian">
     <div class="hero-slides" id="hero-slides" aria-hidden="true">
       ${images.heroSlides.map((src, i) => `<div class="slide${i === 0 ? ' is-active' : ''}" style="background-image:url('${src}')"></div>`).join('\n      ')}
     </div>
     <div class="hero-scrim" aria-hidden="true"></div>
     <div class="hero-inner wrap">
       <div class="hero-copy">
-        <span class="eyebrow hero-tag" data-reveal>Structural, civil, mechanical and digital engineering</span>
-        <h1 data-reveal>Built to stand.</h1>
-        <p class="hero-sub" data-reveal>Engineering for the buildings and infrastructure that have to last.</p>
+        <span class="eyebrow hero-tag" data-reveal>Structural &middot; civil &middot; mechanical &middot; digital &middot; delivery</span>
+        <h1 data-reveal>Engineered to hold.</h1>
+        <p class="hero-sub" data-reveal>We engineer and build the structures that have to work on the worst day they will ever see.</p>
         <div class="hero-actions" data-reveal>
-          <a href="/projects" class="btn">View projects <span class="arw">&rsaquo;</span></a>
-          <a href="#contact" class="btn ghost">Contact us <span class="arw">&rsaquo;</span></a>
+          <a href="/projects" class="btn">See the work <span class="arw">&rsaquo;</span></a>
+          <a href="#contact" class="btn ghost">Start a project <span class="arw">&rsaquo;</span></a>
         </div>
         <div class="hero-dots" id="hero-dots" role="tablist" aria-label="Background slides">
           ${images.heroSlides.map((src, i) => `<button class="dot${i === 0 ? ' is-active' : ''}" data-slide="${i}" aria-label="Slide ${i + 1}"></button>`).join('\n          ')}
@@ -56,9 +60,9 @@ const heroSection = `
       </div>
     </div>
     <div class="hero-readout" aria-label="Practice at a glance">
-      <div class="cell"><span class="k">Founded</span><span class="v">1998</span></div>
-      <div class="cell"><span class="k">Disciplines</span><span class="v">Four core</span></div>
-      <div class="cell"><span class="k">Projects delivered</span><span class="v">640+</span></div>
+      <div class="cell"><span class="k">Engineering since</span><span class="v">2003</span></div>
+      <div class="cell"><span class="k">Disciplines</span><span class="v">Eight</span></div>
+      <div class="cell"><span class="k">Projects delivered</span><span class="v">480+</span></div>
     </div>
   </section>`;
 
@@ -69,8 +73,8 @@ const capabilitiesSection = chapter({
   inner: `
       <div class="section-head" data-reveal>
         <span class="eyebrow">01 / Capabilities</span>
-        <h2>Four disciplines, one coordinated model.</h2>
-        <p>Structure, ground, systems and data are coordinated in one model, so nothing is lost in the gap between two sets of drawings.</p>
+        <h2>One model. Every discipline working inside it.</h2>
+        <p>Frame, ground, systems and site all resolve in the same model, so the gap between two sets of drawings is never where a problem gets to hide.</p>
       </div>
       <div class="services-grid" id="services-grid"></div>`,
 });
@@ -83,14 +87,14 @@ const metricsSection = chapter({
   inner: `
       <div class="section-head centred" data-reveal>
         <span class="eyebrow">02 / The practice</span>
-        <h2>Twenty seven years of load paths.</h2>
-        <p>Figures our clients can check against the projects they name.</p>
+        <h2>Twenty three years of load paths.</h2>
+        <p>Numbers a client can hold us to, against projects they can go and stand in.</p>
       </div>
       <div class="stats-grid" data-reveal>
-        <div class="stat"><div class="num" data-count="640" data-suffix="+">0</div><div class="lbl">Projects delivered</div></div>
-        <div class="stat"><div class="num" data-count="27" data-suffix="">0</div><div class="lbl">Years in practice</div></div>
-        <div class="stat"><div class="num"><em data-count="22" data-suffix="%">0</em></div><div class="lbl">Average material saved</div></div>
-        <div class="stat"><div class="num" data-count="14" data-suffix="">0</div><div class="lbl">Countries built in</div></div>
+        <div class="stat"><div class="num" data-count="480" data-suffix="+">0</div><div class="lbl">Projects delivered</div></div>
+        <div class="stat"><div class="num" data-count="23" data-suffix="">0</div><div class="lbl">Years in practice</div></div>
+        <div class="stat"><div class="num"><em data-count="18" data-suffix="%">0</em></div><div class="lbl">Average material saved</div></div>
+        <div class="stat"><div class="num" data-count="11" data-suffix="">0</div><div class="lbl">Countries built in</div></div>
       </div>`,
 });
 
@@ -100,15 +104,15 @@ const leadershipSection = chapter({
   inner: `
       <div class="leadership">
         <div class="leadership-media" data-reveal>
-          <img src="${ceo.image}" alt="Portrait of ${ceo.name}" loading="lazy" />
-          <span class="leadership-badge">${ceo.role}</span>
+          <img src="${principal.image}" alt="${principal.name ? `Portrait of ${principal.name}` : 'Meridian Construction, principal-led delivery'}" loading="lazy" />
+          <span class="leadership-badge">${principal.role}</span>
         </div>
         <div class="leadership-body" data-reveal>
           <span class="eyebrow">03 / Leadership</span>
-          <blockquote>&ldquo;${ceo.quote}&rdquo;</blockquote>
-          <h3>${ceo.name}</h3>
-          <p>${ceo.bio}</p>
-          <a href="/careers" class="link-arrow">Join the studio <span class="arw">&rsaquo;</span></a>
+          <blockquote>&ldquo;${principal.quote}&rdquo;</blockquote>
+          <h3>${principalName}</h3>
+          <p>${principal.bio}</p>
+          <a href="/careers" class="link-arrow">Work with us <span class="arw">&rsaquo;</span></a>
         </div>
       </div>`,
 });
@@ -121,8 +125,8 @@ const workSection = chapter({
       <div class="section-head with-action" data-reveal>
         <div>
           <span class="eyebrow">04 / Selected work</span>
-          <h2>Recent projects.</h2>
-          <p>Four commissions from the last three years.</p>
+          <h2>Work you can go and stand in.</h2>
+          <p>Three commissions from the last three years. The rest are on the projects page.</p>
         </div>
         <a href="/projects" class="btn ghost">All projects <span class="arw">&rsaquo;</span></a>
       </div>
@@ -137,10 +141,12 @@ const contactSection = chapter({
       <div class="contact-grid">
         <div class="contact-info" data-reveal>
           <span class="eyebrow">05 / Start a project</span>
-          <h2>Bring us the hard part.</h2>
-          <p class="contact-lede">Send us the drawing set, the constraint you keep running into, or a paragraph on the site. A principal engineer reads it and replies within two working days.</p>
+          <h2>Start with the hard part.</h2>
+          <p class="contact-lede">Send the drawing set, the constraint you keep running into, or one paragraph about the site. A principal engineer reads it and answers within two working days &mdash; not a form receipt, an answer.</p>
           <div class="contact-detail">
             <div class="row"><div class="k">Email</div><div class="val"><a href="mailto:${site.email}" data-site="email">${site.email}</a></div></div>
+            <div class="row" data-site-row="phone" hidden><div class="k">Telephone</div><div class="val"><a href="tel:" data-site="phone"></a></div></div>
+            <div class="row" data-site-row="address" hidden><div class="k">Studio</div><div class="val" data-site="address"></div></div>
           </div>
         </div>
         ${contactForm('home-contact-form')}
@@ -159,7 +165,7 @@ const indexContent = [
 
 /* ---------- Projects listing ---------- */
 const projectsContent = `
-  ${pageHeader({ eyebrow: 'Selected work', title: 'Projects.', sub: 'Towers, bridges, industrial plant and transit, from first scheme to handover.', image: images.projectsHeader })}
+  ${pageHeader({ eyebrow: 'Selected work', title: 'Projects.', sub: 'Towers, crossings, process plant and transit &mdash; from the first scheme sketch to the day the operator takes the keys.', image: images.projectsHeader })}
   <section class="section-pad">
     <div class="wrap">
       <div class="proj-filters" id="proj-filters" data-reveal></div>
@@ -175,7 +181,7 @@ const projectContent = `
 
 /* ---------- Services listing ---------- */
 const servicesContent = `
-  ${pageHeader({ eyebrow: 'What we do', title: 'Services.', sub: 'Eight disciplines under one roof, from the ground investigation to the day the plant runs.', image: images.capabilities })}
+  ${pageHeader({ eyebrow: 'What we do', title: 'Services.', sub: 'Eight disciplines under one roof, from the ground investigation to the commissioning record.', image: images.capabilities })}
   <section class="section-pad">
     <div class="wrap">
       <div class="service-index" id="service-index"></div>
@@ -190,15 +196,15 @@ const serviceContent = `
 
 /* ---------- Apply ---------- */
 const applyContent = `
-  ${pageHeader({ eyebrow: 'Careers', title: 'Apply.', sub: 'One form, read by the people you would work with. We reply to everyone.', image: images.metrics })}
+  ${pageHeader({ eyebrow: 'Careers', title: 'Apply.', sub: 'One form, read by the engineers you would sit with. Everyone gets an answer.', image: images.metrics })}
   <section class="section-pad">
     <div class="wrap contact-grid">
       <div class="contact-info" data-reveal>
         <h2 id="apply-role-title">Speculative application</h2>
-        <p class="contact-lede" id="apply-role-sub">Tell us what you have built and where you want to take it next.</p>
+        <p class="contact-lede" id="apply-role-sub">Tell us what you have built, and what you want to be building in five years.</p>
         <div class="contact-detail" id="apply-role-meta"></div>
         <div class="contact-note">
-          <p>We read every application ourselves. If your experience does not line up with an open role we will say so, and say what would change that.</p>
+          <p>We read every application ourselves. If your experience does not line up with an open role we will say so plainly, and say what would change that.</p>
         </div>
         <a class="link-arrow" href="/careers">All open roles <span class="arw">&rsaquo;</span></a>
       </div>
@@ -226,7 +232,7 @@ const applyContent = `
           <div class="err" data-err="roleId"></div>
         </div>
         <div class="field"><label for="apply-portfolio">Portfolio or profile <span class="opt">(optional)</span></label><input type="url" id="apply-portfolio" name="portfolio" placeholder="https://" /><div class="err" data-err="portfolio"></div></div>
-        <div class="field"><label for="apply-message">What have you worked on?</label><textarea id="apply-message" name="message" placeholder="The projects you would want us to ask about, and what you did on them." required></textarea><div class="err" data-err="message"></div></div>
+        <div class="field"><label for="apply-message">What have you worked on?</label><textarea id="apply-message" name="message" placeholder="The projects you would want us to ask about, and the part of each one that was yours." required></textarea><div class="err" data-err="message"></div></div>
         <div class="honeypot" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off" /></label></div>
         <div class="form-status" id="apply-status" role="status" aria-live="polite"></div>
         <button type="submit" class="btn" id="apply-submit">Send application <span class="arw">&rsaquo;</span></button>
@@ -236,14 +242,14 @@ const applyContent = `
 
 /* ---------- Careers ---------- */
 const careersContent = `
-  ${pageHeader({ eyebrow: 'Careers', title: 'Build things that stand.', sub: 'We are a studio of senior engineers who stay on the work rather than moving to management. If that is the career you want, write to us.', image: images.careersHeader })}
+  ${pageHeader({ eyebrow: 'Careers', title: 'Stay on the work.', sub: 'Meridian is a practice of engineers who never left the drawing board for a management floor. If that is the career you want, write to us.', image: images.careersHeader })}
   <section class="section-pad">
     <div class="wrap careers-intro" data-reveal>
       <div>
-        <span class="eyebrow">Life at Merkel</span>
-        <h2>Engineering as a design discipline.</h2>
+        <span class="eyebrow">Life at Meridian</span>
+        <h2>Engineering treated as a design discipline.</h2>
       </div>
-      <p>Our engineers join a project at the first sketch rather than the final check, so the person who sizes a member is in the room when the idea is still being drawn. Juniors sit with principals and take their own packages early. We work across borders on landmark structures, and we buy the tools our people ask for, from parametric modelling to digital twins.</p>
+      <p>Our engineers join a project at the first sketch rather than the final check, so whoever sizes a member is in the room while the idea is still being drawn. Graduates sit beside principals and carry their own packages inside a year. We build across eleven countries, we send people to site to watch their own details go in, and we buy the tools our engineers ask for, from parametric modelling through to the digital twin the operator keeps.</p>
     </div>
   </section>
   <section class="section-pad alt">
@@ -251,7 +257,7 @@ const careersContent = `
       <div class="section-head" data-reveal>
         <span class="eyebrow">Open roles</span>
         <h2>Where we are hiring.</h2>
-        <p>If your discipline is not listed, write to us anyway and say what you would want to work on.</p>
+        <p>If your discipline is not on the list, write anyway and tell us what you would want to be working on.</p>
       </div>
       <div class="roles" id="roles"></div>
       <div class="roles-cta" data-reveal>
@@ -262,16 +268,21 @@ const careersContent = `
 
 /* ---------- Contact ---------- */
 const contactContent = `
-  ${pageHeader({ eyebrow: 'Start a project', title: 'Contact us.', sub: 'Send us the drawing set, the constraint you keep running into, or a paragraph on the site. A principal engineer replies within two working days.', image: images.contactHeader })}
+  ${pageHeader({ eyebrow: 'Start a project', title: 'Talk to an engineer.', sub: 'Send the drawing set, the constraint you keep running into, or one paragraph about the site. A principal engineer answers within two working days.', image: images.contactHeader })}
   <section class="section-pad">
     <div class="wrap contact-grid">
       <div class="contact-info" data-reveal>
         <div class="contact-detail">
           <div class="row"><div class="k">Email</div><div class="val"><a href="mailto:${site.email}" data-site="email">${site.email}</a></div></div>
+          <!-- Address and telephone are blank until the desk sets them under
+               Settings, so each row appears only once there is something to
+               put in it rather than showing an empty label. -->
+          <div class="row" data-site-row="phone" hidden><div class="k">Telephone</div><div class="val"><a href="tel:" data-site="phone"></a></div></div>
+          <div class="row" data-site-row="address" hidden><div class="k">Studio</div><div class="val" data-site="address"></div></div>
           <div class="row"><div class="k">Hours</div><div class="val" data-site="hours">${site.hours}</div></div>
         </div>
         <div class="contact-note">
-          <p>Every enquiry lands on the studio desk and a principal engineer picks it up. If you would rather talk now, the live chat in the corner reaches the same people.</p>
+          <p>Every enquiry lands on the studio desk and a principal engineer picks it up. If you would rather talk now, the live chat in the corner reaches the same desk and the same people.</p>
         </div>
       </div>
 
@@ -288,7 +299,7 @@ const adminContent = `
 
     <section class="admin-gate" id="admin-unconfigured" hidden>
       <div class="admin-card">
-        <span class="eyebrow">Merkel / Studio desk</span>
+        <span class="eyebrow">Meridian / Studio desk</span>
         <h1>Backend not connected.</h1>
         <div id="admin-missing"></div>
         <p class="admin-note">Set it in the deployment's environment variables and reload. Nothing needs rebuilding, but the change only reaches a running deployment after a redeploy.</p>
@@ -299,9 +310,9 @@ const adminContent = `
 
     <section class="admin-gate" id="admin-login" hidden>
       <form class="admin-card" id="login-form" novalidate>
-        <span class="eyebrow">Merkel / Studio desk</span>
+        <span class="eyebrow">Meridian / Studio desk</span>
         <h1>Staff sign in.</h1>
-        <p class="admin-note" id="login-note">Enquiries, live chat and studio mail in one place.</p>
+        <p class="admin-note" id="login-note">Enquiries, applications, live chat and studio mail on one desk.</p>
         <div class="field"><label for="login-email">Email</label><input type="email" id="login-email" name="email" autocomplete="username" required /></div>
         <div class="field"><label for="login-password">Password</label><input type="password" id="login-password" name="password" autocomplete="current-password" required /></div>
         <div class="err" id="login-error" role="alert"></div>
@@ -313,7 +324,11 @@ const adminContent = `
     <div class="admin-shell" id="admin-shell" hidden>
       <header class="admin-bar">
         <a class="admin-brand" href="/">
-          <img src="/assets/brand/merkel-constructions-wordmark.png" alt="Merkel Constructions" width="1048" height="203" />
+          <svg class="brand-mark" viewBox="0 0 48 48" width="28" height="28" aria-hidden="true" focusable="false">
+            <path d="M8 38V12l16 13 16-13v26" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>
+            <path d="M4 43h40" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+          </svg>
+          <b class="admin-brand-word">Meridian</b>
           <span>Studio desk</span>
         </a>
         <div class="admin-bar-end">
@@ -373,23 +388,23 @@ const notFoundContent = `
     <div class="wrap">
       <span class="eyebrow">Error 404</span>
       <h1>Off the drawings.</h1>
-      <p>This page has moved or never existed. The links below will get you back.</p>
-      <div class="hero-actions"><a href="/" class="btn">Back to home <span class="arw">&rsaquo;</span></a><a href="/projects" class="btn ghost">View projects</a></div>
+      <p>This page has moved, or it was never issued. The links below put you back on a sheet that exists.</p>
+      <div class="hero-actions"><a href="/" class="btn">Back to home <span class="arw">&rsaquo;</span></a><a href="/projects" class="btn ghost">See the work</a></div>
     </div>
   </section>`;
 
 module.exports = [
-  { file: 'index.html', active: '', bodyClass: 'page-home', title: 'Merkel Constructions', description: 'Merkel Constructions is a multidisciplinary consultancy delivering structural, civil, mechanical and digital engineering for buildings and infrastructure.', content: indexContent },
-  { file: 'projects.html', active: 'projects', bodyClass: 'page-projects', title: 'Projects | Merkel Constructions', description: 'Selected engineering projects: towers, bridges, industrial plant and transit.', content: projectsContent, extraScripts: ['/js/projects.js'] },
-  { file: 'project.html', active: 'projects', bodyClass: 'page-project', title: 'Project | Merkel Constructions', description: 'Project detail.', content: projectContent, extraScripts: ['/js/project.js'] },
-  { file: 'services.html', active: 'services', bodyClass: 'page-services', title: 'Services | Merkel Constructions', description: 'Structural, civil, mechanical, digital, steel, groundworks, plant construction and commissioning.', content: servicesContent, extraScripts: ['/js/services.js'] },
-  { file: 'service.html', active: 'services', bodyClass: 'page-service', title: 'Service | Merkel Constructions', description: 'Service detail.', content: serviceContent, extraScripts: ['/js/service.js'] },
-  { file: 'apply.html', active: 'careers', bodyClass: 'page-apply', title: 'Apply | Merkel Constructions', description: 'Apply to Merkel Constructions. One form, read by the people you would work with.', content: applyContent, extraScripts: ['/js/apply.js'] },
-  { file: 'careers.html', active: 'careers', bodyClass: 'page-careers', title: 'Careers | Merkel Constructions', description: 'Open engineering roles at Merkel Constructions across structural, civil, mechanical and digital teams.', content: careersContent, extraScripts: ['/js/careers.js'] },
-  { file: 'contact.html', active: 'contact', bodyClass: 'page-contact', title: 'Contact us | Merkel Constructions', description: 'Contact Merkel Constructions to start a project. A principal engineer replies within two working days.', content: contactContent },
+  { file: 'index.html', active: '', bodyClass: 'page-home', title: 'Meridian Construction | Engineered to hold', description: 'Meridian Construction is an engineer-led construction practice: structural, civil, mechanical and digital engineering, plus delivery on site, for buildings and infrastructure.', content: indexContent },
+  { file: 'projects.html', active: 'projects', bodyClass: 'page-projects', title: 'Projects | Meridian Construction', description: 'Selected Meridian Construction projects: towers, crossings, process plant, transit and industrial delivery.', content: projectsContent, extraScripts: ['/js/projects.js'] },
+  { file: 'project.html', active: 'projects', bodyClass: 'page-project', title: 'Project | Meridian Construction', description: 'Project detail.', content: projectContent, extraScripts: ['/js/project.js'] },
+  { file: 'services.html', active: 'services', bodyClass: 'page-services', title: 'Services | Meridian Construction', description: 'Eight disciplines: structural, civil, mechanical, digital engineering, steel, groundworks, plant construction and commissioning.', content: servicesContent, extraScripts: ['/js/services.js'] },
+  { file: 'service.html', active: 'services', bodyClass: 'page-service', title: 'Service | Meridian Construction', description: 'Service detail.', content: serviceContent, extraScripts: ['/js/service.js'] },
+  { file: 'apply.html', active: 'careers', bodyClass: 'page-apply', title: 'Apply | Meridian Construction', description: 'Apply to Meridian Construction. One form, read by the engineers you would sit with.', content: applyContent, extraScripts: ['/js/apply.js'] },
+  { file: 'careers.html', active: 'careers', bodyClass: 'page-careers', title: 'Careers | Meridian Construction', description: 'Open engineering and site roles at Meridian Construction, across structural, civil, mechanical and digital teams.', content: careersContent, extraScripts: ['/js/careers.js'] },
+  { file: 'contact.html', active: 'contact', bodyClass: 'page-contact', title: 'Contact us | Meridian Construction', description: 'Contact Meridian Construction to start a project. A principal engineer answers within two working days.', content: contactContent },
   { file: 'admin.html', active: '', bodyClass: 'page-admin', bare: true, noindex: true,
     styles: ['/css/admin.css'],
-    title: 'Studio desk | Merkel Constructions', description: 'Staff dashboard.',
+    title: 'Studio desk | Meridian Construction', description: 'Staff dashboard.',
     content: adminContent, extraScripts: ['/js/supabase-lite.js', '/js/admin.js'] },
-  { file: '404.html', active: '', bodyClass: 'page-404', title: 'Page not found | Merkel Constructions', description: 'Page not found.', content: notFoundContent },
+  { file: '404.html', active: '', bodyClass: 'page-404', title: 'Page not found | Meridian Construction', description: 'Page not found.', content: notFoundContent },
 ];

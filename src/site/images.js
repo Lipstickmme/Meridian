@@ -5,7 +5,7 @@
  *
  * Every slot names the file it would rather have and the placeholder it uses
  * until that file exists. So adding real photography is a file drop, not a
- * code change: put merkel1 .. merkel5 into public/assets/img/ in any common
+ * code change: put meridian1 .. meridian5 into public/assets/img/ in any common
  * format and the next build picks them up.
  */
 
@@ -25,7 +25,7 @@ const found = [];
 /**
  * Every candidate file, indexed by lower-cased name.
  *
- * Case-insensitive on purpose: an upload named Merkel3.png has to be found on
+ * Case-insensitive on purpose: an upload named Meridian3.png has to be found on
  * Linux, where the deploy runs, not only on the machine it was named on.
  */
 const index = new Map();

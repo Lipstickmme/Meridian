@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="660" viewBox="0 0 1920 660" preserveAspectRatio="xMidYMid slice" role="img" aria-label="MERIDIAN · SITE SURVEY">
+  <defs>
+    <linearGradient id="ground" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#0c1f2b"/><stop offset="0.55" stop-color="#081722"/><stop offset="1" stop-color="#050e15"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="rgba(231,237,239,0.12)" stroke-width="1"/>
+    </pattern>
+    <pattern id="grid-fine" width="8" height="8" patternUnits="userSpaceOnUse">
+      <path d="M8 0H0V8" fill="none" stroke="rgba(231,237,239,0.05)" stroke-width="0.6"/>
+    </pattern>
+    <linearGradient id="wash" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3f9cb4" stop-opacity="0.42"/><stop offset="1" stop-color="#3f9cb4" stop-opacity="0.04"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="660" fill="url(#ground)"/>
+  <rect width="1920" height="660" fill="url(#grid-fine)"/>
+  <rect width="1920" height="660" fill="url(#grid)"/>
+  <rect x="16" y="16" width="1888" height="628" fill="none" stroke="rgba(231,237,239,0.22)" stroke-width="1"/>
+  <line x1="16" y1="598" x2="1904" y2="598" stroke="rgba(231,237,239,0.22)" stroke-width="1"/>
+  <text x="34" y="630" fill="#e7edef" font-family="'IBM Plex Mono',monospace" font-size="16" letter-spacing="2.5" opacity="0.88">MERIDIAN · SITE SURVEY</text>
+  <text x="1886" y="630" text-anchor="end" fill="#d9a441" font-family="'IBM Plex Mono',monospace" font-size="13" letter-spacing="2" opacity="0.9">MERIDIAN</text>
+  <text x="34" y="46" fill="#3f9cb4" font-family="'IBM Plex Mono',monospace" font-size="13" letter-spacing="3">GA-00</text>
+  <text x="1886" y="46" text-anchor="end" fill="rgba(231,237,239,0.22)" font-family="'IBM Plex Mono',monospace" font-size="12" letter-spacing="2">SCALE 1:2500</text>
+  <rect x="787.4" y="299.5" width="265.1" height="184.9" fill="url(#wash)" stroke="#e7edef" stroke-width="2"/>
+  <path d="M787.4 299.5L1052.5 484.4" fill="none" stroke="#e7edef" stroke-width="1" opacity="0.22"/>
+  <rect x="1247.7" y="204.9" width="200.1" height="168" fill="none" stroke="#e7edef" stroke-width="2"/>
+  <path d="M1247.7 204.9L1447.9 372.8" fill="none" stroke="#e7edef" stroke-width="1" opacity="0.22"/>
+  <rect x="923.2" y="198.5" width="272.2" height="178.3" fill="none" stroke="#e7edef" stroke-width="2"/>
+  <path d="M923.2 198.5L1195.4 376.8" fill="none" stroke="#e7edef" stroke-width="1" opacity="0.22"/>
+  <rect x="525.3" y="277.7" width="208.7" height="161" fill="url(#wash)" stroke="#e7edef" stroke-width="2"/>
+  <path d="M525.3 277.7L734 438.8" fill="none" stroke="#e7edef" stroke-width="1" opacity="0.22"/>
+  <rect x="649" y="112.5" width="212.8" height="96.5" fill="none" stroke="#e7edef" stroke-width="2"/>
+  <path d="M649 112.5L861.8 208.9" fill="none" stroke="#e7edef" stroke-width="1" opacity="0.22"/>
+  <rect x="1066.8" y="207.3" width="243.3" height="218.9" fill="none" stroke="#e7edef" stroke-width="2"/>
+  <path d="M1066.8 207.3L1310.2 426.2" fill="none" stroke="#e7edef" stroke-width="1" opacity="0.22"/>
+  <path d="M0 132C576 88.8 1344 186.3 1920 122" fill="none" stroke="#e7edef" stroke-width="1" opacity="0.3"/>
+  <path d="M0 224.4C576 158.9 1344 285.8 1920 214.4" fill="none" stroke="#e7edef" stroke-width="1" opacity="0.3"/>
+  <path d="M0 316.8C576 247.5 1344 385.3 1920 306.8" fill="none" stroke="#e7edef" stroke-width="1" opacity="0.3"/>
+  <path d="M0 409.2C576 359.1 1344 475.6 1920 399.2" fill="none" stroke="#e7edef" stroke-width="1" opacity="0.3"/>
+  <path d="M0 501.6C576 443.9 1344 554.3 1920 491.6" fill="none" stroke="#e7edef" stroke-width="1" opacity="0.3"/>
+  <path d="M0 514.8C576 462 1190.4 580.8 1920 475.2" fill="none" stroke="#d9a441" stroke-width="3" stroke-linecap="round"/>
+  <path d="M153.6 66v475.2" fill="none" stroke="#3f9cb4" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="1728" cy="105.6" r="26" fill="none" stroke="#e7edef" stroke-width="1.6"/>
+  <path d="M1728 71.6v68" fill="none" stroke="#d9a441" stroke-width="2" stroke-linecap="round"/>
+</svg>
