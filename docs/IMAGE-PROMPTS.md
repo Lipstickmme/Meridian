@@ -7,10 +7,14 @@ than the glossy stock look — real light, real dirt, real PPE, imperfect framin
 
 ## How to use it
 
+**Every prompt below is complete.** Copy one block, paste it straight into the
+image tool, put the negative prompt in the negative field, and go — the camera
+settings, the lighting, the house style and the aspect ratio are already in it.
+
 1. Generate the image from the prompt.
 2. Save it at the **filename given in the prompt heading**, under `public/assets/`.
-3. Run `npm run adopt-photos` (the page-level slots need no step 3 — they are
-   picked up by the build automatically).
+3. Run `npm run adopt-photos` (the page-level slots skip this — the build picks
+   them up on its own).
 4. Run `npm run build`.
 
 | What | Where it goes | Picked up by |
@@ -26,23 +30,11 @@ page-level slots are fetched on every visit.
 
 ---
 
-## The house style block
+## The negative prompt
 
-Append this to **every** prompt. It is what keeps the set looking like one
-photographer with one camera rather than a stock library.
-
-> Documentary construction photography, real working site, natural available
-> light only. Full-frame digital capture, native ISO grain retained, colour
-> negative response with slightly muted mid-tones and honest neutral whites. No
-> HDR, no glossy retouching, no orange-and-teal grade, no lens flare, no bokeh
-> balls. PPE is worn-in: scuffed hard hats, faded hi-vis with dust on the
-> shoulders, gloves with grease on them, boots with dried mud. Surfaces show
-> weld spatter, chalk layout marks, rust bloom, tape residue, drips. Framing is
-> candid and slightly imperfect — a foreground element cutting into the frame, a
-> horizon a degree off, someone mid-task and not looking at the camera. No text,
-> no logos, no watermark.
-
-### Negative prompt
+The one thing that is not inside each prompt, because most tools take it in a
+field of its own. Paste it every time — it is what keeps the set out of stock
+photography territory.
 
 > stock photo, corporate brochure, glossy, plastic skin, staged handshake,
 > thumbs up, arms folded smiling at camera, pristine hi-vis, clean boots, studio
@@ -51,19 +43,25 @@ photographer with one camera rather than a stock library.
 > text, brand logos, extra fingers, warped hands, impossible rigging, floating
 > loads, people standing under suspended loads
 
-### Camera recipes (pick the one named in each prompt)
+If your tool has no negative field, append it to the prompt as
+`Avoid: <the list above>`.
 
-| Recipe | Setup |
-| ------ | ----- |
-| **A — wide exterior** | 24 mm at f/8, 1/500, ISO 100, overcast or an hour before sunset |
-| **B — working detail** | 50 mm at f/2, 1/160, ISO 800, whatever light is falling in |
-| **C — compressed telephoto** | 135 mm at f/4, 1/640, ISO 200, shot from distance across the site |
-| **D — night / turnaround** | 35 mm at f/1.8, 1/60, ISO 3200, mixed sodium, LED task light and moonlight |
-| **E — underwater** | 20 mm in an underwater housing, f/5.6, 1/125, ISO 1600, two video lights at low power, green-blue water column with visible particulate and natural light falloff |
-| **F — portrait** | 85 mm at f/2, 1/250, ISO 400, north-facing window or open shade |
+## The six camera set-ups
 
-Aspect ratios: page slots and project heroes **3:2 landscape**; gallery frames
-**16:10**; the leadership portrait **4:5**.
+Reference only — the right one is already written into each prompt. Swap one for
+another if you want a different read of the same scene.
+
+| Set-up | Written into the prompt as |
+| ------ | -------------------------- |
+| **A — wide exterior** | 24 mm at f/8, 1/500s, ISO 100, overcast or an hour before sunset, deep focus |
+| **B — working detail** | 50 mm at f/2, 1/160s, ISO 800, available light, shallow depth of field |
+| **C — compressed telephoto** | 135 mm at f/4, 1/640s, ISO 200, shot from across the site |
+| **D — night / turnaround** | 35 mm at f/1.8, 1/60s, ISO 3200, sodium and LED task light, uncorrected |
+| **E — underwater** | 20 mm in a housing at f/5.6, 1/125s, ISO 1600, two video lights, particulate, falloff to black |
+| **F — portrait** | 85 mm at f/2, 1/250s, ISO 400, open shade, no fill flash |
+
+Aspect ratios are in each prompt: page slots and project heroes **3:2**, gallery
+frames **16:10**, the leadership portrait **4:5**.
 
 ---
 
@@ -73,44 +71,87 @@ These five carry the landing page and the section headers. `meridian1` is the
 one to get right — it sits behind the whole site.
 
 ### `public/assets/img/meridian1.jpg` — site underlay and first hero slide
-> Recipe A. Wide establishing shot of a large American construction site at the
-> end of the working day: a steel frame six floors up, a tower crane jib across
-> the top third of the frame, stacked steel and timber dunnage in the middle
+> Wide establishing shot of a large American construction site at the end of
+> the working day: a steel frame six floors up, a tower crane jib across the
+> top third of the frame, stacked steel and timber dunnage in the middle
 > ground, a haul road cutting left to right with tyre-printed mud. Low sun
-> behind thin coastal cloud, long soft shadows, dust hanging in the light. Calm
-> empty space in the middle of the frame where a headline will sit. 3:2.
+> behind thin coastal cloud, long soft shadows, dust hanging in the light.
+> Calm empty space in the middle of the frame where a headline will sit. Shot
+> on a full-frame camera, 24 mm lens at f/8, 1/500s, ISO 100, overcast
+> daylight or an hour before sunset, deep focus front to back. Documentary
+> construction photography, real working site, natural available light, native
+> grain retained, muted mid-tones, honest neutral whites. Worn-in PPE, dusty
+> hi-vis, greasy gloves, muddy boots; weld spatter, chalk marks and rust bloom
+> on the surfaces. Candid imperfect framing, nobody posing for the camera. No
+> HDR, no gloss, no lens flare, no text, no logos, no watermark. Aspect ratio
+> 3:2.
 
 ### `public/assets/img/meridian2.jpg` — capabilities chapter and second hero slide
-> Recipe A. Two trades working in the same volume: a steel erector on a beam
-> bolting a connection while, below, a concrete crew screeds a deck pour. Shot
-> from an adjacent floor slab through the frame, so columns and rebar frame the
-> view. Flat overcast light, wet concrete sheen, chalk lines on the deck. 3:2.
+> Two trades working in the same volume: a steel erector on a beam bolting a
+> connection while, below, a concrete crew screeds a deck pour. Shot from an
+> adjacent floor slab through the frame, so columns and rebar frame the view.
+> Flat overcast light, wet concrete sheen, chalk lines on the deck. Shot on a
+> full-frame camera, 24 mm lens at f/8, 1/500s, ISO 100, overcast daylight or
+> an hour before sunset, deep focus front to back. Documentary construction
+> photography, real working site, natural available light, native grain
+> retained, muted mid-tones, honest neutral whites. Worn-in PPE, dusty hi-vis,
+> greasy gloves, muddy boots; weld spatter, chalk marks and rust bloom on the
+> surfaces. Candid imperfect framing, nobody posing for the camera. No HDR, no
+> gloss, no lens flare, no text, no logos, no watermark. Aspect ratio 3:2.
 
 ### `public/assets/img/meridian3.jpg` — practice chapter, careers header, third hero slide
-> Recipe B. Four engineers around a drawing laid on a plywood table in a site
-> trailer, one pointing at a detail with a pen, another holding a tablet showing
-> a 3D model, coffee cups and a hard hat on the corner of the table. Daylight
-> through a dusty window on the left, fluorescent tube overhead, papers curling
-> at the edges. Nobody looking at the camera. 3:2.
+> Four engineers around a drawing laid on a plywood table in a site trailer,
+> one pointing at a detail with a pen, another holding a tablet showing a 3D
+> model, coffee cups and a hard hat on the corner of the table. Daylight
+> through a dusty window on the left, fluorescent tube overhead, papers
+> curling at the edges. Nobody looking at the camera. Shot on a full-frame
+> camera, 50 mm lens at f/2, 1/160s, ISO 800, available light only, shallow
+> depth of field falling off behind the subject. Documentary construction
+> photography, real working site, natural available light, native grain
+> retained, muted mid-tones, honest neutral whites. Worn-in PPE, dusty hi-vis,
+> greasy gloves, muddy boots; weld spatter, chalk marks and rust bloom on the
+> surfaces. Candid imperfect framing, nobody posing for the camera. No HDR, no
+> gloss, no lens flare, no text, no logos, no watermark. Aspect ratio 3:2.
 
 ### `public/assets/img/meridian4.jpg` — selected work chapter and projects header
-> Recipe C. Compressed telephoto of a finished mid-rise commercial building
-> against a working port skyline: cranes, stacked containers and a bridge span
-> layered behind it by the long lens. Late-afternoon haze, real atmospheric
-> perspective, no sun star. 3:2.
+> Compressed telephoto of a finished mid-rise commercial building against a
+> working port skyline: cranes, stacked containers and a bridge span layered
+> behind it by the long lens. Late-afternoon haze, real atmospheric
+> perspective, no sun star. Shot on a full-frame camera, 135 mm lens at f/4,
+> 1/640s, ISO 200, taken from across the site so the background compresses
+> onto the subject. Documentary construction photography, real working site,
+> natural available light, native grain retained, muted mid-tones, honest
+> neutral whites. Worn-in PPE, dusty hi-vis, greasy gloves, muddy boots; weld
+> spatter, chalk marks and rust bloom on the surfaces. Candid imperfect
+> framing, nobody posing for the camera. No HDR, no gloss, no lens flare, no
+> text, no logos, no watermark. Aspect ratio 3:2.
 
 ### `public/assets/img/meridian5.jpg` — contact chapter and contact header
-> Recipe B. A site office desk at the end of a shift: a marked-up drawing set
-> weighed down by a tape measure, a radio, a laptop showing a coordination
-> model out of focus behind, a spare hard hat on the chair. Warm late light
-> across the desk from a window out of frame. 3:2.
+> A site office desk at the end of a shift: a marked-up drawing set weighed
+> down by a tape measure, a radio, a laptop showing a coordination model out
+> of focus behind, a spare hard hat on the chair. Warm late light across the
+> desk from a window out of frame. Shot on a full-frame camera, 50 mm lens at
+> f/2, 1/160s, ISO 800, available light only, shallow depth of field falling
+> off behind the subject. Documentary construction photography, real working
+> site, natural available light, native grain retained, muted mid-tones,
+> honest neutral whites. Worn-in PPE, dusty hi-vis, greasy gloves, muddy
+> boots; weld spatter, chalk marks and rust bloom on the surfaces. Candid
+> imperfect framing, nobody posing for the camera. No HDR, no gloss, no lens
+> flare, no text, no logos, no watermark. Aspect ratio 3:2.
 
 ### `public/assets/img/leadership.jpg` — leadership portrait
-> Recipe F. Environmental portrait of a principal engineer in their fifties at a
-> site boundary, hard hat under one arm, hi-vis over a plain shirt, reading
-> glasses hooked on the collar. Steel frame soft behind them. Open shade, even
-> light on the face, expression neutral and direct, not smiling for the camera.
-> Slight skin texture retained, no skin smoothing. 4:5 portrait.
+> Environmental portrait of a principal engineer in their fifties at a site
+> boundary, hard hat under one arm, hi-vis over a plain shirt, reading glasses
+> hooked on the collar. Steel frame soft behind them. Open shade, even light
+> on the face, expression neutral and direct, not smiling for the camera.
+> Slight skin texture retained, no skin smoothing. Shot on a full-frame
+> camera, 85 mm lens at f/2, 1/250s, ISO 400, open shade or north-facing
+> window light, no fill flash. Documentary construction photography, real
+> working site, natural available light, native grain retained, muted
+> mid-tones, honest neutral whites. Worn-in PPE, dusty hi-vis, greasy gloves,
+> muddy boots; weld spatter, chalk marks and rust bloom on the surfaces.
+> Candid imperfect framing, nobody posing for the camera. No HDR, no gloss, no
+> lens flare, no text, no logos, no watermark. Aspect ratio 4:5.
 
 ---
 
@@ -122,172 +163,388 @@ to `public/assets/img/services/`.
 ## Commercial Construction
 
 ### `commercial.jpg`
-> Recipe A. Ground-up commercial building at structural topping-out: bare steel
-> frame, metal deck on the upper floors, a concrete core rising one level
-> higher, tower crane in frame, urban street below with pedestrian hoarding and
-> traffic control. Overcast midday, cool flat light. 3:2.
+> Ground-up commercial building at structural topping-out: bare steel frame,
+> metal deck on the upper floors, a concrete core rising one level higher,
+> tower crane in frame, urban street below with pedestrian hoarding and
+> traffic control. Overcast midday, cool flat light. Shot on a full-frame
+> camera, 24 mm lens at f/8, 1/500s, ISO 100, overcast daylight or an hour
+> before sunset, deep focus front to back. Documentary construction
+> photography, real working site, natural available light, native grain
+> retained, muted mid-tones, honest neutral whites. Worn-in PPE, dusty hi-vis,
+> greasy gloves, muddy boots; weld spatter, chalk marks and rust bloom on the
+> surfaces. Candid imperfect framing, nobody posing for the camera. No HDR, no
+> gloss, no lens flare, no text, no logos, no watermark. Aspect ratio 3:2.
 
 ### `commercial-02.jpg`
-> Recipe C. The frame from across the street, long lens, a steel erector walking
-> a beam with a fall-arrest lanyard clipped, existing buildings compressed
-> behind. No dramatic sky. 16:10.
+> The frame from across the street, long lens, a steel erector walking a beam
+> with a fall-arrest lanyard clipped, existing buildings compressed behind. No
+> dramatic sky. Shot on a full-frame camera, 135 mm lens at f/4, 1/640s, ISO
+> 200, taken from across the site so the background compresses onto the
+> subject. Documentary construction photography, real working site, natural
+> available light, native grain retained, muted mid-tones, honest neutral
+> whites. Worn-in PPE, dusty hi-vis, greasy gloves, muddy boots; weld spatter,
+> chalk marks and rust bloom on the surfaces. Candid imperfect framing, nobody
+> posing for the camera. No HDR, no gloss, no lens flare, no text, no logos,
+> no watermark. Aspect ratio 16:10.
 
 ### `commercial-03.jpg`
-> Recipe B. Glazing crew landing a curtain wall unit on a floor edge: two
-> workers guiding it on tag lines, vacuum lifter, safety line, view of the
-> street below through the opening. Reflections in the glass show a grey sky,
-> not a sunset. 16:10.
+> Glazing crew landing a curtain wall unit on a floor edge: two workers
+> guiding it on tag lines, vacuum lifter, safety line, view of the street
+> below through the opening. Reflections in the glass show a grey sky, not a
+> sunset. Shot on a full-frame camera, 50 mm lens at f/2, 1/160s, ISO 800,
+> available light only, shallow depth of field falling off behind the subject.
+> Documentary construction photography, real working site, natural available
+> light, native grain retained, muted mid-tones, honest neutral whites.
+> Worn-in PPE, dusty hi-vis, greasy gloves, muddy boots; weld spatter, chalk
+> marks and rust bloom on the surfaces. Candid imperfect framing, nobody
+> posing for the camera. No HDR, no gloss, no lens flare, no text, no logos,
+> no watermark. Aspect ratio 16:10.
 
 ## Structural Engineering
 
 ### `structural.jpg`
-> Recipe B. A bolted moment connection in a steel frame, mid-erection: fitted
-> bolts partially tensioned, a torque wrench hanging from a lanyard, mill scale
-> and layout chalk on the flange, out-of-focus frame receding behind. 3:2.
+> A bolted moment connection in a steel frame, mid-erection: fitted bolts
+> partially tensioned, a torque wrench hanging from a lanyard, mill scale and
+> layout chalk on the flange, out-of-focus frame receding behind. Shot on a
+> full-frame camera, 50 mm lens at f/2, 1/160s, ISO 800, available light only,
+> shallow depth of field falling off behind the subject. Documentary
+> construction photography, real working site, natural available light, native
+> grain retained, muted mid-tones, honest neutral whites. Worn-in PPE, dusty
+> hi-vis, greasy gloves, muddy boots; weld spatter, chalk marks and rust bloom
+> on the surfaces. Candid imperfect framing, nobody posing for the camera. No
+> HDR, no gloss, no lens flare, no text, no logos, no watermark. Aspect ratio
+> 3:2.
 
 ### `structural-02.jpg`
-> Recipe B. Shop floor of a steel fabricator: a plate girder on trestles, a
-> welder's arc reflected on the web, sparks falling into a puddle of shop light,
-> gantry crane overhead. Grain visible in the shadows. 16:10.
+> Shop floor of a steel fabricator: a plate girder on trestles, a welder's arc
+> reflected on the web, sparks falling into a puddle of shop light, gantry
+> crane overhead. Grain visible in the shadows. Shot on a full-frame camera,
+> 50 mm lens at f/2, 1/160s, ISO 800, available light only, shallow depth of
+> field falling off behind the subject. Documentary construction photography,
+> real working site, natural available light, native grain retained, muted
+> mid-tones, honest neutral whites. Worn-in PPE, dusty hi-vis, greasy gloves,
+> muddy boots; weld spatter, chalk marks and rust bloom on the surfaces.
+> Candid imperfect framing, nobody posing for the camera. No HDR, no gloss, no
+> lens flare, no text, no logos, no watermark. Aspect ratio 16:10.
 
 ### `structural-03.jpg`
-> Recipe A. A dense rebar cage in a column before the pour, tied by hand, a
-> rebar worker's gloved hands mid-tie at the edge of frame, formwork stacked
-> behind, sunlight raking across the bars. 16:10.
+> A dense rebar cage in a column before the pour, tied by hand, a rebar
+> worker's gloved hands mid-tie at the edge of frame, formwork stacked behind,
+> sunlight raking across the bars. Shot on a full-frame camera, 24 mm lens at
+> f/8, 1/500s, ISO 100, overcast daylight or an hour before sunset, deep focus
+> front to back. Documentary construction photography, real working site,
+> natural available light, native grain retained, muted mid-tones, honest
+> neutral whites. Worn-in PPE, dusty hi-vis, greasy gloves, muddy boots; weld
+> spatter, chalk marks and rust bloom on the surfaces. Candid imperfect
+> framing, nobody posing for the camera. No HDR, no gloss, no lens flare, no
+> text, no logos, no watermark. Aspect ratio 16:10.
 
 ## Major Civil Engineering
 
 ### `civil.jpg`
-> Recipe A. Bridge deck under construction over a wide concrete flood channel:
-> falsework and formwork beneath, rebar mat laid out on top, a concrete pump
-> boom reaching in from the levee road. Dry channel, coastal scrub, hazy
-> daylight. 3:2.
+> Bridge deck under construction over a wide concrete flood channel: falsework
+> and formwork beneath, rebar mat laid out on top, a concrete pump boom
+> reaching in from the levee road. Dry channel, coastal scrub, hazy daylight.
+> Shot on a full-frame camera, 24 mm lens at f/8, 1/500s, ISO 100, overcast
+> daylight or an hour before sunset, deep focus front to back. Documentary
+> construction photography, real working site, natural available light, native
+> grain retained, muted mid-tones, honest neutral whites. Worn-in PPE, dusty
+> hi-vis, greasy gloves, muddy boots; weld spatter, chalk marks and rust bloom
+> on the surfaces. Candid imperfect framing, nobody posing for the camera. No
+> HDR, no gloss, no lens flare, no text, no logos, no watermark. Aspect ratio
+> 3:2.
 
 ### `civil-02.jpg`
-> Recipe D. Night girder erection: a crawler crane lowering a steel girder onto
-> a pier cap under portable flood lights, a signaller with a radio in the
-> foreground, closed highway lanes with cones and orange lights behind. 16:10.
+> Night girder erection: a crawler crane lowering a steel girder onto a pier
+> cap under portable flood lights, a signaller with a radio in the foreground,
+> closed highway lanes with cones and orange lights behind. Shot on a
+> full-frame camera, 35 mm lens at f/1.8, 1/60s, ISO 3200, mixed sodium
+> vapour, LED task light and moonlight, colour temperatures left uncorrected.
+> Documentary construction photography, real working site, natural available
+> light, native grain retained, muted mid-tones, honest neutral whites.
+> Worn-in PPE, dusty hi-vis, greasy gloves, muddy boots; weld spatter, chalk
+> marks and rust bloom on the surfaces. Candid imperfect framing, nobody
+> posing for the camera. No HDR, no gloss, no lens flare, no text, no logos,
+> no watermark. Aspect ratio 16:10.
 
 ### `civil-03.jpg`
-> Recipe B. Survey crew shooting levels on a levee road at first light, robotic
-> total station on a tripod, prism pole held by a second surveyor, marked-up
-> plans on the truck tailgate. 16:10.
+> Survey crew shooting levels on a levee road at first light, robotic total
+> station on a tripod, prism pole held by a second surveyor, marked-up plans
+> on the truck tailgate. Shot on a full-frame camera, 50 mm lens at f/2,
+> 1/160s, ISO 800, available light only, shallow depth of field falling off
+> behind the subject. Documentary construction photography, real working site,
+> natural available light, native grain retained, muted mid-tones, honest
+> neutral whites. Worn-in PPE, dusty hi-vis, greasy gloves, muddy boots; weld
+> spatter, chalk marks and rust bloom on the surfaces. Candid imperfect
+> framing, nobody posing for the camera. No HDR, no gloss, no lens flare, no
+> text, no logos, no watermark. Aspect ratio 16:10.
 
 ## Oil and Gas Facilities
 
 ### `oil-gas.jpg`
-> Recipe A. Refinery pipe rack and process columns seen from grade: insulated
-> lines, valve stations, scaffold on one column, a technician on the walkway in
-> FR coveralls and a gas monitor. Hard midday light, no sunset glow. 3:2.
+> Refinery pipe rack and process columns seen from grade: insulated lines,
+> valve stations, scaffold on one column, a technician on the walkway in FR
+> coveralls and a gas monitor. Hard midday light, no sunset glow. Shot on a
+> full-frame camera, 24 mm lens at f/8, 1/500s, ISO 100, overcast daylight or
+> an hour before sunset, deep focus front to back. Documentary construction
+> photography, real working site, natural available light, native grain
+> retained, muted mid-tones, honest neutral whites. Worn-in PPE, dusty hi-vis,
+> greasy gloves, muddy boots; weld spatter, chalk marks and rust bloom on the
+> surfaces. Candid imperfect framing, nobody posing for the camera. No HDR, no
+> gloss, no lens flare, no text, no logos, no watermark. Aspect ratio 3:2.
 
 ### `oil-gas-02.jpg`
-> Recipe B. Pipefitter fitting up a spool under a welding habitat tent: purge
-> hoses, a heat blanket on the joint, chalk weld numbers on the pipe, welding
-> lead coiled on the deck plate. 16:10.
+> Pipefitter fitting up a spool under a welding habitat tent: purge hoses, a
+> heat blanket on the joint, chalk weld numbers on the pipe, welding lead
+> coiled on the deck plate. Shot on a full-frame camera, 50 mm lens at f/2,
+> 1/160s, ISO 800, available light only, shallow depth of field falling off
+> behind the subject. Documentary construction photography, real working site,
+> natural available light, native grain retained, muted mid-tones, honest
+> neutral whites. Worn-in PPE, dusty hi-vis, greasy gloves, muddy boots; weld
+> spatter, chalk marks and rust bloom on the surfaces. Candid imperfect
+> framing, nobody posing for the camera. No HDR, no gloss, no lens flare, no
+> text, no logos, no watermark. Aspect ratio 16:10.
 
 ### `oil-gas-03.jpg`
-> Recipe A. Inside a storage tank under construction: shell plates lapped and
-> tacked, a welder on the floor seam with an extraction hose beside them, light
-> coming through the open roof hatch in a hard shaft. 16:10.
+> Inside a storage tank under construction: shell plates lapped and tacked, a
+> welder on the floor seam with an extraction hose beside them, light coming
+> through the open roof hatch in a hard shaft. Shot on a full-frame camera, 24
+> mm lens at f/8, 1/500s, ISO 100, overcast daylight or an hour before sunset,
+> deep focus front to back. Documentary construction photography, real working
+> site, natural available light, native grain retained, muted mid-tones,
+> honest neutral whites. Worn-in PPE, dusty hi-vis, greasy gloves, muddy
+> boots; weld spatter, chalk marks and rust bloom on the surfaces. Candid
+> imperfect framing, nobody posing for the camera. No HDR, no gloss, no lens
+> flare, no text, no logos, no watermark. Aspect ratio 16:10.
 
 ## Underwater and Marine Welding
 
 ### `underwater.jpg`
-> Recipe E. Surface-supplied commercial diver working on a steel pile underwater:
+> Surface-supplied commercial diver working on a steel pile underwater:
 > brass-and-fibreglass dive helmet, umbilical trailing up and out of frame,
 > gloved hand on a pile jacket, marine growth on the steel below the repair
-> band. Green-blue water, particulate in the beam of the video light. 3:2.
+> band. Green-blue water, particulate in the beam of the video light. Shot on
+> a full-frame camera in an underwater housing, 20 mm lens at f/5.6, 1/125s,
+> ISO 1600, two video lights at low power, green-blue water column with
+> visible particulate and light falling off to black. Documentary construction
+> photography, real working site, natural available light, native grain
+> retained, muted mid-tones, honest neutral whites. Worn-in PPE, dusty hi-vis,
+> greasy gloves, muddy boots; weld spatter, chalk marks and rust bloom on the
+> surfaces. Candid imperfect framing, nobody posing for the camera. No HDR, no
+> gloss, no lens flare, no text, no logos, no watermark. Aspect ratio 3:2.
 
 ### `underwater-02.jpg`
-> Recipe A. Dive station on a barge at the surface: tender at the control rack
-> watching gauges, umbilical flaked on deck, dive stage on the crane hook, diver
-> in a hat about to step off. Overcast harbour light, wet steel deck. 16:10.
+> Dive station on a barge at the surface: tender at the control rack watching
+> gauges, umbilical flaked on deck, dive stage on the crane hook, diver in a
+> hat about to step off. Overcast harbour light, wet steel deck. Shot on a
+> full-frame camera, 24 mm lens at f/8, 1/500s, ISO 100, overcast daylight or
+> an hour before sunset, deep focus front to back. Documentary construction
+> photography, real working site, natural available light, native grain
+> retained, muted mid-tones, honest neutral whites. Worn-in PPE, dusty hi-vis,
+> greasy gloves, muddy boots; weld spatter, chalk marks and rust bloom on the
+> surfaces. Candid imperfect framing, nobody posing for the camera. No HDR, no
+> gloss, no lens flare, no text, no logos, no watermark. Aspect ratio 16:10.
 
 ### `underwater-03.jpg`
-> Recipe E. A dry welding habitat clamped around a subsea pipe joint, water
-> level held below the joint inside it, the diver-welder's arm and stinger
-> visible inside the chamber, hoses running away into the dark. 16:10.
+> A dry welding habitat clamped around a subsea pipe joint, water level held
+> below the joint inside it, the diver-welder's arm and stinger visible inside
+> the chamber, hoses running away into the dark. Shot on a full-frame camera
+> in an underwater housing, 20 mm lens at f/5.6, 1/125s, ISO 1600, two video
+> lights at low power, green-blue water column with visible particulate and
+> light falling off to black. Documentary construction photography, real
+> working site, natural available light, native grain retained, muted
+> mid-tones, honest neutral whites. Worn-in PPE, dusty hi-vis, greasy gloves,
+> muddy boots; weld spatter, chalk marks and rust bloom on the surfaces.
+> Candid imperfect framing, nobody posing for the camera. No HDR, no gloss, no
+> lens flare, no text, no logos, no watermark. Aspect ratio 16:10.
 
 ## Steel Fabrication and Erection
 
 ### `steel.jpg`
-> Recipe A. Long-span steel truss being erected over a transit platform: crane
-> at the pick, two erectors on the truss chord, taglines pulling it into line.
-> Flat sky, honest greys, no golden hour. 3:2.
+> Long-span steel truss being erected over a transit platform: crane at the
+> pick, two erectors on the truss chord, taglines pulling it into line. Flat
+> sky, honest greys, no golden hour. Shot on a full-frame camera, 24 mm lens
+> at f/8, 1/500s, ISO 100, overcast daylight or an hour before sunset, deep
+> focus front to back. Documentary construction photography, real working
+> site, natural available light, native grain retained, muted mid-tones,
+> honest neutral whites. Worn-in PPE, dusty hi-vis, greasy gloves, muddy
+> boots; weld spatter, chalk marks and rust bloom on the surfaces. Candid
+> imperfect framing, nobody posing for the camera. No HDR, no gloss, no lens
+> flare, no text, no logos, no watermark. Aspect ratio 3:2.
 
 ### `steel-02.jpg`
-> Recipe B. Fabrication shop: a fitter running a grinder on a connection plate,
-> sparks in a low arc, layout markings in soapstone, stacked stock in the depth
-> of the shop. 16:10.
+> Fabrication shop: a fitter running a grinder on a connection plate, sparks
+> in a low arc, layout markings in soapstone, stacked stock in the depth of
+> the shop. Shot on a full-frame camera, 50 mm lens at f/2, 1/160s, ISO 800,
+> available light only, shallow depth of field falling off behind the subject.
+> Documentary construction photography, real working site, natural available
+> light, native grain retained, muted mid-tones, honest neutral whites.
+> Worn-in PPE, dusty hi-vis, greasy gloves, muddy boots; weld spatter, chalk
+> marks and rust bloom on the surfaces. Candid imperfect framing, nobody
+> posing for the camera. No HDR, no gloss, no lens flare, no text, no logos,
+> no watermark. Aspect ratio 16:10.
 
 ### `steel-03.jpg`
-> Recipe B. Bolt-up at height: a hand with a spud wrench aligning holes, the
-> steel beam's camber visible, ground eight floors down blurred by shallow
-> depth of field. 16:10.
+> Bolt-up at height: a hand with a spud wrench aligning holes, the steel
+> beam's camber visible, ground eight floors down blurred by shallow depth of
+> field. Shot on a full-frame camera, 50 mm lens at f/2, 1/160s, ISO 800,
+> available light only, shallow depth of field falling off behind the subject.
+> Documentary construction photography, real working site, natural available
+> light, native grain retained, muted mid-tones, honest neutral whites.
+> Worn-in PPE, dusty hi-vis, greasy gloves, muddy boots; weld spatter, chalk
+> marks and rust bloom on the surfaces. Candid imperfect framing, nobody
+> posing for the camera. No HDR, no gloss, no lens flare, no text, no logos,
+> no watermark. Aspect ratio 16:10.
 
 ## Groundworks and Foundations
 
 ### `groundworks.jpg`
-> Recipe A. Piling rig driving a steel pipe pile on a compacted working
-> platform: leader mast at full height, hammer at the head, pile cut-offs
-> stacked to one side, mud-tracked ground. Dust in the air. 3:2.
+> Piling rig driving a steel pipe pile on a compacted working platform: leader
+> mast at full height, hammer at the head, pile cut-offs stacked to one side,
+> mud-tracked ground. Dust in the air. Shot on a full-frame camera, 24 mm lens
+> at f/8, 1/500s, ISO 100, overcast daylight or an hour before sunset, deep
+> focus front to back. Documentary construction photography, real working
+> site, natural available light, native grain retained, muted mid-tones,
+> honest neutral whites. Worn-in PPE, dusty hi-vis, greasy gloves, muddy
+> boots; weld spatter, chalk marks and rust bloom on the surfaces. Candid
+> imperfect framing, nobody posing for the camera. No HDR, no gloss, no lens
+> flare, no text, no logos, no watermark. Aspect ratio 3:2.
 
 ### `groundworks-02.jpg`
-> Recipe A. Open excavation with sheet piling and walers, dewatering pumps
-> running into a settlement tank, an engineer in the cut looking up at the
-> shoring. 16:10.
+> Open excavation with sheet piling and walers, dewatering pumps running into
+> a settlement tank, an engineer in the cut looking up at the shoring. Shot on
+> a full-frame camera, 24 mm lens at f/8, 1/500s, ISO 100, overcast daylight
+> or an hour before sunset, deep focus front to back. Documentary construction
+> photography, real working site, natural available light, native grain
+> retained, muted mid-tones, honest neutral whites. Worn-in PPE, dusty hi-vis,
+> greasy gloves, muddy boots; weld spatter, chalk marks and rust bloom on the
+> surfaces. Candid imperfect framing, nobody posing for the camera. No HDR, no
+> gloss, no lens flare, no text, no logos, no watermark. Aspect ratio 16:10.
 
 ### `groundworks-03.jpg`
-> Recipe B. Wet concrete going into a pile cap: the pump boom tip, a gloved hand
-> on the hose, vibrator poker in the mix, steel starter bars projecting. 16:10.
+> Wet concrete going into a pile cap: the pump boom tip, a gloved hand on the
+> hose, vibrator poker in the mix, steel starter bars projecting. Shot on a
+> full-frame camera, 50 mm lens at f/2, 1/160s, ISO 800, available light only,
+> shallow depth of field falling off behind the subject. Documentary
+> construction photography, real working site, natural available light, native
+> grain retained, muted mid-tones, honest neutral whites. Worn-in PPE, dusty
+> hi-vis, greasy gloves, muddy boots; weld spatter, chalk marks and rust bloom
+> on the surfaces. Candid imperfect framing, nobody posing for the camera. No
+> HDR, no gloss, no lens flare, no text, no logos, no watermark. Aspect ratio
+> 16:10.
 
 ## Mechanical and Process
 
 ### `mechanical.jpg`
-> Recipe A. Plant room of a large commercial building: chillers, primary pipework
-> in identification colours, a fitter on a step ladder gauging a valve, cable
-> tray overhead. Fluorescent and daylight mixed. 3:2.
+> Plant room of a large commercial building: chillers, primary pipework in
+> identification colours, a fitter on a step ladder gauging a valve, cable
+> tray overhead. Fluorescent and daylight mixed. Shot on a full-frame camera,
+> 24 mm lens at f/8, 1/500s, ISO 100, overcast daylight or an hour before
+> sunset, deep focus front to back. Documentary construction photography, real
+> working site, natural available light, native grain retained, muted
+> mid-tones, honest neutral whites. Worn-in PPE, dusty hi-vis, greasy gloves,
+> muddy boots; weld spatter, chalk marks and rust bloom on the surfaces.
+> Candid imperfect framing, nobody posing for the camera. No HDR, no gloss, no
+> lens flare, no text, no logos, no watermark. Aspect ratio 3:2.
 
 ### `mechanical-02.jpg`
-> Recipe B. A pump skid being set on its plinth: rigger's hand on the load, laser
-> alignment tool in place, shim packs on the base plate. 16:10.
+> A pump skid being set on its plinth: rigger's hand on the load, laser
+> alignment tool in place, shim packs on the base plate. Shot on a full-frame
+> camera, 50 mm lens at f/2, 1/160s, ISO 800, available light only, shallow
+> depth of field falling off behind the subject. Documentary construction
+> photography, real working site, natural available light, native grain
+> retained, muted mid-tones, honest neutral whites. Worn-in PPE, dusty hi-vis,
+> greasy gloves, muddy boots; weld spatter, chalk marks and rust bloom on the
+> surfaces. Candid imperfect framing, nobody posing for the camera. No HDR, no
+> gloss, no lens flare, no text, no logos, no watermark. Aspect ratio 16:10.
 
 ### `mechanical-03.jpg`
-> Recipe A. Rooftop plant on a commercial building at dusk, air handling units
-> and ductwork, city beyond, technicians packing up tools. Blue hour, no
-> saturated sky. 16:10.
+> Rooftop plant on a commercial building at dusk, air handling units and
+> ductwork, city beyond, technicians packing up tools. Blue hour, no saturated
+> sky. Shot on a full-frame camera, 24 mm lens at f/8, 1/500s, ISO 100,
+> overcast daylight or an hour before sunset, deep focus front to back.
+> Documentary construction photography, real working site, natural available
+> light, native grain retained, muted mid-tones, honest neutral whites.
+> Worn-in PPE, dusty hi-vis, greasy gloves, muddy boots; weld spatter, chalk
+> marks and rust bloom on the surfaces. Candid imperfect framing, nobody
+> posing for the camera. No HDR, no gloss, no lens flare, no text, no logos,
+> no watermark. Aspect ratio 16:10.
 
 ## Digital Engineering
 
 ### `digital.jpg`
-> Recipe B. Two engineers in a site trailer comparing a federated 3D model on a
-> large monitor against a printed drawing pinned to the wall, model visible but
-> not legible, both mid-conversation. Window light from the side. 3:2.
+> Two engineers in a site trailer comparing a federated 3D model on a large
+> monitor against a printed drawing pinned to the wall, model visible but not
+> legible, both mid-conversation. Window light from the side. Shot on a
+> full-frame camera, 50 mm lens at f/2, 1/160s, ISO 800, available light only,
+> shallow depth of field falling off behind the subject. Documentary
+> construction photography, real working site, natural available light, native
+> grain retained, muted mid-tones, honest neutral whites. Worn-in PPE, dusty
+> hi-vis, greasy gloves, muddy boots; weld spatter, chalk marks and rust bloom
+> on the surfaces. Candid imperfect framing, nobody posing for the camera. No
+> HDR, no gloss, no lens flare, no text, no logos, no watermark. Aspect ratio
+> 3:2.
 
 ### `digital-02.jpg`
-> Recipe B. A laser scanner on a tripod in a half-built plant room, technician
-> crouched at the tablet, scanned volume around it dim and complicated. 16:10.
+> A laser scanner on a tripod in a half-built plant room, technician crouched
+> at the tablet, scanned volume around it dim and complicated. Shot on a
+> full-frame camera, 50 mm lens at f/2, 1/160s, ISO 800, available light only,
+> shallow depth of field falling off behind the subject. Documentary
+> construction photography, real working site, natural available light, native
+> grain retained, muted mid-tones, honest neutral whites. Worn-in PPE, dusty
+> hi-vis, greasy gloves, muddy boots; weld spatter, chalk marks and rust bloom
+> on the surfaces. Candid imperfect framing, nobody posing for the camera. No
+> HDR, no gloss, no lens flare, no text, no logos, no watermark. Aspect ratio
+> 16:10.
 
 ### `digital-03.jpg`
-> Recipe B. A tablet held up against the real structure, screen showing an
-> overlay of the model, the same beams and hangers visible past the edge of the
-> screen, hand with a dusty glove holding it. 16:10.
+> A tablet held up against the real structure, screen showing an overlay of
+> the model, the same beams and hangers visible past the edge of the screen,
+> hand with a dusty glove holding it. Shot on a full-frame camera, 50 mm lens
+> at f/2, 1/160s, ISO 800, available light only, shallow depth of field
+> falling off behind the subject. Documentary construction photography, real
+> working site, natural available light, native grain retained, muted
+> mid-tones, honest neutral whites. Worn-in PPE, dusty hi-vis, greasy gloves,
+> muddy boots; weld spatter, chalk marks and rust bloom on the surfaces.
+> Candid imperfect framing, nobody posing for the camera. No HDR, no gloss, no
+> lens flare, no text, no logos, no watermark. Aspect ratio 16:10.
 
 ## Commissioning and Handover
 
 ### `commissioning.jpg`
-> Recipe B. Commissioning engineer with a clipboard and a calibrated meter at a
+> Commissioning engineer with a clipboard and a calibrated meter at a
 > switchboard, ticking off an instrument schedule, cabinet doors open, labels
-> and tags visible but not readable. 3:2.
+> and tags visible but not readable. Shot on a full-frame camera, 50 mm lens
+> at f/2, 1/160s, ISO 800, available light only, shallow depth of field
+> falling off behind the subject. Documentary construction photography, real
+> working site, natural available light, native grain retained, muted
+> mid-tones, honest neutral whites. Worn-in PPE, dusty hi-vis, greasy gloves,
+> muddy boots; weld spatter, chalk marks and rust bloom on the surfaces.
+> Candid imperfect framing, nobody posing for the camera. No HDR, no gloss, no
+> lens flare, no text, no logos, no watermark. Aspect ratio 3:2.
 
 ### `commissioning-02.jpg`
-> Recipe A. Witness test in progress: three people around a flow meter on a
-> newly installed line, one taking a reading, one writing, one on a radio. 16:10.
+> Witness test in progress: three people around a flow meter on a newly
+> installed line, one taking a reading, one writing, one on a radio. Shot on a
+> full-frame camera, 24 mm lens at f/8, 1/500s, ISO 100, overcast daylight or
+> an hour before sunset, deep focus front to back. Documentary construction
+> photography, real working site, natural available light, native grain
+> retained, muted mid-tones, honest neutral whites. Worn-in PPE, dusty hi-vis,
+> greasy gloves, muddy boots; weld spatter, chalk marks and rust bloom on the
+> surfaces. Candid imperfect framing, nobody posing for the camera. No HDR, no
+> gloss, no lens flare, no text, no logos, no watermark. Aspect ratio 16:10.
 
 ### `commissioning-03.jpg`
-> Recipe B. Control room at first run: operator at the desk with mimic screens,
-> reflections of the screens on the glass behind, a handover binder open beside
-> the keyboard. 16:10.
+> Control room at first run: operator at the desk with mimic screens,
+> reflections of the screens on the glass behind, a handover binder open
+> beside the keyboard. Shot on a full-frame camera, 50 mm lens at f/2, 1/160s,
+> ISO 800, available light only, shallow depth of field falling off behind the
+> subject. Documentary construction photography, real working site, natural
+> available light, native grain retained, muted mid-tones, honest neutral
+> whites. Worn-in PPE, dusty hi-vis, greasy gloves, muddy boots; weld spatter,
+> chalk marks and rust bloom on the surfaces. Candid imperfect framing, nobody
+> posing for the camera. No HDR, no gloss, no lens flare, no text, no logos,
+> no watermark. Aspect ratio 16:10.
 
 ---
 
@@ -299,253 +556,547 @@ run on the page. Save to `public/assets/img/projects/`.
 ## Harbor Gateway Tower — Commercial, Long Beach CA
 
 ### `harbor-gateway-tower.jpg` — hero
-> Recipe C. A 32-storey office tower under construction on a harbour edge,
-> photographed from across the water with a long lens: bare steel frame on the
-> top eight floors, curtain wall installed below, tower crane, port cranes and
-> stacked containers compressed behind it. Coastal haze, flat afternoon light,
-> water without sparkle. 3:2.
+> A 32-storey office tower under construction on a harbour edge, photographed
+> from across the water with a long lens: bare steel frame on the top eight
+> floors, curtain wall installed below, tower crane, port cranes and stacked
+> containers compressed behind it. Coastal haze, flat afternoon light, water
+> without sparkle. Shot on a full-frame camera, 135 mm lens at f/4, 1/640s,
+> ISO 200, taken from across the site so the background compresses onto the
+> subject. Documentary construction photography, real working site, natural
+> available light, native grain retained, muted mid-tones, honest neutral
+> whites. Worn-in PPE, dusty hi-vis, greasy gloves, muddy boots; weld spatter,
+> chalk marks and rust bloom on the surfaces. Candid imperfect framing, nobody
+> posing for the camera. No HDR, no gloss, no lens flare, no text, no logos,
+> no watermark. Aspect ratio 3:2.
 
 ### `harbor-gateway-tower-02.jpg` — core slipform running ahead of the steel
-> Recipe A. Looking up the face of a concrete core being slipformed, the working
+> Looking up the face of a concrete core being slipformed, the working
 > platform ringed with plywood and scaffold, hoses and hydraulic jacks at the
 > edge, steel frame two floors lower around it. Grey sky, concrete dust on
-> everything. 16:10.
+> everything. Shot on a full-frame camera, 24 mm lens at f/8, 1/500s, ISO 100,
+> overcast daylight or an hour before sunset, deep focus front to back.
+> Documentary construction photography, real working site, natural available
+> light, native grain retained, muted mid-tones, honest neutral whites.
+> Worn-in PPE, dusty hi-vis, greasy gloves, muddy boots; weld spatter, chalk
+> marks and rust bloom on the surfaces. Candid imperfect framing, nobody
+> posing for the camera. No HDR, no gloss, no lens flare, no text, no logos,
+> no watermark. Aspect ratio 16:10.
 
 ### `harbor-gateway-tower-03.jpg` — moment frame bolt-up on level 19
-> Recipe B. Two ironworkers bolting a moment connection on an open floor,
-> nineteen storeys up, harbour visible between the columns, one worker with a
-> spud wrench and a bolt bag, fall-arrest clipped to a static line. Wind moving
-> their hi-vis. 16:10.
+> Two ironworkers bolting a moment connection on an open floor, nineteen
+> storeys up, harbour visible between the columns, one worker with a spud
+> wrench and a bolt bag, fall-arrest clipped to a static line. Wind moving
+> their hi-vis. Shot on a full-frame camera, 50 mm lens at f/2, 1/160s, ISO
+> 800, available light only, shallow depth of field falling off behind the
+> subject. Documentary construction photography, real working site, natural
+> available light, native grain retained, muted mid-tones, honest neutral
+> whites. Worn-in PPE, dusty hi-vis, greasy gloves, muddy boots; weld spatter,
+> chalk marks and rust bloom on the surfaces. Candid imperfect framing, nobody
+> posing for the camera. No HDR, no gloss, no lens flare, no text, no logos,
+> no watermark. Aspect ratio 16:10.
 
 ### `harbor-gateway-tower-04.jpg` — topping out, looking back at the harbour
-> Recipe A. The top deck at topping out: a final beam being landed, crew watching
-> from the deck edge, a small flag zip-tied to the beam, the port and the
-> breakwater below behind them. Overcast, cold light. 16:10.
+> The top deck at topping out: a final beam being landed, crew watching from
+> the deck edge, a small flag zip-tied to the beam, the port and the
+> breakwater below behind them. Overcast, cold light. Shot on a full-frame
+> camera, 24 mm lens at f/8, 1/500s, ISO 100, overcast daylight or an hour
+> before sunset, deep focus front to back. Documentary construction
+> photography, real working site, natural available light, native grain
+> retained, muted mid-tones, honest neutral whites. Worn-in PPE, dusty hi-vis,
+> greasy gloves, muddy boots; weld spatter, chalk marks and rust bloom on the
+> surfaces. Candid imperfect framing, nobody posing for the camera. No HDR, no
+> gloss, no lens flare, no text, no logos, no watermark. Aspect ratio 16:10.
 
 ## Katella Medical Pavilion — Commercial, Anaheim CA
 
 ### `katella-medical-pavilion.jpg` — hero
-> Recipe A. A new outpatient medical building under construction directly
-> alongside a working hospital wing: hoarding, a covered walkway keeping the
-> entrance open, ambulance bay in use in the middle distance, structure and
-> scaffold on the left. Ordinary weekday light, no drama. 3:2.
+> A new outpatient medical building under construction directly alongside a
+> working hospital wing: hoarding, a covered walkway keeping the entrance
+> open, ambulance bay in use in the middle distance, structure and scaffold on
+> the left. Ordinary weekday light, no drama. Shot on a full-frame camera, 24
+> mm lens at f/8, 1/500s, ISO 100, overcast daylight or an hour before sunset,
+> deep focus front to back. Documentary construction photography, real working
+> site, natural available light, native grain retained, muted mid-tones,
+> honest neutral whites. Worn-in PPE, dusty hi-vis, greasy gloves, muddy
+> boots; weld spatter, chalk marks and rust bloom on the surfaces. Candid
+> imperfect framing, nobody posing for the camera. No HDR, no gloss, no lens
+> flare, no text, no logos, no watermark. Aspect ratio 3:2.
 
 ### `katella-medical-pavilion-02.jpg` — night pour beside the existing wing
-> Recipe D. Night concrete pour: pump truck boom over a deck, crew screeding
-> under portable lights, wet concrete glare, the lit windows of the occupied
+> Night concrete pour: pump truck boom over a deck, crew screeding under
+> portable lights, wet concrete glare, the lit windows of the occupied
 > hospital wing twenty metres away. Mixed colour temperature left uncorrected.
-> 16:10.
+> Shot on a full-frame camera, 35 mm lens at f/1.8, 1/60s, ISO 3200, mixed
+> sodium vapour, LED task light and moonlight, colour temperatures left
+> uncorrected. Documentary construction photography, real working site,
+> natural available light, native grain retained, muted mid-tones, honest
+> neutral whites. Worn-in PPE, dusty hi-vis, greasy gloves, muddy boots; weld
+> spatter, chalk marks and rust bloom on the surfaces. Candid imperfect
+> framing, nobody posing for the camera. No HDR, no gloss, no lens flare, no
+> text, no logos, no watermark. Aspect ratio 16:10.
 
 ### `katella-medical-pavilion-03.jpg` — mechanical penthouse, rigged in one lift
-> Recipe C. A pre-assembled mechanical penthouse module in the air under a
-> crawler crane, taglines running down to the deck, riggers looking up, the
-> hospital roofline behind. Long lens compression, bare sky. 16:10.
+> A pre-assembled mechanical penthouse module in the air under a crawler
+> crane, taglines running down to the deck, riggers looking up, the hospital
+> roofline behind. Long lens compression, bare sky. Shot on a full-frame
+> camera, 135 mm lens at f/4, 1/640s, ISO 200, taken from across the site so
+> the background compresses onto the subject. Documentary construction
+> photography, real working site, natural available light, native grain
+> retained, muted mid-tones, honest neutral whites. Worn-in PPE, dusty hi-vis,
+> greasy gloves, muddy boots; weld spatter, chalk marks and rust bloom on the
+> surfaces. Candid imperfect framing, nobody posing for the camera. No HDR, no
+> gloss, no lens flare, no text, no logos, no watermark. Aspect ratio 16:10.
 
 ## Civic Center Seismic Retrofit — Commercial, Santa Ana CA
 
 ### `civic-center-retrofit.jpg` — hero
-> Recipe A. A 1960s concrete civic building mid-retrofit: scaffolding to one
-> elevation, temporary propping visible through open windows, staff walking in
-> past a protected entrance, contractor fencing along the plaza. Hard midday
-> shadow, dated concrete texture. 3:2.
+> A 1960s concrete civic building mid-retrofit: scaffolding to one elevation,
+> temporary propping visible through open windows, staff walking in past a
+> protected entrance, contractor fencing along the plaza. Hard midday shadow,
+> dated concrete texture. Shot on a full-frame camera, 24 mm lens at f/8,
+> 1/500s, ISO 100, overcast daylight or an hour before sunset, deep focus
+> front to back. Documentary construction photography, real working site,
+> natural available light, native grain retained, muted mid-tones, honest
+> neutral whites. Worn-in PPE, dusty hi-vis, greasy gloves, muddy boots; weld
+> spatter, chalk marks and rust bloom on the surfaces. Candid imperfect
+> framing, nobody posing for the camera. No HDR, no gloss, no lens flare, no
+> text, no logos, no watermark. Aspect ratio 3:2.
 
 ### `civic-center-retrofit-02.jpg` — new shear wall threaded through the 1968 frame
-> Recipe B. Interior strip-out: a new reinforced concrete shear wall being formed
-> inside an old frame, drilled dowels epoxied into the existing beams, plastic
+> Interior strip-out: a new reinforced concrete shear wall being formed inside
+> an old frame, drilled dowels epoxied into the existing beams, plastic
 > sheeting separating the works from an occupied corridor with a light on
-> behind it. 16:10.
+> behind it. Shot on a full-frame camera, 50 mm lens at f/2, 1/160s, ISO 800,
+> available light only, shallow depth of field falling off behind the subject.
+> Documentary construction photography, real working site, natural available
+> light, native grain retained, muted mid-tones, honest neutral whites.
+> Worn-in PPE, dusty hi-vis, greasy gloves, muddy boots; weld spatter, chalk
+> marks and rust bloom on the surfaces. Candid imperfect framing, nobody
+> posing for the camera. No HDR, no gloss, no lens flare, no text, no logos,
+> no watermark. Aspect ratio 16:10.
 
 ### `civic-center-retrofit-03.jpg` — column jacket, formwork stripped
-> Recipe B. A freshly stripped concrete column jacket around an older column,
-> form tie holes and board marks visible, a worker's hand brushing the surface,
-> old paint on the original concrete above the new pour line. 16:10.
+> A freshly stripped concrete column jacket around an older column, form tie
+> holes and board marks visible, a worker's hand brushing the surface, old
+> paint on the original concrete above the new pour line. Shot on a full-frame
+> camera, 50 mm lens at f/2, 1/160s, ISO 800, available light only, shallow
+> depth of field falling off behind the subject. Documentary construction
+> photography, real working site, natural available light, native grain
+> retained, muted mid-tones, honest neutral whites. Worn-in PPE, dusty hi-vis,
+> greasy gloves, muddy boots; weld spatter, chalk marks and rust bloom on the
+> surfaces. Candid imperfect framing, nobody posing for the camera. No HDR, no
+> gloss, no lens flare, no text, no logos, no watermark. Aspect ratio 16:10.
 
 ## Carson Tank Farm Rebuild — Oil and Gas, Carson CA
 
 ### `carson-tank-farm.jpg` — hero
-> Recipe A. Four large steel storage tanks under construction in a terminal:
-> shells part-built with courses stacked, a completed tank behind, containment
-> berm earthworks in the foreground, pipe rack running across frame. Flat
+> Four large steel storage tanks under construction in a terminal: shells
+> part-built with courses stacked, a completed tank behind, containment berm
+> earthworks in the foreground, pipe rack running across frame. Flat
 > industrial light, dusty ground, distant refinery flare stack out of focus.
+> Shot on a full-frame camera, 24 mm lens at f/8, 1/500s, ISO 100, overcast
+> daylight or an hour before sunset, deep focus front to back. Documentary
+> construction photography, real working site, natural available light, native
+> grain retained, muted mid-tones, honest neutral whites. Worn-in PPE, dusty
+> hi-vis, greasy gloves, muddy boots; weld spatter, chalk marks and rust bloom
+> on the surfaces. Candid imperfect framing, nobody posing for the camera. No
+> HDR, no gloss, no lens flare, no text, no logos, no watermark. Aspect ratio
 > 3:2.
 
 ### `carson-tank-farm-02.jpg` — floor plate welding inside the shell
-> Recipe B. Inside a tank shell during construction: a welder kneeling on the
-> floor plates running a seam, extraction ducting snaking behind, light falling
-> through the open top in a broad shaft, chalk seam numbers on the steel. 16:10.
+> Inside a tank shell during construction: a welder kneeling on the floor
+> plates running a seam, extraction ducting snaking behind, light falling
+> through the open top in a broad shaft, chalk seam numbers on the steel. Shot
+> on a full-frame camera, 50 mm lens at f/2, 1/160s, ISO 800, available light
+> only, shallow depth of field falling off behind the subject. Documentary
+> construction photography, real working site, natural available light, native
+> grain retained, muted mid-tones, honest neutral whites. Worn-in PPE, dusty
+> hi-vis, greasy gloves, muddy boots; weld spatter, chalk marks and rust bloom
+> on the surfaces. Candid imperfect framing, nobody posing for the camera. No
+> HDR, no gloss, no lens flare, no text, no logos, no watermark. Aspect ratio
+> 16:10.
 
 ### `carson-tank-farm-03.jpg` — secondary containment going in around the ring wall
-> Recipe A. Earthworks and concrete ring wall for tank containment: a compactor
-> working the berm, rebar mat laid for the ring beam, surveyor with a level in
-> the middle distance. Dust, tyre ruts, chain-link fence. 16:10.
+> Earthworks and concrete ring wall for tank containment: a compactor working
+> the berm, rebar mat laid for the ring beam, surveyor with a level in the
+> middle distance. Dust, tyre ruts, chain-link fence. Shot on a full-frame
+> camera, 24 mm lens at f/8, 1/500s, ISO 100, overcast daylight or an hour
+> before sunset, deep focus front to back. Documentary construction
+> photography, real working site, natural available light, native grain
+> retained, muted mid-tones, honest neutral whites. Worn-in PPE, dusty hi-vis,
+> greasy gloves, muddy boots; weld spatter, chalk marks and rust bloom on the
+> surfaces. Candid imperfect framing, nobody posing for the camera. No HDR, no
+> gloss, no lens flare, no text, no logos, no watermark. Aspect ratio 16:10.
 
 ### `carson-tank-farm-04.jpg` — manifold pipe rack before insulation
-> Recipe B. A new pipe manifold before insulation: bare welded carbon steel
-> lines, valve handwheels, hydrotest tags on the flanges, weld numbers in paint
-> pen, a fitter checking a joint in the background. 16:10.
+> A new pipe manifold before insulation: bare welded carbon steel lines, valve
+> handwheels, hydrotest tags on the flanges, weld numbers in paint pen, a
+> fitter checking a joint in the background. Shot on a full-frame camera, 50
+> mm lens at f/2, 1/160s, ISO 800, available light only, shallow depth of
+> field falling off behind the subject. Documentary construction photography,
+> real working site, natural available light, native grain retained, muted
+> mid-tones, honest neutral whites. Worn-in PPE, dusty hi-vis, greasy gloves,
+> muddy boots; weld spatter, chalk marks and rust bloom on the surfaces.
+> Candid imperfect framing, nobody posing for the camera. No HDR, no gloss, no
+> lens flare, no text, no logos, no watermark. Aspect ratio 16:10.
 
 ## El Segundo Hydrotreater Revamp — Oil and Gas, El Segundo CA
 
 ### `el-segundo-hydrotreater.jpg` — hero
-> Recipe A. A refinery process unit during turnaround: scaffolding wrapped around
-> a reactor section, crane boom over the unit, crews on the structure in FR
+> A refinery process unit during turnaround: scaffolding wrapped around a
+> reactor section, crane boom over the unit, crews on the structure in FR
 > coveralls, temporary lighting and hoses everywhere. Overcast, salt haze from
-> the coast. 3:2.
+> the coast. Shot on a full-frame camera, 24 mm lens at f/8, 1/500s, ISO 100,
+> overcast daylight or an hour before sunset, deep focus front to back.
+> Documentary construction photography, real working site, natural available
+> light, native grain retained, muted mid-tones, honest neutral whites.
+> Worn-in PPE, dusty hi-vis, greasy gloves, muddy boots; weld spatter, chalk
+> marks and rust bloom on the surfaces. Candid imperfect framing, nobody
+> posing for the camera. No HDR, no gloss, no lens flare, no text, no logos,
+> no watermark. Aspect ratio 3:2.
 
 ### `el-segundo-hydrotreater-02.jpg` — reactor section from the rack, mid-turnaround
-> Recipe C. Looking across the pipe rack at the reactor section during the
-> outage: insulation removed in patches, blinds installed on lines, tags on
-> valves, two workers small in the frame for scale. Long lens, heavy
-> compression. 16:10.
+> Looking across the pipe rack at the reactor section during the outage:
+> insulation removed in patches, blinds installed on lines, tags on valves,
+> two workers small in the frame for scale. Long lens, heavy compression. Shot
+> on a full-frame camera, 135 mm lens at f/4, 1/640s, ISO 200, taken from
+> across the site so the background compresses onto the subject. Documentary
+> construction photography, real working site, natural available light, native
+> grain retained, muted mid-tones, honest neutral whites. Worn-in PPE, dusty
+> hi-vis, greasy gloves, muddy boots; weld spatter, chalk marks and rust bloom
+> on the surfaces. Candid imperfect framing, nobody posing for the camera. No
+> HDR, no gloss, no lens flare, no text, no logos, no watermark. Aspect ratio
+> 16:10.
 
 ### `el-segundo-hydrotreater-03.jpg` — spool fit-up under a weld tent
-> Recipe B. Inside a welding habitat tent: pipe spool fitted up on a line, purge
-> hose taped at the joint, welder seated on a bucket with the hood up, waiting
-> for a preheat reading. Task light, dark corners, honest shadows. 16:10.
+> Inside a welding habitat tent: pipe spool fitted up on a line, purge hose
+> taped at the joint, welder seated on a bucket with the hood up, waiting for
+> a preheat reading. Task light, dark corners, honest shadows. Shot on a
+> full-frame camera, 50 mm lens at f/2, 1/160s, ISO 800, available light only,
+> shallow depth of field falling off behind the subject. Documentary
+> construction photography, real working site, natural available light, native
+> grain retained, muted mid-tones, honest neutral whites. Worn-in PPE, dusty
+> hi-vis, greasy gloves, muddy boots; weld spatter, chalk marks and rust bloom
+> on the surfaces. Candid imperfect framing, nobody posing for the camera. No
+> HDR, no gloss, no lens flare, no text, no logos, no watermark. Aspect ratio
+> 16:10.
 
 ## Beacon Offshore Tieback — Oil and Gas, Gulf of Mexico
 
 ### `beacon-offshore-tieback.jpg` — hero
-> Recipe A. A fixed offshore platform from the deck of a dive support vessel:
-> jacket legs going down into grey-green water, crane pedestal, helideck edge,
-> the DSV's own deck spread in the foreground with umbilical reels and
-> containers. Gulf swell, overcast, no sunset. 3:2.
+> A fixed offshore platform from the deck of a dive support vessel: jacket
+> legs going down into grey-green water, crane pedestal, helideck edge, the
+> DSV's own deck spread in the foreground with umbilical reels and containers.
+> Gulf swell, overcast, no sunset. Shot on a full-frame camera, 24 mm lens at
+> f/8, 1/500s, ISO 100, overcast daylight or an hour before sunset, deep focus
+> front to back. Documentary construction photography, real working site,
+> natural available light, native grain retained, muted mid-tones, honest
+> neutral whites. Worn-in PPE, dusty hi-vis, greasy gloves, muddy boots; weld
+> spatter, chalk marks and rust bloom on the surfaces. Candid imperfect
+> framing, nobody posing for the camera. No HDR, no gloss, no lens flare, no
+> text, no logos, no watermark. Aspect ratio 3:2.
 
 ### `beacon-offshore-tieback-02.jpg` — saturation dive bell on the moon pool
-> Recipe B. A saturation diving bell suspended over an open moon pool, tenders in
-> hard hats guiding it, umbilical bundle, wet steel grating, the water below
-> lit from beneath. Interior industrial lighting, steam in the cold air. 16:10.
+> A saturation diving bell suspended over an open moon pool, tenders in hard
+> hats guiding it, umbilical bundle, wet steel grating, the water below lit
+> from beneath. Interior industrial lighting, steam in the cold air. Shot on a
+> full-frame camera, 50 mm lens at f/2, 1/160s, ISO 800, available light only,
+> shallow depth of field falling off behind the subject. Documentary
+> construction photography, real working site, natural available light, native
+> grain retained, muted mid-tones, honest neutral whites. Worn-in PPE, dusty
+> hi-vis, greasy gloves, muddy boots; weld spatter, chalk marks and rust bloom
+> on the surfaces. Candid imperfect framing, nobody posing for the camera. No
+> HDR, no gloss, no lens flare, no text, no logos, no watermark. Aspect ratio
+> 16:10.
 
 ### `beacon-offshore-tieback-03.jpg` — habitat welding on the riser clamp
-> Recipe E. A dry welding habitat clamped around a riser at depth, the water
-> line held inside it, a saturation diver in a hot-water suit and helmet
-> working at the joint, umbilicals rising into the dark above. Particulate,
-> natural light falloff, artificial light doing all the work. 16:10.
+> A dry welding habitat clamped around a riser at depth, the water line held
+> inside it, a saturation diver in a hot-water suit and helmet working at the
+> joint, umbilicals rising into the dark above. Particulate, natural light
+> falloff, artificial light doing all the work. Shot on a full-frame camera in
+> an underwater housing, 20 mm lens at f/5.6, 1/125s, ISO 1600, two video
+> lights at low power, green-blue water column with visible particulate and
+> light falling off to black. Documentary construction photography, real
+> working site, natural available light, native grain retained, muted
+> mid-tones, honest neutral whites. Worn-in PPE, dusty hi-vis, greasy gloves,
+> muddy boots; weld spatter, chalk marks and rust bloom on the surfaces.
+> Candid imperfect framing, nobody posing for the camera. No HDR, no gloss, no
+> lens flare, no text, no logos, no watermark. Aspect ratio 16:10.
 
 ### `beacon-offshore-tieback-04.jpg` — deck spread on the support vessel
-> Recipe A. Working deck of the dive support vessel: control containers, hose
-> reels, an ROV in its cage on the rail, crew crossing the deck in survival
-> suits, horizon tilted slightly with the roll. 16:10.
+> Working deck of the dive support vessel: control containers, hose reels, an
+> ROV in its cage on the rail, crew crossing the deck in survival suits,
+> horizon tilted slightly with the roll. Shot on a full-frame camera, 24 mm
+> lens at f/8, 1/500s, ISO 100, overcast daylight or an hour before sunset,
+> deep focus front to back. Documentary construction photography, real working
+> site, natural available light, native grain retained, muted mid-tones,
+> honest neutral whites. Worn-in PPE, dusty hi-vis, greasy gloves, muddy
+> boots; weld spatter, chalk marks and rust bloom on the surfaces. Candid
+> imperfect framing, nobody posing for the camera. No HDR, no gloss, no lens
+> flare, no text, no logos, no watermark. Aspect ratio 16:10.
 
 ## Pier J Berth Deepening — Marine, Port of Long Beach CA
 
 ### `pier-j-berth.jpg` — hero
-> Recipe A. A working container berth with a dive spread set up alongside: dive
-> barge and control shack against the wharf, ship-to-shore cranes loading a
-> vessel a hundred metres down the quay, fender line and bollards in the
-> foreground. Port haze, ordinary daylight. 3:2.
+> A working container berth with a dive spread set up alongside: dive barge
+> and control shack against the wharf, ship-to-shore cranes loading a vessel a
+> hundred metres down the quay, fender line and bollards in the foreground.
+> Port haze, ordinary daylight. Shot on a full-frame camera, 24 mm lens at
+> f/8, 1/500s, ISO 100, overcast daylight or an hour before sunset, deep focus
+> front to back. Documentary construction photography, real working site,
+> natural available light, native grain retained, muted mid-tones, honest
+> neutral whites. Worn-in PPE, dusty hi-vis, greasy gloves, muddy boots; weld
+> spatter, chalk marks and rust bloom on the surfaces. Candid imperfect
+> framing, nobody posing for the camera. No HDR, no gloss, no lens flare, no
+> text, no logos, no watermark. Aspect ratio 3:2.
 
 ### `pier-j-berth-02.jpg` — diver on stage, entering beside the fender line
-> Recipe A. A surface-supplied diver on a dive stage being lowered past the
-> wharf fenders, tender paying out umbilical, water dark and choppy below,
-> mussel growth on the fender piles. Shot from the deck above at a steep angle.
+> A surface-supplied diver on a dive stage being lowered past the wharf
+> fenders, tender paying out umbilical, water dark and choppy below, mussel
+> growth on the fender piles. Shot from the deck above at a steep angle. Shot
+> on a full-frame camera, 24 mm lens at f/8, 1/500s, ISO 100, overcast
+> daylight or an hour before sunset, deep focus front to back. Documentary
+> construction photography, real working site, natural available light, native
+> grain retained, muted mid-tones, honest neutral whites. Worn-in PPE, dusty
+> hi-vis, greasy gloves, muddy boots; weld spatter, chalk marks and rust bloom
+> on the surfaces. Candid imperfect framing, nobody posing for the camera. No
+> HDR, no gloss, no lens flare, no text, no logos, no watermark. Aspect ratio
 > 16:10.
 
 ### `pier-j-berth-03.jpg` — pile jacket set and grouted
-> Recipe E. Underwater: a fibreglass pile jacket clamped around a repaired pile
-> with grout lines running to the surface, the diver's gloved hand checking a
+> Underwater: a fibreglass pile jacket clamped around a repaired pile with
+> grout lines running to the surface, the diver's gloved hand checking a
 > strap, marine growth on the adjacent piles, green water going to black
-> beyond. 16:10.
+> beyond. Shot on a full-frame camera in an underwater housing, 20 mm lens at
+> f/5.6, 1/125s, ISO 1600, two video lights at low power, green-blue water
+> column with visible particulate and light falling off to black. Documentary
+> construction photography, real working site, natural available light, native
+> grain retained, muted mid-tones, honest neutral whites. Worn-in PPE, dusty
+> hi-vis, greasy gloves, muddy boots; weld spatter, chalk marks and rust bloom
+> on the surfaces. Candid imperfect framing, nobody posing for the camera. No
+> HDR, no gloss, no lens flare, no text, no logos, no watermark. Aspect ratio
+> 16:10.
 
 ### `pier-j-berth-04.jpg` — deck works above, dive spread below
-> Recipe A. Split view from the wharf edge: deck repair crew working on the
-> concrete above, dive control and hoses at the water's edge below, a container
-> ship's hull filling the far side of the frame. 16:10.
+> Split view from the wharf edge: deck repair crew working on the concrete
+> above, dive control and hoses at the water's edge below, a container ship's
+> hull filling the far side of the frame. Shot on a full-frame camera, 24 mm
+> lens at f/8, 1/500s, ISO 100, overcast daylight or an hour before sunset,
+> deep focus front to back. Documentary construction photography, real working
+> site, natural available light, native grain retained, muted mid-tones,
+> honest neutral whites. Worn-in PPE, dusty hi-vis, greasy gloves, muddy
+> boots; weld spatter, chalk marks and rust bloom on the surfaces. Candid
+> imperfect framing, nobody posing for the camera. No HDR, no gloss, no lens
+> flare, no text, no logos, no watermark. Aspect ratio 16:10.
 
 ## Terminal Island Wharf Strengthening — Marine, Port of Los Angeles CA
 
 ### `terminal-island-wharf.jpg` — hero
-> Recipe A. A container wharf mid-strengthening: a new crane rail beam being set
-> along the deck, existing gantry crane parked clear, piling rig on a barge
-> alongside. Working port in the background, flat overcast light. 3:2.
+> A container wharf mid-strengthening: a new crane rail beam being set along
+> the deck, existing gantry crane parked clear, piling rig on a barge
+> alongside. Working port in the background, flat overcast light. Shot on a
+> full-frame camera, 24 mm lens at f/8, 1/500s, ISO 100, overcast daylight or
+> an hour before sunset, deep focus front to back. Documentary construction
+> photography, real working site, natural available light, native grain
+> retained, muted mid-tones, honest neutral whites. Worn-in PPE, dusty hi-vis,
+> greasy gloves, muddy boots; weld spatter, chalk marks and rust bloom on the
+> surfaces. Candid imperfect framing, nobody posing for the camera. No HDR, no
+> gloss, no lens flare, no text, no logos, no watermark. Aspect ratio 3:2.
 
 ### `terminal-island-wharf-02.jpg` — new crane beam threaded over the existing deck
-> Recipe C. A long precast crane beam in the air over the wharf deck, two
-> riggers steadying it on taglines, existing rail and stop blocks below,
-> compressed by a long lens against stacked containers. 16:10.
+> A long precast crane beam in the air over the wharf deck, two riggers
+> steadying it on taglines, existing rail and stop blocks below, compressed by
+> a long lens against stacked containers. Shot on a full-frame camera, 135 mm
+> lens at f/4, 1/640s, ISO 200, taken from across the site so the background
+> compresses onto the subject. Documentary construction photography, real
+> working site, natural available light, native grain retained, muted
+> mid-tones, honest neutral whites. Worn-in PPE, dusty hi-vis, greasy gloves,
+> muddy boots; weld spatter, chalk marks and rust bloom on the surfaces.
+> Candid imperfect framing, nobody posing for the camera. No HDR, no gloss, no
+> lens flare, no text, no logos, no watermark. Aspect ratio 16:10.
 
 ### `terminal-island-wharf-03.jpg` — underdeck inspection before the strengthening scheme
-> Recipe B. Beneath a wharf deck at low tide: forest of piles, chloride staining
-> and spalled concrete on the pile caps, an inspector in a small boat with a
-> headlamp and a clipboard, hard shafts of daylight between the beams. 16:10.
+> Beneath a wharf deck at low tide: forest of piles, chloride staining and
+> spalled concrete on the pile caps, an inspector in a small boat with a
+> headlamp and a clipboard, hard shafts of daylight between the beams. Shot on
+> a full-frame camera, 50 mm lens at f/2, 1/160s, ISO 800, available light
+> only, shallow depth of field falling off behind the subject. Documentary
+> construction photography, real working site, natural available light, native
+> grain retained, muted mid-tones, honest neutral whites. Worn-in PPE, dusty
+> hi-vis, greasy gloves, muddy boots; weld spatter, chalk marks and rust bloom
+> on the surfaces. Candid imperfect framing, nobody posing for the camera. No
+> HDR, no gloss, no lens flare, no text, no logos, no watermark. Aspect ratio
+> 16:10.
 
 ## Catalina Channel Outfall Repair — Marine, Catalina Channel CA
 
 ### `catalina-outfall.jpg` — hero
-> Recipe A. A dive and survey vessel on open water over a subsea pipeline route:
-> A-frame at the stern, ROV on the deck crane, crew at the rail watching the
-> line go down, island coast low on the horizon. Choppy blue-grey sea, high
-> overcast. 3:2.
+> A dive and survey vessel on open water over a subsea pipeline route: A-frame
+> at the stern, ROV on the deck crane, crew at the rail watching the line go
+> down, island coast low on the horizon. Choppy blue-grey sea, high overcast.
+> Shot on a full-frame camera, 24 mm lens at f/8, 1/500s, ISO 100, overcast
+> daylight or an hour before sunset, deep focus front to back. Documentary
+> construction photography, real working site, natural available light, native
+> grain retained, muted mid-tones, honest neutral whites. Worn-in PPE, dusty
+> hi-vis, greasy gloves, muddy boots; weld spatter, chalk marks and rust bloom
+> on the surfaces. Candid imperfect framing, nobody posing for the camera. No
+> HDR, no gloss, no lens flare, no text, no logos, no watermark. Aspect ratio
+> 3:2.
 
 ### `catalina-outfall-02.jpg` — ROV survey ahead of the dive
-> Recipe B. Inside the ROV control container: pilot at the joystick, screens
-> showing sonar and a murky pipeline camera feed, notes on the desk, red-tinted
-> dim lighting. Screens legible as shapes, not as data. 16:10.
+> Inside the ROV control container: pilot at the joystick, screens showing
+> sonar and a murky pipeline camera feed, notes on the desk, red-tinted dim
+> lighting. Screens legible as shapes, not as data. Shot on a full-frame
+> camera, 50 mm lens at f/2, 1/160s, ISO 800, available light only, shallow
+> depth of field falling off behind the subject. Documentary construction
+> photography, real working site, natural available light, native grain
+> retained, muted mid-tones, honest neutral whites. Worn-in PPE, dusty hi-vis,
+> greasy gloves, muddy boots; weld spatter, chalk marks and rust bloom on the
+> surfaces. Candid imperfect framing, nobody posing for the camera. No HDR, no
+> gloss, no lens flare, no text, no logos, no watermark. Aspect ratio 16:10.
 
 ### `catalina-outfall-03.jpg` — clamp set over the damaged section
-> Recipe E. Underwater: a split repair clamp bolted over a dented pipeline
-> section on the seabed, diver torquing a bolt with a hydraulic wrench, silt
-> kicked up around the work, anodes and marine growth on the pipe either side.
-> 16:10.
+> Underwater: a split repair clamp bolted over a dented pipeline section on
+> the seabed, diver torquing a bolt with a hydraulic wrench, silt kicked up
+> around the work, anodes and marine growth on the pipe either side. Shot on a
+> full-frame camera in an underwater housing, 20 mm lens at f/5.6, 1/125s, ISO
+> 1600, two video lights at low power, green-blue water column with visible
+> particulate and light falling off to black. Documentary construction
+> photography, real working site, natural available light, native grain
+> retained, muted mid-tones, honest neutral whites. Worn-in PPE, dusty hi-vis,
+> greasy gloves, muddy boots; weld spatter, chalk marks and rust bloom on the
+> surfaces. Candid imperfect framing, nobody posing for the camera. No HDR, no
+> gloss, no lens flare, no text, no logos, no watermark. Aspect ratio 16:10.
 
 ## Santa Ana River Bridge Replacement — Infrastructure, Orange County CA
 
 ### `santa-ana-river-bridge.jpg` — hero
-> Recipe A. A three-span bridge under construction over a wide concrete flood
-> control channel: new piers up, girders landed on two spans, the old crossing
-> still carrying traffic alongside. Dry channel with a low water trickle,
-> palms and freeway in the distance, Southern California haze. 3:2.
+> A three-span bridge under construction over a wide concrete flood control
+> channel: new piers up, girders landed on two spans, the old crossing still
+> carrying traffic alongside. Dry channel with a low water trickle, palms and
+> freeway in the distance, Southern California haze. Shot on a full-frame
+> camera, 24 mm lens at f/8, 1/500s, ISO 100, overcast daylight or an hour
+> before sunset, deep focus front to back. Documentary construction
+> photography, real working site, natural available light, native grain
+> retained, muted mid-tones, honest neutral whites. Worn-in PPE, dusty hi-vis,
+> greasy gloves, muddy boots; weld spatter, chalk marks and rust bloom on the
+> surfaces. Candid imperfect framing, nobody posing for the camera. No HDR, no
+> gloss, no lens flare, no text, no logos, no watermark. Aspect ratio 3:2.
 
 ### `santa-ana-river-bridge-02.jpg` — girder set over the channel, night closure
-> Recipe D. Night girder erection over the channel: two crawler cranes at the
-> pick, girder swinging slowly under flood lights, traffic control cones and
-> flashing amber on the closed road, crew watching from the abutment. 16:10.
+> Night girder erection over the channel: two crawler cranes at the pick,
+> girder swinging slowly under flood lights, traffic control cones and
+> flashing amber on the closed road, crew watching from the abutment. Shot on
+> a full-frame camera, 35 mm lens at f/1.8, 1/60s, ISO 3200, mixed sodium
+> vapour, LED task light and moonlight, colour temperatures left uncorrected.
+> Documentary construction photography, real working site, natural available
+> light, native grain retained, muted mid-tones, honest neutral whites.
+> Worn-in PPE, dusty hi-vis, greasy gloves, muddy boots; weld spatter, chalk
+> marks and rust bloom on the surfaces. Candid imperfect framing, nobody
+> posing for the camera. No HDR, no gloss, no lens flare, no text, no logos,
+> no watermark. Aspect ratio 16:10.
 
 ### `santa-ana-river-bridge-03.jpg` — falsework and rebar before the deck pour
-> Recipe A. Deck rebar mat tied out over falsework and formwork, chairs and
-> spacers under the bars, a rebar crew working the far end, chalk marks on the
-> soffit forms. Shot low along the deck so the bars converge. 16:10.
+> Deck rebar mat tied out over falsework and formwork, chairs and spacers
+> under the bars, a rebar crew working the far end, chalk marks on the soffit
+> forms. Shot low along the deck so the bars converge. Shot on a full-frame
+> camera, 24 mm lens at f/8, 1/500s, ISO 100, overcast daylight or an hour
+> before sunset, deep focus front to back. Documentary construction
+> photography, real working site, natural available light, native grain
+> retained, muted mid-tones, honest neutral whites. Worn-in PPE, dusty hi-vis,
+> greasy gloves, muddy boots; weld spatter, chalk marks and rust bloom on the
+> surfaces. Candid imperfect framing, nobody posing for the camera. No HDR, no
+> gloss, no lens flare, no text, no logos, no watermark. Aspect ratio 16:10.
 
 ### `santa-ana-river-bridge-04.jpg` — abutment works from the levee road
-> Recipe C. Abutment and wing wall construction seen from the levee road:
-> excavator trimming, formwork panels stacked, a surveyor with a prism pole,
-> levee gravel in the near foreground out of focus. 16:10.
+> Abutment and wing wall construction seen from the levee road: excavator
+> trimming, formwork panels stacked, a surveyor with a prism pole, levee
+> gravel in the near foreground out of focus. Shot on a full-frame camera, 135
+> mm lens at f/4, 1/640s, ISO 200, taken from across the site so the
+> background compresses onto the subject. Documentary construction
+> photography, real working site, natural available light, native grain
+> retained, muted mid-tones, honest neutral whites. Worn-in PPE, dusty hi-vis,
+> greasy gloves, muddy boots; weld spatter, chalk marks and rust bloom on the
+> surfaces. Candid imperfect framing, nobody posing for the camera. No HDR, no
+> gloss, no lens flare, no text, no logos, no watermark. Aspect ratio 16:10.
 
 ## Sierra Dam Outlet Works — Infrastructure, Sierra Nevada CA
 
 ### `sierra-dam-outlet.jpg` — hero
-> Recipe A. A 1950s concrete dam with new outlet works under construction at the
-> toe: cofferdam and dewatering at the intake, crane on the crest road, pine
-> slopes either side, reservoir held high behind. Cool mountain light, thin
-> cloud. 3:2.
+> A 1950s concrete dam with new outlet works under construction at the toe:
+> cofferdam and dewatering at the intake, crane on the crest road, pine slopes
+> either side, reservoir held high behind. Cool mountain light, thin cloud.
+> Shot on a full-frame camera, 24 mm lens at f/8, 1/500s, ISO 100, overcast
+> daylight or an hour before sunset, deep focus front to back. Documentary
+> construction photography, real working site, natural available light, native
+> grain retained, muted mid-tones, honest neutral whites. Worn-in PPE, dusty
+> hi-vis, greasy gloves, muddy boots; weld spatter, chalk marks and rust bloom
+> on the surfaces. Candid imperfect framing, nobody posing for the camera. No
+> HDR, no gloss, no lens flare, no text, no logos, no watermark. Aspect ratio
+> 3:2.
 
 ### `sierra-dam-outlet-02.jpg` — intake tower works behind a cofferdam
-> Recipe A. Sheet-pile cofferdam holding water back from an intake tower, pumps
-> running, workers on staging against the old concrete, algae line marking the
-> normal water level. 16:10.
+> Sheet-pile cofferdam holding water back from an intake tower, pumps running,
+> workers on staging against the old concrete, algae line marking the normal
+> water level. Shot on a full-frame camera, 24 mm lens at f/8, 1/500s, ISO
+> 100, overcast daylight or an hour before sunset, deep focus front to back.
+> Documentary construction photography, real working site, natural available
+> light, native grain retained, muted mid-tones, honest neutral whites.
+> Worn-in PPE, dusty hi-vis, greasy gloves, muddy boots; weld spatter, chalk
+> marks and rust bloom on the surfaces. Candid imperfect framing, nobody
+> posing for the camera. No HDR, no gloss, no lens flare, no text, no logos,
+> no watermark. Aspect ratio 16:10.
 
 ### `sierra-dam-outlet-03.jpg` — gate slot machining in the tunnel
-> Recipe B. Inside a concrete outlet tunnel: crew fitting a steel gate frame in
-> a machined slot, string lines and dial gauges set for alignment, temporary
-> lighting strung along the crown, damp walls. 16:10.
+> Inside a concrete outlet tunnel: crew fitting a steel gate frame in a
+> machined slot, string lines and dial gauges set for alignment, temporary
+> lighting strung along the crown, damp walls. Shot on a full-frame camera, 50
+> mm lens at f/2, 1/160s, ISO 800, available light only, shallow depth of
+> field falling off behind the subject. Documentary construction photography,
+> real working site, natural available light, native grain retained, muted
+> mid-tones, honest neutral whites. Worn-in PPE, dusty hi-vis, greasy gloves,
+> muddy boots; weld spatter, chalk marks and rust bloom on the surfaces.
+> Candid imperfect framing, nobody posing for the camera. No HDR, no gloss, no
+> lens flare, no text, no logos, no watermark. Aspect ratio 16:10.
 
 ## Imperial Valley Substation — Energy, Imperial Valley CA
 
 ### `imperial-substation.jpg` — hero
-> Recipe A. A 500 kV switchyard under construction on desert ground: galvanised
-> lattice structures going up, insulator stacks set, transformer on its pad,
-> gravel yard and chain-link fence, mountains low on the horizon through heat
-> haze. Harsh dry light, honest shadows. 3:2.
+> A 500 kV switchyard under construction on desert ground: galvanised lattice
+> structures going up, insulator stacks set, transformer on its pad, gravel
+> yard and chain-link fence, mountains low on the horizon through heat haze.
+> Harsh dry light, honest shadows. Shot on a full-frame camera, 24 mm lens at
+> f/8, 1/500s, ISO 100, overcast daylight or an hour before sunset, deep focus
+> front to back. Documentary construction photography, real working site,
+> natural available light, native grain retained, muted mid-tones, honest
+> neutral whites. Worn-in PPE, dusty hi-vis, greasy gloves, muddy boots; weld
+> spatter, chalk marks and rust bloom on the surfaces. Candid imperfect
+> framing, nobody posing for the camera. No HDR, no gloss, no lens flare, no
+> text, no logos, no watermark. Aspect ratio 3:2.
 
 ### `imperial-substation-02.jpg` — bus structure erection in the switchyard
-> Recipe C. Crew setting a galvanised lattice bus structure with a rough-terrain
-> crane, one worker on a lift basket guiding it, energised line and existing
-> yard behind. Long lens compression, dust in the air. 16:10.
+> Crew setting a galvanised lattice bus structure with a rough-terrain crane,
+> one worker on a lift basket guiding it, energised line and existing yard
+> behind. Long lens compression, dust in the air. Shot on a full-frame camera,
+> 135 mm lens at f/4, 1/640s, ISO 200, taken from across the site so the
+> background compresses onto the subject. Documentary construction
+> photography, real working site, natural available light, native grain
+> retained, muted mid-tones, honest neutral whites. Worn-in PPE, dusty hi-vis,
+> greasy gloves, muddy boots; weld spatter, chalk marks and rust bloom on the
+> surfaces. Candid imperfect framing, nobody posing for the camera. No HDR, no
+> gloss, no lens flare, no text, no logos, no watermark. Aspect ratio 16:10.
 
 ### `imperial-substation-03.jpg` — transformer set on its foundation
-> Recipe A. A large power transformer being lowered onto its foundation by two
-> cranes, riggers on tag lines, oil containment pit and drilled pier caps
-> visible below, desert ground cracked from heat. 16:10.
+> A large power transformer being lowered onto its foundation by two cranes,
+> riggers on tag lines, oil containment pit and drilled pier caps visible
+> below, desert ground cracked from heat. Shot on a full-frame camera, 24 mm
+> lens at f/8, 1/500s, ISO 100, overcast daylight or an hour before sunset,
+> deep focus front to back. Documentary construction photography, real working
+> site, natural available light, native grain retained, muted mid-tones,
+> honest neutral whites. Worn-in PPE, dusty hi-vis, greasy gloves, muddy
+> boots; weld spatter, chalk marks and rust bloom on the surfaces. Candid
+> imperfect framing, nobody posing for the camera. No HDR, no gloss, no lens
+> flare, no text, no logos, no watermark. Aspect ratio 16:10.
 
 ---
 
