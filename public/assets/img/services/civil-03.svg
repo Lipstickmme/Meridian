@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" preserveAspectRatio="xMidYMid slice" role="img" aria-label="MAJOR CIVIL ENGINEERING · SECTION">
+  <defs>
+    <linearGradient id="ground" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0" stop-color="#f6f4ec"/><stop offset="0.6" stop-color="#eceee7"/><stop offset="1" stop-color="#dfe7e6"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="rgba(18,54,66,0.11)" stroke-width="1"/>
+    </pattern>
+    <pattern id="grid-fine" width="8" height="8" patternUnits="userSpaceOnUse">
+      <path d="M8 0H0V8" fill="none" stroke="rgba(18,54,66,0.055)" stroke-width="0.6"/>
+    </pattern>
+    <linearGradient id="wash" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f6d84" stop-opacity="0.34"/><stop offset="1" stop-color="#0f6d84" stop-opacity="0.06"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="820" fill="url(#ground)"/>
+  <rect width="1200" height="820" fill="url(#grid-fine)"/>
+  <rect width="1200" height="820" fill="url(#grid)"/>
+  <rect x="14" y="14" width="1172" height="792" fill="none" stroke="rgba(18,54,66,0.34)" stroke-width="1.4"/>
+  <text x="34" y="46" fill="#0f6d84" font-family="'IBM Plex Mono',monospace" font-size="13" letter-spacing="3">S-03/3</text>
+  <text x="1166" y="46" text-anchor="end" fill="rgba(18,54,66,0.45)" font-family="'IBM Plex Mono',monospace" font-size="12" letter-spacing="2">SCALE 1:50</text>
+  <rect x="732.1" y="314.6" width="167.9" height="169.2" fill="url(#wash)" stroke="#123642" stroke-width="2"/>
+  <path d="M732.1 314.6L900 483.8" fill="none" stroke="#123642" stroke-width="1" opacity="0.22"/>
+  <rect x="372.2" y="259.3" width="266.1" height="194.8" fill="none" stroke="#123642" stroke-width="2"/>
+  <path d="M372.2 259.3L638.3 454.1" fill="none" stroke="#123642" stroke-width="1" opacity="0.22"/>
+  <rect x="692.5" y="414.2" width="145" height="97.8" fill="none" stroke="#123642" stroke-width="2"/>
+  <path d="M692.5 414.2L837.5 511.9" fill="none" stroke="#123642" stroke-width="1" opacity="0.22"/>
+  <rect x="508.3" y="285.2" width="257.9" height="105.2" fill="url(#wash)" stroke="#123642" stroke-width="2"/>
+  <path d="M508.3 285.2L766.2 390.4" fill="none" stroke="#123642" stroke-width="1" opacity="0.22"/>
+  <rect x="316.9" y="446.8" width="262.3" height="151.1" fill="none" stroke="#123642" stroke-width="2"/>
+  <path d="M316.9 446.8L579.2 597.8" fill="none" stroke="#123642" stroke-width="1" opacity="0.22"/>
+  <rect x="324.5" y="145.3" width="160.8" height="198.4" fill="none" stroke="#123642" stroke-width="2"/>
+  <path d="M324.5 145.3L485.3 343.7" fill="none" stroke="#123642" stroke-width="1" opacity="0.22"/>
+  <path d="M0 164C360 111.1 840 226 1200 154" fill="none" stroke="#123642" stroke-width="1" opacity="0.3"/>
+  <path d="M0 278.8C360 222.2 840 338.8 1200 268.8" fill="none" stroke="#123642" stroke-width="1" opacity="0.3"/>
+  <path d="M0 393.6C360 352.5 840 450.1 1200 383.6" fill="none" stroke="#123642" stroke-width="1" opacity="0.3"/>
+  <path d="M0 508.4C360 441.3 840 555.9 1200 498.4" fill="none" stroke="#123642" stroke-width="1" opacity="0.3"/>
+  <path d="M0 623.2C360 575.5 840 676.7 1200 613.2" fill="none" stroke="#123642" stroke-width="1" opacity="0.3"/>
+  <path d="M0 639.6C360 574 744 721.6 1200 590.4" fill="none" stroke="#f2a900" stroke-width="3" stroke-linecap="round"/>
+  <path d="M96 82v590.4" fill="none" stroke="#0f6d84" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="1080" cy="131.2" r="26" fill="none" stroke="#123642" stroke-width="1.6"/>
+  <path d="M1080 97.2v68" fill="none" stroke="#f2a900" stroke-width="2" stroke-linecap="round"/>
+  <rect x="14" y="752" width="1172" height="54" fill="#f2a900"/>
+  <rect x="14" y="752" width="1172" height="3" fill="#123642"/>
+  <text x="34" y="785" fill="#123642" font-family="'IBM Plex Mono',monospace" font-size="15" letter-spacing="2.4" font-weight="500">MAJOR CIVIL ENGINEERING · SECTION</text>
+  <text x="1166" y="785" text-anchor="end" fill="#123642" font-family="'IBM Plex Mono',monospace" font-size="13" letter-spacing="3" opacity="0.72">MERIDIAN</text>
+</svg>

@@ -1908,3 +1908,190 @@ body, main { background: var(--meridian-paper) !important; color: var(--meridian
 .chat-toggle { background: var(--meridian-ink) !important; color: #f4f2ec !important; }
 .chat-head { background: var(--meridian-ink) !important; color: #f4f2ec !important; }
 .chat-head .dot { background: var(--meridian-flare) !important; }
+
+/* =========================================================================
+   Colour pass
+   The site was carrying too much near-black: an ink nav, an ink footer and
+   dark artwork bands in between. Ink moves to a deep teal that reads as a
+   colour rather than an absence of one, the drawings are now on paper, and
+   construction yellow does the work it does on a site — it marks the things
+   you are meant to notice from across the room.
+   ========================================================================= */
+:root {
+  --meridian-ink: #0e3a46;        /* deep teal: type, and the two dark bands */
+  --meridian-ink-deep: #0a2b34;   /* one step down, for the footer floor */
+  --meridian-paper: #f4f2ec;
+  --meridian-sand: #f7efdd;       /* warm tint for alternating bands */
+  --meridian-mist: #e9f0f0;       /* cool tint, for galleries */
+  --meridian-muted: #4a5f68;
+  --meridian-signal: #12677c;     /* teal: anything that points */
+  --meridian-flare: #f2a900;      /* construction yellow: anything measured */
+  --meridian-flare-soft: #ffd77a;
+}
+
+/* The two dark surfaces. Deep teal, with yellow doing the edges. */
+.nav { background: var(--meridian-ink) !important; border-bottom: 3px solid var(--meridian-flare) !important; }
+.hero { background-color: var(--meridian-ink) !important; }
+.hero-scrim { background: linear-gradient(180deg, rgb(14 58 70 / .34) 0%, rgb(14 58 70 / .58) 62%, rgb(10 43 52 / .78) 100%) !important; }
+.footer { background: var(--meridian-ink-deep) !important; }
+.chat-toggle, .chat-head { background: var(--meridian-ink) !important; }
+
+/* Alternating bands, so a long page is not one flat sheet of off-white. */
+.section-pad.alt { background: var(--meridian-sand); }
+.gallery-band { background: var(--meridian-mist); }
+.chapter#metrics { background: var(--meridian-sand) !important; }
+.chapter#contact { background: var(--meridian-mist) !important; }
+.cta-band { background: var(--meridian-flare); border-top: 3px solid var(--meridian-ink); }
+.cta-band::after { display: none !important; }
+.cta-inner h2, .cta-inner p { color: var(--meridian-ink) !important; }
+.cta-band .btn { background: var(--meridian-ink) !important; color: #f4f2ec !important; border-color: var(--meridian-ink) !important; }
+.cta-band .btn:hover { background: var(--meridian-ink-deep) !important; }
+
+/* Buttons: the primary one is site yellow, which is the loudest thing on a
+   light page without shouting in a colour nobody uses on a drawing. */
+.btn {
+  background: var(--meridian-flare) !important;
+  color: var(--meridian-ink) !important;
+  border: 1px solid var(--meridian-ink) !important;
+  font-weight: 600;
+}
+.btn:hover { background: var(--meridian-flare-soft) !important; color: var(--meridian-ink) !important; }
+.btn.ghost {
+  background: transparent !important;
+  color: var(--meridian-ink) !important;
+  border-color: var(--meridian-signal) !important;
+}
+.btn.ghost:hover { background: var(--meridian-signal) !important; color: #fff !important; border-color: var(--meridian-signal) !important; }
+.hero .btn { border-color: var(--meridian-flare) !important; }
+.hero .btn.ghost, .nav .nav-cta { color: #f4f2ec !important; border-color: rgb(244 242 236 / .6) !important; background: transparent !important; }
+.hero .btn.ghost:hover, .nav .nav-cta:hover { background: var(--meridian-flare) !important; color: var(--meridian-ink) !important; border-color: var(--meridian-flare) !important; }
+
+/* Stats: tinted tiles instead of four outlines, with the headline figure in
+   yellow on the one that carries the point. */
+#metrics .stat { background: rgb(255 255 255 / .6); border: 1px solid rgb(14 58 70 / .14) !important; }
+#metrics .stat:nth-child(2n) { background: rgb(18 103 124 / .07); }
+#metrics .stat .num { color: var(--meridian-ink) !important; }
+#metrics .stat .num em { color: #a06a00 !important; font-style: normal; }
+
+/* Sector chips, coloured by sector, so a listing reads as a portfolio that
+   covers several industries rather than one long list. */
+.card .sector, .meta-row .sector {
+  background: rgb(18 103 124 / .12); color: var(--meridian-signal);
+  padding: 4px 10px; border-radius: 0; font-weight: 600;
+}
+[data-sector="Oil and Gas"] { background: rgb(242 169 0 / .2) !important; color: #8a5d00 !important; }
+[data-sector="Marine"] { background: rgb(13 84 120 / .14) !important; color: #0d5478 !important; }
+[data-sector="Infrastructure"] { background: rgb(30 110 76 / .14) !important; color: #1e6e4c !important; }
+[data-sector="Energy"] { background: rgb(176 74 27 / .14) !important; color: #b04a1b !important; }
+[data-sector="Commercial"] { background: rgb(18 103 124 / .12) !important; color: var(--meridian-signal) !important; }
+
+/* Filter chips on /projects */
+.chip { border: 1px solid rgb(14 58 70 / .2) !important; border-radius: 0 !important; background: transparent !important; color: var(--meridian-ink) !important; }
+.chip:hover { border-color: var(--meridian-signal) !important; color: var(--meridian-signal) !important; }
+.chip.active { background: var(--meridian-flare) !important; border-color: var(--meridian-ink) !important; color: var(--meridian-ink) !important; font-weight: 600; }
+
+/* Section numbering: the eyebrow's leading digits carry the yellow. */
+.eyebrow { color: var(--meridian-signal) !important; }
+.service .num { color: rgb(242 169 0 / .5) !important; }
+.service .code, .services-grid .service::before { color: var(--meridian-signal) !important; }
+
+/* ---- project and service pages ---------------------------------------- */
+.project-lede { font-size: clamp(17px, 1.7vw, 21px); line-height: 1.5; color: var(--meridian-muted); max-width: 52ch; margin: 18px 0 0; }
+.page-header-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: clamp(28px, 5vw, 72px); align-items: center; padding: clamp(96px, 11vw, 150px) 0 clamp(40px, 6vw, 72px); }
+.page-header-copy h1 { font-size: clamp(38px, 5vw, 68px); line-height: 1.02; }
+.page-header-figure { position: relative; margin: 0; border: 1px solid rgb(14 58 70 / .18); background: #fff; }
+.page-header-figure img { width: 100%; display: block; }
+.figure-metric {
+  position: absolute; left: 0; bottom: 0;
+  background: var(--meridian-flare); color: var(--meridian-ink);
+  padding: 12px 18px; display: flex; align-items: baseline; gap: 10px;
+  border-top: 3px solid var(--meridian-ink);
+}
+.figure-metric b { font-family: var(--font-display); font-size: 26px; line-height: 1; }
+.figure-metric span { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; }
+.meta-row { display: flex; flex-wrap: wrap; gap: 10px 14px; margin-top: 22px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--meridian-muted); align-items: center; }
+.project-cols { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 88px); align-items: start; padding-bottom: clamp(56px, 8vw, 96px); }
+.project-body { padding-top: clamp(24px, 4vw, 48px); }
+.overview p { font-size: clamp(16px, 1.5vw, 19px); line-height: 1.65; color: var(--meridian-muted); }
+.project-services { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px; }
+.project-services a, .project-services span {
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 8px 12px; border: 1px solid rgb(14 58 70 / .2); color: var(--meridian-ink); text-decoration: none;
+}
+.project-services a:hover { background: var(--meridian-signal); border-color: var(--meridian-signal); color: #fff; }
+.project-facts { border-top: 3px solid var(--meridian-flare); }
+.project-facts .fact .v { color: var(--meridian-ink); }
+
+/* Gallery: the first frame runs wide, the rest sit beside each other. */
+.gallery-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(16px, 2.4vw, 28px); }
+.gallery-item { margin: 0; border: 1px solid rgb(14 58 70 / .16); background: #fff; }
+.gallery-item.is-wide { grid-column: 1 / -1; }
+.gallery-item img { width: 100%; display: block; aspect-ratio: 16 / 10; object-fit: cover; }
+.gallery-item figcaption {
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--meridian-muted); padding: 12px 14px; border-top: 1px solid rgb(14 58 70 / .12);
+}
+.project-next { border-top: 1px solid rgb(14 58 70 / .16); background: var(--meridian-paper); }
+.project-next a { display: flex; align-items: center; justify-content: space-between; padding: clamp(28px, 4vw, 44px) 0; text-decoration: none; color: var(--meridian-ink); }
+.project-next .lbl { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--meridian-signal); }
+.project-next .nm { font-family: var(--font-display); font-size: clamp(22px, 3vw, 34px); font-weight: 600; }
+.project-next a:hover .nm { color: var(--meridian-signal); }
+.service-row-media { border: 1px solid rgb(14 58 70 / .16); }
+.service-row:hover .service-row-body h2 { color: var(--meridian-signal); }
+
+@media (max-width: 860px) {
+  .page-header-grid, .project-cols { grid-template-columns: 1fr; }
+  .page-header-grid { padding-top: 104px; }
+  .gallery-grid { grid-template-columns: 1fr; }
+}
+
+/* The project and service pages lay their own header out as a two-column
+   grid inside .wrap, so the landing-page header rules (which make the header
+   itself the grid, with a media band in the second column) have to stand
+   down here or the copy is squeezed into half a column. */
+.page-project .page-header,
+.page-service .page-header {
+  display: block !important;
+  min-height: 0 !important;
+  padding-top: 0 !important;
+  grid-template-columns: none !important;
+  background: var(--meridian-paper) !important;
+}
+.page-project .page-header-grid,
+.page-service .page-header-grid { display: grid !important; }
+.page-project .page-header-figure img,
+.page-service .page-header-figure img { aspect-ratio: 3 / 2; object-fit: cover; }
+.gallery-item.is-wide img { aspect-ratio: 21 / 9; }
+.page-project .section-head h2,
+.page-service .section-head h2 { font-size: clamp(28px, 3.6vw, 44px); }
+
+/* The landing chapters and the hero have their own button rules from an
+   earlier pass, at a higher specificity than the colour pass above, which
+   left the primary button reading as an outline everywhere except the CTA
+   bands. The primary button is solid yellow wherever it appears. */
+.chapter .btn:not(.ghost),
+.hero .btn:not(.ghost),
+.page-header .btn:not(.ghost),
+.cta-inner .btn:not(.ghost),
+form .btn:not(.ghost) {
+  background: var(--meridian-flare) !important;
+  color: var(--meridian-ink) !important;
+  border-color: var(--meridian-ink) !important;
+}
+.chapter .btn:not(.ghost):hover,
+.hero .btn:not(.ghost):hover,
+.page-header .btn:not(.ghost):hover,
+form .btn:not(.ghost):hover { background: var(--meridian-flare-soft) !important; }
+.cta-band .btn:not(.ghost) { background: var(--meridian-ink) !important; color: #f4f2ec !important; }
+.chapter .btn.ghost, .hero .btn.ghost { border-color: var(--meridian-signal) !important; }
+.hero .btn.ghost { border-color: rgb(244 242 236 / .6) !important; }
+
+/* An earlier pass pinned the hero's first button to white text, which was
+   right when it was an outline on a photograph and is unreadable now that it
+   is solid yellow. Ink on yellow is 9:1; white on yellow is 2:1. */
+.hero .hero-actions .btn:first-child,
+.hero .hero-actions .btn:first-child:visited,
+.hero .hero-actions .btn:first-child:hover {
+  color: var(--meridian-ink) !important;
+  border-color: var(--meridian-ink) !important;
+}

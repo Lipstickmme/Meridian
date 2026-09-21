@@ -1,7 +1,7 @@
 {
-  "_comment": "The practice's contact details. Address and telephone are blank by default and only appear on the site once they are set under Settings at /admin; email and hours are the values the pages are built with. Anything set at the desk reaches every page on the next load, with no rebuild. Replace the placeholder address below with the mailbox you actually read.",
+  "_comment": "The practice's contact details. These are the values the pages are built with; the studio desk can change any of them under Settings at /admin and every page picks the change up on its next load, with no rebuild. Address is blank until you set one, and its row stays hidden while it is.",
   "address": "",
   "email": "hello@meridianconstruction.com",
-  "phone": "",
-  "hours": "Monday to Friday, 08:00 to 17:30 CET"
+  "phone": "(714) 738-8708",
+  "hours": "Monday to Friday, 7:00am to 5:30pm PT"
 }

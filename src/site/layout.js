@@ -44,11 +44,12 @@ function contactForm(id = 'contact-form') {
           <div class="field"><label for="${id}-service">Discipline</label>
             <select id="${id}-service" name="service">
               <option value="">Select</option>
-              <option>Structural</option>
-              <option>Civil &amp; Infrastructure</option>
-              <option>Mechanical &amp; Process</option>
-              <option>Digital Engineering</option>
-              <option>Construction &amp; delivery</option>
+              <option>Commercial construction</option>
+              <option>Major civil engineering</option>
+              <option>Oil and gas facilities</option>
+              <option>Underwater and marine welding</option>
+              <option>Structural engineering</option>
+              <option>Mechanical and process</option>
               <option>Not sure yet</option>
             </select><div class="err" data-err="service"></div>
           </div>
@@ -132,6 +133,7 @@ function footer() {
       </div>
       <div class="col">
         <h5>Contact</h5>
+        <a href="tel:${site.phone.replace(/[^+\d]/g, '')}" data-site="phone">${site.phone}</a>
         <a href="mailto:${site.email}" data-site="email">${site.email}</a>
         <a href="/contact">Contact us</a>
       </div>

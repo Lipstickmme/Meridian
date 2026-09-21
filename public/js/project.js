@@ -21,14 +21,20 @@
     document.title = project.name + ' | Meridian Construction';
     const facts = (project.facts || []).map((f) => `<div class="fact"><span class="k">${esc(f.k)}</span><span class="v">${esc(f.v)}</span></div>`).join('');
     const services = (project.services || []).map((s) => `<span>${esc(s)}</span>`).join('');
+    const gallery = (project.gallery || []).map((g, i) => `
+          <figure class="gallery-item${i === 0 && project.gallery.length > 2 ? ' is-wide' : ''}" data-reveal>
+            <img src="${esc(g.src)}" alt="${esc(g.caption || '')}" loading="lazy" decoding="async" />
+            ${g.caption ? `<figcaption>${esc(g.caption)}</figcaption>` : ''}
+          </figure>`).join('');
     root.innerHTML = `
       <header class="page-header project-hero">
         <div class="wrap page-header-grid">
           <div class="page-header-copy">
             <span class="eyebrow">${esc(project.sector)} project</span>
             <h1>${esc(project.name)}</h1>
+            <p class="project-lede">${esc(project.blurb)}</p>
             <div class="meta-row">
-              <span class="sector">${esc(project.location)}</span>
+              <span class="sector" data-sector="${esc(project.sector)}">${esc(project.location)}</span>
               <span>${esc(project.status || project.year)}</span>
               ${project.client ? `<span>Client: ${esc(project.client)}</span>` : ''}
               ${project.duration ? `<span>${esc(project.duration)}</span>` : ''}
@@ -36,6 +42,7 @@
           </div>
           <figure class="figure page-header-figure">
             <img src="${esc(project.image)}" alt="${esc(project.name)}" decoding="async" />
+            <figcaption class="figure-metric"><b>${esc(project.metric)}</b><span>${esc(project.metricLabel)}</span></figcaption>
           </figure>
         </div>
       </header>
@@ -48,6 +55,10 @@
           <div class="project-facts">${facts}</div>
         </aside>
       </div></section>
+      ${gallery ? `<section class="section-pad gallery-band"><div class="wrap">
+        <div class="section-head"><span class="eyebrow">On site</span><h2>How it went together.</h2></div>
+        <div class="gallery-grid">${gallery}</div>
+      </div></section>` : ''}
       <nav class="project-next"><div class="wrap"><a href="/projects/${esc(next.id)}">
         <span><span class="lbl">Next project</span><br><span class="nm">${esc(next.name)}</span></span>
         <span class="arw">&rsaquo;</span>
@@ -62,7 +73,7 @@
     if (!id) return notFound();
     try {
       const d = await M.fetchJSON('/api/projects/' + encodeURIComponent(id));
-      render(d.project, d.next || { id: 'helix-tower', name: 'Helix Tower' });
+      render(d.project, d.next || { id: 'harbor-gateway-tower', name: 'Harbor Gateway Tower' });
     } catch (e) { notFound(); }
   })();
 })();

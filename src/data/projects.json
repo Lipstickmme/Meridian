@@ -1,231 +1,319 @@
 [
   {
-    "id": "helix-tower",
-    "name": "Helix Tower",
+    "id": "harbor-gateway-tower",
+    "name": "Harbor Gateway Tower",
     "sector": "Commercial",
-    "location": "Hamburg, DE",
+    "location": "Long Beach, CA",
     "year": 2025,
-    "metric": "184 m",
-    "metricLabel": "structural height",
-    "image": "/assets/img/proj-helix-tower.svg",
+    "metric": "32",
+    "metricLabel": "storeys above grade",
+    "image": "/assets/img/projects/harbor-gateway-tower.svg",
+    "gallery": [
+      { "src": "/assets/img/projects/harbor-gateway-tower-02.svg", "caption": "Core slipform running ahead of the steel" },
+      { "src": "/assets/img/projects/harbor-gateway-tower-03.svg", "caption": "Moment frame bolt-up on level 19" },
+      { "src": "/assets/img/projects/harbor-gateway-tower-04.svg", "caption": "Topping out, looking back at the harbour" }
+    ],
     "client": "Waterfront development partnership",
     "status": "Completed 2025",
-    "duration": "38 months",
-    "services": [
-      "Structural Engineering",
-      "Digital Engineering"
-    ],
-    "blurb": "A diagrid superstructure that took 22 percent of the steel out of a conventional frame.",
-    "overview": "Helix Tower is a 44 storey commercial high rise on the Elbe waterfront. The brief asked for column free floor plates and a slender profile, so we developed a perimeter diagrid that carries both gravity and lateral load without an internal core wall. Every node was resolved parametrically and checked under full non linear seismic and wind analysis."
+    "duration": "34 months",
+    "services": ["Commercial Construction", "Structural Engineering", "Digital Engineering"],
+    "blurb": "A 32-storey office tower on reclaimed harbour ground, framed to ride a magnitude 7 event with its core intact.",
+    "overview": "Harbor Gateway sits on reclaimed ground half a mile from the fault trace, which put seismic demand, not gravity, in charge of every member size. We ran a buckling-restrained braced frame against a full non-linear time history, tuned the core wall to take the drift, and drove the foundations through liquefiable fill to competent material. The tower was built over an operating parking structure that never closed.",
+    "facts": [
+      { "k": "Frame", "v": "BRB steel + concrete core" },
+      { "k": "Gross area", "v": "612,000 sq ft" },
+      { "k": "Seismic", "v": "Risk Category II, SDC E" },
+      { "k": "Foundation", "v": "148 driven piles to 96 ft" }
+    ]
   },
   {
-    "id": "north-crossing",
-    "name": "North Crossing",
-    "sector": "Infrastructure",
-    "location": "Aarhus, DK",
+    "id": "katella-medical-pavilion",
+    "name": "Katella Medical Pavilion",
+    "sector": "Commercial",
+    "location": "Anaheim, CA",
     "year": 2024,
-    "metric": "410 m",
-    "metricLabel": "cable-stayed span",
-    "image": "/assets/img/proj-north-crossing.svg",
-    "client": "Regional roads and transit authority",
+    "metric": "0",
+    "metricLabel": "days the hospital closed",
+    "image": "/assets/img/projects/katella-medical-pavilion.svg",
+    "gallery": [
+      { "src": "/assets/img/projects/katella-medical-pavilion-02.svg", "caption": "Night pour beside the existing wing" },
+      { "src": "/assets/img/projects/katella-medical-pavilion-03.svg", "caption": "Mechanical penthouse, rigged in one lift" }
+    ],
+    "client": "Regional health system",
     "status": "Completed 2024",
-    "duration": "52 months",
-    "services": [
-      "Structural Engineering",
-      "Civil and Infrastructure"
-    ],
-    "blurb": "A twin pylon crossing carrying road and light rail over a fjord that sees severe cross winds.",
-    "overview": "North Crossing carries road and light rail across the Aarhus fjord on a twin pylon cable stayed deck. The site sees severe cross winds and an aggressive marine environment, so the deck section was wind tunnel tested and the stay anchorages detailed for inspection and replacement without closing the crossing."
+    "duration": "26 months",
+    "services": ["Commercial Construction", "Mechanical and Process", "Commissioning and Handover"],
+    "blurb": "An outpatient pavilion built hard against a working hospital, with the acute wing running the whole time.",
+    "overview": "The pavilion shares a wall, a plant room and an emergency vehicle route with a hospital that could not lose a single bed. Noise, vibration and infection control governed the programme more than the structure did: heavy work ran nights, the tie-in to the central plant was staged across four two-hour windows, and every penetration was sealed and pressure-tested before the shift ended.",
+    "facts": [
+      { "k": "Gross area", "v": "184,000 sq ft" },
+      { "k": "Structure", "v": "Special moment frame" },
+      { "k": "Utility tie-ins", "v": "11, all in live systems" },
+      { "k": "OSHPD review", "v": "Cleared in one cycle" }
+    ]
   },
   {
-    "id": "atlas-plant",
-    "name": "Atlas Process Plant",
-    "sector": "Industrial",
-    "location": "Duisburg, DE",
+    "id": "civic-center-retrofit",
+    "name": "Civic Center Seismic Retrofit",
+    "sector": "Commercial",
+    "location": "Santa Ana, CA",
+    "year": 2025,
+    "metric": "+2",
+    "metricLabel": "storeys added",
+    "image": "/assets/img/projects/civic-center-retrofit.svg",
+    "gallery": [
+      { "src": "/assets/img/projects/civic-center-retrofit-02.svg", "caption": "New shear wall threaded through the 1968 frame" },
+      { "src": "/assets/img/projects/civic-center-retrofit-03.svg", "caption": "Column jacket, formwork stripped" }
+    ],
+    "client": "County facilities department",
+    "status": "On site",
+    "duration": "22 months",
+    "services": ["Structural Engineering", "Commercial Construction", "Digital Engineering"],
+    "blurb": "A 1968 concrete frame strengthened to current code and given two more floors, with staff at their desks throughout.",
+    "overview": "The existing frame had capacity nobody had ever calculated, so we started with a laser scan, core samples and a load test rather than an assumption. Strengthening was targeted at fourteen columns and two transfer beams, which was enough to carry the new floors and the code-level drift without touching the occupied levels. Work ran floor by floor behind temporary partitions.",
+    "facts": [
+      { "k": "Built", "v": "1968, non-ductile concrete" },
+      { "k": "Retrofit", "v": "14 column jackets, 2 shear walls" },
+      { "k": "Drift reduction", "v": "41 percent" },
+      { "k": "Occupancy", "v": "Continuous" }
+    ]
+  },
+  {
+    "id": "carson-tank-farm",
+    "name": "Carson Tank Farm Rebuild",
+    "sector": "Oil and Gas",
+    "location": "Carson, CA",
     "year": 2024,
-    "metric": "38%",
-    "metricLabel": "energy reduction",
-    "image": "/assets/img/proj-atlas-plant.svg",
-    "client": "Continuous process manufacturer",
+    "metric": "420,000",
+    "metricLabel": "barrels of storage",
+    "image": "/assets/img/projects/carson-tank-farm.svg",
+    "gallery": [
+      { "src": "/assets/img/projects/carson-tank-farm-02.svg", "caption": "Floor plate welding inside the shell" },
+      { "src": "/assets/img/projects/carson-tank-farm-03.svg", "caption": "Secondary containment going in around the ring wall" },
+      { "src": "/assets/img/projects/carson-tank-farm-04.svg", "caption": "Manifold pipe rack before insulation" }
+    ],
+    "client": "Terminal operator",
     "status": "Completed 2024",
     "duration": "19 months",
-    "services": [
-      "Mechanical and Process",
-      "Digital Engineering"
-    ],
-    "blurb": "A heat recovery redesign of a continuous process line, recommissioned without stopping production.",
-    "overview": "Atlas asked us to cut the energy load of an ageing continuous process line without stopping production. We metered the plant for a full season, built a model against the measured baseline, and staged the heat recovery installation across four scheduled maintenance windows."
+    "services": ["Oil and Gas Facilities", "Steel Fabrication and Erection", "Groundworks and Foundations"],
+    "blurb": "Four API 650 tanks, their containment and the manifold that ties them in, built inside a terminal that never stopped shipping.",
+    "overview": "Two tanks came down and four went up on the same footprint, with the terminal loading trucks through the whole programme. Ring wall foundations were designed for liquefiable fill with stone columns beneath; shells were built by the shell-jacking method to keep the welding at ground level. Every seam was vacuum-box and radiograph tested, and the manifold was hydrotested before the first tie-in was cut.",
+    "facts": [
+      { "k": "Tanks", "v": "4 x 105,000 bbl, API 650" },
+      { "k": "Weld NDE", "v": "100 percent shell seams" },
+      { "k": "Ground improvement", "v": "1,180 stone columns" },
+      { "k": "Lost production", "v": "None" }
+    ]
   },
   {
-    "id": "rhone-transit",
-    "name": "Rhone Transit Hub",
-    "sector": "Transit",
-    "location": "Lyon, FR",
-    "year": 2023,
-    "metric": "96 m",
-    "metricLabel": "clear-span canopy",
-    "image": "/assets/img/proj-rhone-transit.svg",
-    "client": "Metropolitan transport authority",
-    "status": "Completed 2023",
-    "duration": "41 months",
-    "services": [
-      "Structural Engineering",
-      "Steel Fabrication and Erection"
-    ],
-    "blurb": "A long span steel canopy and below grade concourse built over live tracks.",
-    "overview": "Rhone Transit Hub is an interchange that had to be built over and around live tracks. The signature is a 96 metre clear span canopy that shelters the platforms without a column between them. Erection ran in 41 possessions of four hours each, with the temporary stability case re-checked at every stage."
-  },
-  {
-    "id": "kade-viaduct",
-    "name": "Kade Viaduct",
-    "sector": "Infrastructure",
-    "location": "Antwerp, BE",
+    "id": "el-segundo-hydrotreater",
+    "name": "El Segundo Hydrotreater Revamp",
+    "sector": "Oil and Gas",
+    "location": "El Segundo, CA",
     "year": 2025,
-    "metric": "1.4 km",
-    "metricLabel": "elevated deck",
-    "image": "/assets/img/proj-kade-viaduct.svg",
+    "metric": "11 days",
+    "metricLabel": "total shutdown",
+    "image": "/assets/img/projects/el-segundo-hydrotreater.svg",
+    "gallery": [
+      { "src": "/assets/img/projects/el-segundo-hydrotreater-02.svg", "caption": "Reactor section from the rack, mid-turnaround" },
+      { "src": "/assets/img/projects/el-segundo-hydrotreater-03.svg", "caption": "Spool fit-up under a weld tent" }
+    ],
+    "client": "Refinery operator",
+    "status": "Completed 2025",
+    "duration": "23 months",
+    "services": ["Oil and Gas Facilities", "Mechanical and Process", "Commissioning and Handover"],
+    "blurb": "A capacity revamp with 38 tie-ins into live systems, executed inside an eleven-day turnaround window.",
+    "overview": "The revamp needed 38 cuts into systems that could only be opened during the annual turnaround. Every spool was fabricated, tested and laid down in erection order before the unit came off line, each tie-in was rehearsed against the scan-registered model, and the sequence was written so no two cuts competed for the same crane. The unit came back on specification on the first pass.",
+    "facts": [
+      { "k": "Tie-ins", "v": "38, all in live systems" },
+      { "k": "Pipe installed", "v": "4.2 miles" },
+      { "k": "Weld reject rate", "v": "0.7 percent" },
+      { "k": "Return to spec", "v": "First pass" }
+    ]
+  },
+  {
+    "id": "beacon-offshore-tieback",
+    "name": "Beacon Offshore Tieback",
+    "sector": "Oil and Gas",
+    "location": "Gulf of Mexico",
+    "year": 2023,
+    "metric": "412 ft",
+    "metricLabel": "working depth",
+    "image": "/assets/img/projects/beacon-offshore-tieback.svg",
+    "gallery": [
+      { "src": "/assets/img/projects/beacon-offshore-tieback-02.svg", "caption": "Saturation dive bell on the moon pool" },
+      { "src": "/assets/img/projects/beacon-offshore-tieback-03.svg", "caption": "Habitat welding on the riser clamp" },
+      { "src": "/assets/img/projects/beacon-offshore-tieback-04.svg", "caption": "Deck spread on the support vessel" }
+    ],
+    "client": "Offshore operator",
+    "status": "Completed 2023",
+    "duration": "14 months",
+    "services": ["Underwater and Marine Welding", "Oil and Gas Facilities", "Structural Engineering"],
+    "blurb": "A subsea tieback and riser clamp repair at 412 feet, welded dry inside a habitat by a saturation dive team.",
+    "overview": "Inspection found fatigue cracking in two riser clamps on a fixed platform, in water too deep and too cold for a wet weld to meet the class. We designed the repair around a welding habitat: the clamp was dewatered, preheated and welded dry, to AWS D3.6M class A, by a saturation team living at depth for eighteen days. Every pass was video-logged and ultrasonically verified before the habitat came off.",
+    "facts": [
+      { "k": "Depth", "v": "412 ft, saturation" },
+      { "k": "Weld class", "v": "AWS D3.6M class A, dry habitat" },
+      { "k": "Bottom time", "v": "18 days, 6 divers" },
+      { "k": "Production impact", "v": "Zero deferred barrels" }
+    ]
+  },
+  {
+    "id": "pier-j-berth",
+    "name": "Pier J Berth Deepening",
+    "sector": "Marine",
+    "location": "Port of Long Beach, CA",
+    "year": 2025,
+    "metric": "1,900 ft",
+    "metricLabel": "of berth kept open",
+    "image": "/assets/img/projects/pier-j-berth.svg",
+    "gallery": [
+      { "src": "/assets/img/projects/pier-j-berth-02.svg", "caption": "Diver on stage, entering beside the fender line" },
+      { "src": "/assets/img/projects/pier-j-berth-03.svg", "caption": "Pile jacket set and grouted" },
+      { "src": "/assets/img/projects/pier-j-berth-04.svg", "caption": "Deck works above, dive spread below" }
+    ],
     "client": "Port authority",
     "status": "On site",
-    "duration": "46 months",
-    "services": [
-      "Civil and Infrastructure",
-      "Groundworks and Foundations"
-    ],
-    "blurb": "An elevated freight route threaded through a working port, built without closing a berth.",
-    "overview": "The viaduct carries freight traffic over a congested quayside. Foundations thread between existing services and a live rail spur, so each pile position was proved with radar before it was set out. The deck is precast to keep occupation of the quay to a minimum."
+    "duration": "28 months",
+    "services": ["Underwater and Marine Welding", "Groundworks and Foundations", "Major Civil Engineering"],
+    "blurb": "Deepening a container berth and repairing 214 piles underneath it, without taking the berth out of service.",
+    "overview": "Dredging to take post-panamax draft undermined the existing pile embedment, so every pile in the affected bay needed a jacket and a structural weld before the dredger could pass. Dive crews worked surface-supplied between vessel calls, welding wet to class B where the repair allowed and setting habitats where it did not. The berth handled ships through the entire programme.",
+    "facts": [
+      { "k": "Piles repaired", "v": "214" },
+      { "k": "Dredge depth", "v": "-55 ft MLLW" },
+      { "k": "Dive hours", "v": "6,400" },
+      { "k": "Berth downtime", "v": "None" }
+    ]
   },
   {
-    "id": "haven-terminal",
-    "name": "Haven Terminal",
-    "sector": "Energy",
-    "location": "Eemshaven, NL",
-    "year": 2025,
-    "metric": "72 GWh",
-    "metricLabel": "annual throughput",
-    "image": "/assets/img/proj-haven-terminal.svg",
-    "client": "Energy terminal operator",
-    "status": "On site",
-    "duration": "33 months",
-    "services": [
-      "Industrial Plant Construction",
-      "Mechanical and Process"
-    ],
-    "blurb": "A process terminal erected beside a plant that stayed in production throughout.",
-    "overview": "Haven Terminal adds storage and processing capacity to an operating site. Everything above the foundations was assembled in modules off site and lifted in during three planned shutdowns, which kept the crane time on the live plant to nine days in total."
-  },
-  {
-    "id": "westgate-foundations",
-    "name": "Westgate Foundations",
-    "sector": "Commercial",
-    "location": "Utrecht, NL",
+    "id": "terminal-island-wharf",
+    "name": "Terminal Island Wharf Strengthening",
+    "sector": "Marine",
+    "location": "Port of Los Angeles, CA",
     "year": 2024,
-    "metric": "4,800 m3",
-    "metricLabel": "single raft pour",
-    "image": "/assets/img/proj-westgate-foundations.svg",
-    "client": "Mixed use developer",
-    "status": "Completed 2024",
-    "duration": "14 months",
-    "services": [
-      "Groundworks and Foundations",
-      "Structural Engineering"
+    "metric": "2.4x",
+    "metricLabel": "crane load capacity",
+    "image": "/assets/img/projects/terminal-island-wharf.svg",
+    "gallery": [
+      { "src": "/assets/img/projects/terminal-island-wharf-02.svg", "caption": "New crane beam threaded over the existing deck" },
+      { "src": "/assets/img/projects/terminal-island-wharf-03.svg", "caption": "Underdeck inspection before the strengthening scheme" }
     ],
-    "blurb": "One continuous raft pour under a mixed use block, on ground that changes across the site.",
-    "overview": "Ground conditions across the Westgate site change from dense sand to soft clay within thirty metres, which ruled out a uniform pad solution. We designed a stiffened raft with local ground improvement and poured it in one continuous operation to avoid a construction joint under the core."
+    "client": "Container terminal operator",
+    "status": "Completed 2024",
+    "duration": "21 months",
+    "services": ["Structural Engineering", "Underwater and Marine Welding", "Steel Fabrication and Erection"],
+    "blurb": "A 1970s wharf brought up to carry the next generation of ship-to-shore cranes, with the underdeck repaired by divers.",
+    "overview": "The terminal wanted cranes 2.4 times heavier than the wharf was built for. A full underdeck survey, half of it by dive team, found chloride damage worse at the splash zone than the records suggested. We designed a new crane beam carried on supplemental piles, jacketed the worst of the existing ones, and sequenced the work so no more than one crane rail was ever out of service.",
+    "facts": [
+      { "k": "Built", "v": "1974" },
+      { "k": "New piles", "v": "86, 36-inch pipe" },
+      { "k": "Jacketed piles", "v": "133" },
+      { "k": "Design life", "v": "50 years" }
+    ]
   },
   {
-    "id": "delta-refinery",
-    "name": "Delta Refinery Upgrade",
-    "sector": "Energy",
-    "location": "Vlissingen, NL",
+    "id": "catalina-outfall",
+    "name": "Catalina Channel Outfall Repair",
+    "sector": "Marine",
+    "location": "Catalina Channel, CA",
     "year": 2023,
-    "metric": "9 days",
-    "metricLabel": "total shutdown",
-    "image": "/assets/img/proj-delta-refinery.svg",
-    "client": "Refinery operator",
+    "metric": "1.3 miles",
+    "metricLabel": "of pipeline surveyed",
+    "image": "/assets/img/projects/catalina-outfall.svg",
+    "gallery": [
+      { "src": "/assets/img/projects/catalina-outfall-02.svg", "caption": "ROV survey ahead of the dive" },
+      { "src": "/assets/img/projects/catalina-outfall-03.svg", "caption": "Clamp set over the damaged section" }
+    ],
+    "client": "Regional water district",
     "status": "Completed 2023",
-    "duration": "27 months",
-    "services": [
-      "Industrial Plant Construction",
-      "Commissioning and Handover"
-    ],
-    "blurb": "A capacity upgrade tied into live systems inside a nine day shutdown window.",
-    "overview": "The upgrade required 42 tie ins to systems that could only be opened during the annual shutdown. Every cut was rehearsed on the model and dry run on site, and the work package was sequenced so that no two tie ins competed for the same crane."
+    "duration": "9 months",
+    "services": ["Underwater and Marine Welding", "Mechanical and Process", "Major Civil Engineering"],
+    "blurb": "A damaged subsea outfall located, clamped and welded in place, with the discharge never taken off line.",
+    "overview": "A dropped anchor had dented and cracked a section of outfall in 90 feet of water. We surveyed the full run by ROV, designed a split clamp that could be set and welded by divers against a live flow, and installed it in four dive days. Post-repair ultrasonic testing and a pressure survey confirmed the line back to full rated flow.",
+    "facts": [
+      { "k": "Depth", "v": "90 ft, surface supplied" },
+      { "k": "Repair", "v": "Split clamp, wet weld class B" },
+      { "k": "Survey", "v": "ROV, full 1.3-mile run" },
+      { "k": "Service outage", "v": "None" }
+    ]
   },
   {
-    "id": "brede-warehouse",
-    "name": "Brede Distribution Centre",
-    "sector": "Industrial",
-    "location": "Venlo, NL",
-    "year": 2024,
-    "metric": "61,000 m2",
-    "metricLabel": "floor area",
-    "image": "/assets/img/proj-brede-warehouse.svg",
-    "client": "Logistics operator",
-    "status": "Completed 2024",
-    "duration": "16 months",
-    "services": [
-      "Steel Fabrication and Erection",
-      "Groundworks and Foundations"
-    ],
-    "blurb": "A portal framed distribution centre taken from ground investigation to handover in sixteen months.",
-    "overview": "A large shed is a simple structure with an unforgiving programme. Connections were detailed to the fabricator's shop standards, steel arrived in erection sequence, and the slab was poured in bays that followed the frame rather than the other way round."
-  },
-  {
-    "id": "zuidas-retrofit",
-    "name": "Zuidas Tower Retrofit",
-    "sector": "Commercial",
-    "location": "Amsterdam, NL",
+    "id": "santa-ana-river-bridge",
+    "name": "Santa Ana River Bridge Replacement",
+    "sector": "Infrastructure",
+    "location": "Orange County, CA",
     "year": 2025,
-    "metric": "+6",
-    "metricLabel": "storeys added",
-    "image": "/assets/img/proj-zuidas-retrofit.svg",
-    "client": "Commercial landlord",
+    "metric": "640 ft",
+    "metricLabel": "three-span crossing",
+    "image": "/assets/img/projects/santa-ana-river-bridge.svg",
+    "gallery": [
+      { "src": "/assets/img/projects/santa-ana-river-bridge-02.svg", "caption": "Girder set over the channel, night closure" },
+      { "src": "/assets/img/projects/santa-ana-river-bridge-03.svg", "caption": "Falsework and rebar before the deck pour" },
+      { "src": "/assets/img/projects/santa-ana-river-bridge-04.svg", "caption": "Abutment works from the levee road" }
+    ],
+    "client": "County transportation authority",
+    "status": "On site",
+    "duration": "31 months",
+    "services": ["Major Civil Engineering", "Structural Engineering", "Groundworks and Foundations"],
+    "blurb": "A three-span replacement crossing built over a flood control channel that has to stay clear through storm season.",
+    "overview": "The existing crossing was scour-critical and two lanes short. The replacement is a three-span prestressed girder bridge on drilled shafts set back from the channel, so nothing new stands in the waterway. Falsework had to be out of the channel before each storm season, which set the pour sequence, and traffic stayed on the old structure until the new one carried load.",
+    "facts": [
+      { "k": "Spans", "v": "3, 640 ft total" },
+      { "k": "Foundations", "v": "Drilled shafts, 8 ft diameter" },
+      { "k": "Design flood", "v": "100-year, clear waterway" },
+      { "k": "Lanes added", "v": "2, plus shared-use path" }
+    ]
+  },
+  {
+    "id": "sierra-dam-outlet",
+    "name": "Sierra Dam Outlet Works",
+    "sector": "Infrastructure",
+    "location": "Sierra Nevada, CA",
+    "year": 2024,
+    "metric": "1,100 cfs",
+    "metricLabel": "release capacity",
+    "image": "/assets/img/projects/sierra-dam-outlet.svg",
+    "gallery": [
+      { "src": "/assets/img/projects/sierra-dam-outlet-02.svg", "caption": "Intake tower works behind a cofferdam" },
+      { "src": "/assets/img/projects/sierra-dam-outlet-03.svg", "caption": "Gate slot machining in the tunnel" }
+    ],
+    "client": "Water resources agency",
+    "status": "Completed 2024",
+    "duration": "27 months",
+    "services": ["Major Civil Engineering", "Mechanical and Process", "Underwater and Marine Welding"],
+    "blurb": "New outlet works and gates for a 1950s dam, with the reservoir kept in service and the low-level intake welded underwater.",
+    "overview": "The agency needed a controlled release capacity the original works could not deliver, and could not draw the reservoir down to build it. We staged the work behind a cofferdam, cut and lined a new low-level outlet, and had dive crews weld and seal the intake trash rack and guide frames in place. Gates were dry-commissioned before the cofferdam came out.",
+    "facts": [
+      { "k": "Dam built", "v": "1953" },
+      { "k": "Outlet", "v": "New 84-inch lined conduit" },
+      { "k": "Gates", "v": "2 slide, 1 jet-flow" },
+      { "k": "Reservoir drawdown", "v": "None required" }
+    ]
+  },
+  {
+    "id": "imperial-substation",
+    "name": "Imperial Valley Substation",
+    "sector": "Energy",
+    "location": "Imperial Valley, CA",
+    "year": 2025,
+    "metric": "500 kV",
+    "metricLabel": "switchyard",
+    "image": "/assets/img/projects/imperial-substation.svg",
+    "gallery": [
+      { "src": "/assets/img/projects/imperial-substation-02.svg", "caption": "Bus structure erection in the switchyard" },
+      { "src": "/assets/img/projects/imperial-substation-03.svg", "caption": "Transformer set on its foundation" }
+    ],
+    "client": "Transmission utility",
     "status": "On site",
     "duration": "24 months",
-    "services": [
-      "Structural Engineering",
-      "Digital Engineering"
-    ],
-    "blurb": "Six storeys added to a 1970s frame, with every floor below them tenanted throughout.",
-    "overview": "The existing frame had capacity nobody had ever calculated, so we started with a full assessment and a load test rather than an assumption. Strengthening was targeted at eleven columns and two transfer beams, which was enough to carry the new storeys without touching the tenanted floors."
-  },
-  {
-    "id": "scheldt-lock",
-    "name": "Scheldt Lock Gates",
-    "sector": "Infrastructure",
-    "location": "Terneuzen, NL",
-    "year": 2023,
-    "metric": "2,100 t",
-    "metricLabel": "gate assembly",
-    "image": "/assets/img/proj-scheldt-lock.svg",
-    "client": "National waterways agency",
-    "status": "Completed 2023",
-    "duration": "35 months",
-    "services": [
-      "Steel Fabrication and Erection",
-      "Mechanical and Process"
-    ],
-    "blurb": "Replacement lock gates fabricated on a quay and floated into position on one tide.",
-    "overview": "The gates were too large to assemble in place, so they were built on a quay, load tested there, and floated to the lock on a single tide. The mechanical drives were commissioned dry before the chamber was flooded."
-  },
-  {
-    "id": "noord-campus",
-    "name": "Noord Campus",
-    "sector": "Commercial",
-    "location": "Groningen, NL",
-    "year": 2025,
-    "metric": "A++",
-    "metricLabel": "energy label",
-    "image": "/assets/img/proj-noord-campus.svg",
-    "client": "University estates department",
-    "status": "On site",
-    "duration": "29 months",
-    "services": [
-      "Mechanical and Process",
-      "Commissioning and Handover",
-      "Digital Engineering"
-    ],
-    "blurb": "Four teaching buildings commissioned as one low temperature heat network.",
-    "overview": "The campus runs on a low temperature network fed by ground source, which only works if the buildings are commissioned as a system rather than one at a time. Instrumentation was specified at design stage so that performance could be proved against the model before handover."
+    "services": ["Steel Fabrication and Erection", "Groundworks and Foundations", "Commissioning and Handover"],
+    "blurb": "A 500 kV switchyard on expansive desert soils, tied into a line that stays energised.",
+    "overview": "The site sits on soils that swell and shrink through a 40 degree annual range, which rules out shallow pads for equipment that cannot tolerate differential movement. Every structure is on drilled piers below the active zone. Steel was galvanised and match-marked in the shop so the yard crew never waited on a fit-up, and energisation was staged bay by bay against a line that could not be dropped.",
+    "facts": [
+      { "k": "Voltage", "v": "500 kV / 230 kV" },
+      { "k": "Structures", "v": "64, hot-dip galvanised" },
+      { "k": "Foundations", "v": "Drilled piers to 28 ft" },
+      { "k": "Outage taken", "v": "One 6-hour window" }
+    ]
   }
 ]

@@ -17,7 +17,7 @@ function autoReply(text) {
     return "Hi, you're through to Meridian Construction. What are you building, and where does it get difficult?";
   }
   if (has('career', 'job', 'hiring', 'vacancy', 'apply', 'position', 'role')) {
-    return 'We are hiring across the structural, civil, mechanical and digital teams, and on site. Open roles are on our Careers page, or tell me which discipline you work in.';
+    return 'We are hiring across the structural, civil, mechanical and digital teams, on site, and in the dive locker. Open roles are on our Careers page, or tell me which discipline you work in.';
   }
   if (has('quote', 'cost', 'price', 'fee', 'budget')) {
     return 'Fees follow scope and stage. Leave a short brief and your email and a principal engineer will come back with a considered answer rather than a number pulled out of the air.';
@@ -25,11 +25,11 @@ function autoReply(text) {
   if (has('project', 'portfolio', 'work', 'reference', 'example')) {
     return 'Selected projects are on our Projects page: towers, crossings, process plant, transit and industrial delivery. Is there a sector you would like to see?';
   }
-  if (has('bridge', 'structural', 'seismic', 'civil', 'mechanical', 'hvac', 'bim', 'digital twin', 'facade')) {
+  if (has('bridge', 'structural', 'seismic', 'civil', 'mechanical', 'hvac', 'bim', 'digital twin', 'facade', 'weld', 'diver', 'diving', 'subsea', 'underwater', 'pipeline', 'refinery', 'tank', 'offshore', 'wharf', 'pier', 'dock')) {
     return 'That is work we do every week. Tell me a little about the project and the part of it that worries you, and I will put you in front of the right engineer.';
   }
   if (has('contact', 'call', 'phone', 'email', 'meet', 'speak')) {
-    return 'The quickest route is the contact page, or email hello@meridianconstruction.com. Leave your address here and we will come back within two working days.';
+    return 'Quickest is the phone: (714) 738-8708, Monday to Friday, 7:00am to 5:30pm Pacific. Otherwise email hello@meridianconstruction.com, or leave your address here and we will come back within two working days.';
   }
   if (has('thanks', 'thank you', 'cheers', 'great')) {
     return 'Any time. Anything else I can help with?';

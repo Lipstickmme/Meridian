@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" preserveAspectRatio="xMidYMid slice" role="img" aria-label="DIGITAL ENGINEERING · DETAIL">
+  <defs>
+    <linearGradient id="ground" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0" stop-color="#f6f4ec"/><stop offset="0.6" stop-color="#eceee7"/><stop offset="1" stop-color="#dfe7e6"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="rgba(18,54,66,0.11)" stroke-width="1"/>
+    </pattern>
+    <pattern id="grid-fine" width="8" height="8" patternUnits="userSpaceOnUse">
+      <path d="M8 0H0V8" fill="none" stroke="rgba(18,54,66,0.055)" stroke-width="0.6"/>
+    </pattern>
+    <linearGradient id="wash" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f6d84" stop-opacity="0.34"/><stop offset="1" stop-color="#0f6d84" stop-opacity="0.06"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="820" fill="url(#ground)"/>
+  <rect width="1200" height="820" fill="url(#grid-fine)"/>
+  <rect width="1200" height="820" fill="url(#grid)"/>
+  <rect x="14" y="14" width="1172" height="792" fill="none" stroke="rgba(18,54,66,0.34)" stroke-width="1.4"/>
+  <text x="34" y="46" fill="#0f6d84" font-family="'IBM Plex Mono',monospace" font-size="13" letter-spacing="3">S-09/2</text>
+  <text x="1166" y="46" text-anchor="end" fill="rgba(18,54,66,0.45)" font-family="'IBM Plex Mono',monospace" font-size="12" letter-spacing="2">SCALE 1:50</text>
+  <rect x="451.8" y="415.8" width="164.6" height="158.9" fill="url(#wash)" stroke="#123642" stroke-width="2"/>
+  <path d="M451.8 415.8L616.4 574.7" fill="none" stroke="#123642" stroke-width="1" opacity="0.22"/>
+  <rect x="267" y="331.1" width="259.5" height="223.2" fill="none" stroke="#123642" stroke-width="2"/>
+  <path d="M267 331.1L526.6 554.3" fill="none" stroke="#123642" stroke-width="1" opacity="0.22"/>
+  <rect x="159.7" y="252.4" width="277.9" height="171.3" fill="none" stroke="#123642" stroke-width="2"/>
+  <path d="M159.7 252.4L437.5 423.8" fill="none" stroke="#123642" stroke-width="1" opacity="0.22"/>
+  <rect x="152.8" y="243" width="215.3" height="232.9" fill="url(#wash)" stroke="#123642" stroke-width="2"/>
+  <path d="M152.8 243L368.1 475.9" fill="none" stroke="#123642" stroke-width="1" opacity="0.22"/>
+  <rect x="649.3" y="177.8" width="205.8" height="112.1" fill="none" stroke="#123642" stroke-width="2"/>
+  <path d="M649.3 177.8L855.1 289.9" fill="none" stroke="#123642" stroke-width="1" opacity="0.22"/>
+  <rect x="622.6" y="149.4" width="272.6" height="228" fill="none" stroke="#123642" stroke-width="2"/>
+  <path d="M622.6 149.4L895.2 377.4" fill="none" stroke="#123642" stroke-width="1" opacity="0.22"/>
+  <path d="M0 164C360 123 840 219.1 1200 154" fill="none" stroke="#123642" stroke-width="1" opacity="0.3"/>
+  <path d="M0 278.8C360 212.8 840 333.5 1200 268.8" fill="none" stroke="#123642" stroke-width="1" opacity="0.3"/>
+  <path d="M0 393.6C360 342.3 840 435.3 1200 383.6" fill="none" stroke="#123642" stroke-width="1" opacity="0.3"/>
+  <path d="M0 508.4C360 465.4 840 572.2 1200 498.4" fill="none" stroke="#123642" stroke-width="1" opacity="0.3"/>
+  <path d="M0 623.2C360 557.1 840 668.4 1200 613.2" fill="none" stroke="#123642" stroke-width="1" opacity="0.3"/>
+  <path d="M0 639.6C360 574 744 721.6 1200 590.4" fill="none" stroke="#f2a900" stroke-width="3" stroke-linecap="round"/>
+  <path d="M96 82v590.4" fill="none" stroke="#0f6d84" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="1080" cy="131.2" r="26" fill="none" stroke="#123642" stroke-width="1.6"/>
+  <path d="M1080 97.2v68" fill="none" stroke="#f2a900" stroke-width="2" stroke-linecap="round"/>
+  <rect x="14" y="752" width="1172" height="54" fill="#f2a900"/>
+  <rect x="14" y="752" width="1172" height="3" fill="#123642"/>
+  <text x="34" y="785" fill="#123642" font-family="'IBM Plex Mono',monospace" font-size="15" letter-spacing="2.4" font-weight="500">DIGITAL ENGINEERING · DETAIL</text>
+  <text x="1166" y="785" text-anchor="end" fill="#123642" font-family="'IBM Plex Mono',monospace" font-size="13" letter-spacing="3" opacity="0.72">MERIDIAN</text>
+</svg>

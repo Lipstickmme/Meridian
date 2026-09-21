@@ -24,16 +24,16 @@
   }
 
   const FALLBACK_SERVICES = [
-    { code: 'S-01', title: 'Structural Engineering', summary: 'Load-path analysis, seismic detailing and frame design that let architecture reach further on less material.', capabilities: ['Finite element analysis', 'Seismic & wind design', 'Steel, concrete & timber', 'Retrofit & assessment'] },
-    { code: 'S-02', title: 'Civil & Infrastructure', summary: 'Roads, crossings, drainage and site works engineered for a hundred-year horizon and a changing climate.', capabilities: ['Highway & transit', 'Stormwater & flood', 'Bridges & culverts', 'Land development'] },
-    { code: 'S-03', title: 'Mechanical & Process', summary: 'Piping, thermal systems and plant layouts tuned for throughput, redundancy and quiet operation.', capabilities: ['Process piping & stress', 'HVAC & ventilation', 'Energy modelling', 'Plant layout'] },
-    { code: 'S-04', title: 'Digital Engineering', summary: 'One coordinated model every discipline works in, and that is still worth opening after handover.', capabilities: ['BIM / VDC', 'Parametric design', 'Digital twins', 'Clash & 4D scheduling'] }
+    { code: 'S-01', title: 'Commercial Construction', summary: 'Ground-up offices, medical and civic buildings delivered by the same people who engineered them.', capabilities: ['Ground-up delivery', 'Tenant-occupied works', 'Core and shell', 'Seismic retrofit'] },
+    { code: 'S-03', title: 'Major Civil Engineering', summary: 'Bridges, dams, highways and drainage engineered for a hundred-year horizon and a changing climate.', capabilities: ['Bridges and crossings', 'Dams and outlet works', 'Highway and transit', 'Stormwater and flood'] },
+    { code: 'S-04', title: 'Oil and Gas Facilities', summary: 'Tankage, piping and process units built, revamped and tied in on sites that stay in production.', capabilities: ['Tank farms and bunding', 'Process piping and stress', 'Turnaround and tie-ins', 'API inspection support'] },
+    { code: 'S-05', title: 'Underwater and Marine Welding', summary: 'Commercial diving, wet and hyperbaric welding, and pile repair on structures that cannot be lifted out of the water.', capabilities: ['Wet and hyperbaric welding', 'Pile and jacket repair', 'Subsea pipeline tie-ins', 'Dive inspection and NDT'] }
   ];
   const FALLBACK_PROJECTS = [
-    { id: 'helix-tower', name: 'Helix Tower', sector: 'Commercial', location: 'Hamburg, DE', year: 2025, metric: '184 m', metricLabel: 'structural height', image: '/assets/img/proj-helix-tower.svg', blurb: 'A diagrid superstructure that took 22 percent of the steel out of a conventional frame.' },
-    { id: 'north-crossing', name: 'North Crossing', sector: 'Infrastructure', location: 'Aarhus, DK', year: 2024, metric: '410 m', metricLabel: 'cable-stayed span', image: '/assets/img/proj-north-crossing.svg', blurb: 'A twin-pylon crossing carrying road and light rail over a fjord that sees severe cross winds.' },
-    { id: 'atlas-plant', name: 'Atlas Process Plant', sector: 'Industrial', location: 'Duisburg, DE', year: 2024, metric: '38%', metricLabel: 'energy reduction', image: '/assets/img/proj-atlas-plant.svg', blurb: 'A heat-recovery redesign of a continuous process line, recommissioned without stopping production.' },
-    { id: 'rhone-transit', name: 'Rhone Transit Hub', sector: 'Transit', location: 'Lyon, FR', year: 2023, metric: '96 m', metricLabel: 'clear-span canopy', image: '/assets/img/proj-rhone-transit.svg', blurb: 'A long-span steel canopy and below-grade concourse built over live tracks.' }
+    { id: 'harbor-gateway-tower', name: 'Harbor Gateway Tower', sector: 'Commercial', location: 'Long Beach, CA', year: 2025, metric: '32', metricLabel: 'storeys above grade', image: '/assets/img/projects/harbor-gateway-tower.svg', blurb: 'A 32-storey office tower on reclaimed harbour ground, framed to ride a magnitude 7 event with its core intact.' },
+    { id: 'beacon-offshore-tieback', name: 'Beacon Offshore Tieback', sector: 'Oil and Gas', location: 'Gulf of Mexico', year: 2023, metric: '412 ft', metricLabel: 'working depth', image: '/assets/img/projects/beacon-offshore-tieback.svg', blurb: 'A subsea tieback and riser clamp repair at 412 feet, welded dry inside a habitat by a saturation dive team.' },
+    { id: 'pier-j-berth', name: 'Pier J Berth Deepening', sector: 'Marine', location: 'Port of Long Beach, CA', year: 2025, metric: '1,900 ft', metricLabel: 'of berth kept open', image: '/assets/img/projects/pier-j-berth.svg', blurb: 'Deepening a container berth and repairing 214 piles underneath it, without taking the berth out of service.' },
+    { id: 'santa-ana-river-bridge', name: 'Santa Ana River Bridge Replacement', sector: 'Infrastructure', location: 'Orange County, CA', year: 2025, metric: '640 ft', metricLabel: 'three-span crossing', image: '/assets/img/projects/santa-ana-river-bridge.svg', blurb: 'A three-span replacement crossing built over a flood control channel that has to stay clear through storm season.' }
   ];
 
   function projectCard(p) {
@@ -41,7 +41,7 @@
       <a class="card" href="/projects/${esc(p.id)}" data-reveal>
         <div class="thumb"><img src="${esc(p.image)}" alt="${esc(p.name)}" loading="lazy" /></div>
         <div class="card-body">
-          <div class="meta"><span class="sector">${esc(p.sector)}</span><span>${esc(p.year)}</span></div>
+          <div class="meta"><span class="sector" data-sector="${esc(p.sector)}">${esc(p.sector)}</span><span>${esc(p.year)}</span></div>
           <h3>${esc(p.name)}</h3>
           <div class="loc">${esc(p.location)}</div>
           <p>${esc(p.blurb)}</p>

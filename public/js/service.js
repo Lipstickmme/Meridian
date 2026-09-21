@@ -44,6 +44,20 @@
         </div>
       </section>
 
+      ${(s.gallery || []).length ? `
+      <section class="section-pad gallery-band">
+        <div class="wrap">
+          <div class="section-head" data-reveal><span class="eyebrow">On site</span><h2>What it looks like in the field.</h2></div>
+          <div class="gallery-grid">
+            ${(s.gallery || []).map((g, i) => `
+            <figure class="gallery-item${i === 0 && (s.gallery || []).length > 2 ? ' is-wide' : ''}" data-reveal>
+              <img src="${esc(g.src)}" alt="${esc(g.caption || '')}" loading="lazy" decoding="async" />
+              ${g.caption ? `<figcaption>${esc(g.caption)}</figcaption>` : ''}
+            </figure>`).join('')}
+          </div>
+        </div>
+      </section>` : ''}
+
       ${related.length ? `
       <section class="section-pad alt">
         <div class="wrap">

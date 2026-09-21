@@ -47,7 +47,7 @@ const heroSection = `
     <div class="hero-scrim" aria-hidden="true"></div>
     <div class="hero-inner wrap">
       <div class="hero-copy">
-        <span class="eyebrow hero-tag" data-reveal>Structural &middot; civil &middot; mechanical &middot; digital &middot; delivery</span>
+        <span class="eyebrow hero-tag" data-reveal>Commercial &middot; civil &middot; oil and gas &middot; marine &middot; underwater</span>
         <h1 data-reveal>Engineered to hold.</h1>
         <p class="hero-sub" data-reveal>We engineer and build the structures that have to work on the worst day they will ever see.</p>
         <div class="hero-actions" data-reveal>
@@ -61,7 +61,7 @@ const heroSection = `
     </div>
     <div class="hero-readout" aria-label="Practice at a glance">
       <div class="cell"><span class="k">Engineering since</span><span class="v">2003</span></div>
-      <div class="cell"><span class="k">Disciplines</span><span class="v">Eight</span></div>
+      <div class="cell"><span class="k">Disciplines</span><span class="v">Ten</span></div>
       <div class="cell"><span class="k">Projects delivered</span><span class="v">480+</span></div>
     </div>
   </section>`;
@@ -94,7 +94,7 @@ const metricsSection = chapter({
         <div class="stat"><div class="num" data-count="480" data-suffix="+">0</div><div class="lbl">Projects delivered</div></div>
         <div class="stat"><div class="num" data-count="23" data-suffix="">0</div><div class="lbl">Years in practice</div></div>
         <div class="stat"><div class="num"><em data-count="18" data-suffix="%">0</em></div><div class="lbl">Average material saved</div></div>
-        <div class="stat"><div class="num" data-count="11" data-suffix="">0</div><div class="lbl">Countries built in</div></div>
+        <div class="stat"><div class="num" data-count="40" data-suffix="k">0</div><div class="lbl">Certified dive hours</div></div>
       </div>`,
 });
 
@@ -144,8 +144,8 @@ const contactSection = chapter({
           <h2>Start with the hard part.</h2>
           <p class="contact-lede">Send the drawing set, the constraint you keep running into, or one paragraph about the site. A principal engineer reads it and answers within two working days &mdash; not a form receipt, an answer.</p>
           <div class="contact-detail">
+            <div class="row"><div class="k">Telephone</div><div class="val"><a href="tel:${site.phone.replace(/[^+\d]/g, '')}" data-site="phone">${site.phone}</a></div></div>
             <div class="row"><div class="k">Email</div><div class="val"><a href="mailto:${site.email}" data-site="email">${site.email}</a></div></div>
-            <div class="row" data-site-row="phone" hidden><div class="k">Telephone</div><div class="val"><a href="tel:" data-site="phone"></a></div></div>
             <div class="row" data-site-row="address" hidden><div class="k">Studio</div><div class="val" data-site="address"></div></div>
           </div>
         </div>
@@ -165,7 +165,7 @@ const indexContent = [
 
 /* ---------- Projects listing ---------- */
 const projectsContent = `
-  ${pageHeader({ eyebrow: 'Selected work', title: 'Projects.', sub: 'Towers, crossings, process plant and transit &mdash; from the first scheme sketch to the day the operator takes the keys.', image: images.projectsHeader })}
+  ${pageHeader({ eyebrow: 'Selected work', title: 'Projects.', sub: 'Towers, crossings, tank farms, wharves and the welds nobody sees &mdash; from the first scheme sketch to the day the operator takes the keys.', image: images.projectsHeader })}
   <section class="section-pad">
     <div class="wrap">
       <div class="proj-filters" id="proj-filters" data-reveal></div>
@@ -181,7 +181,7 @@ const projectContent = `
 
 /* ---------- Services listing ---------- */
 const servicesContent = `
-  ${pageHeader({ eyebrow: 'What we do', title: 'Services.', sub: 'Eight disciplines under one roof, from the ground investigation to the commissioning record.', image: images.capabilities })}
+  ${pageHeader({ eyebrow: 'What we do', title: 'Services.', sub: 'Ten disciplines under one roof, from the ground investigation to the last weld on the seabed.', image: images.capabilities })}
   <section class="section-pad">
     <div class="wrap">
       <div class="service-index" id="service-index"></div>
@@ -249,7 +249,7 @@ const careersContent = `
         <span class="eyebrow">Life at Meridian</span>
         <h2>Engineering treated as a design discipline.</h2>
       </div>
-      <p>Our engineers join a project at the first sketch rather than the final check, so whoever sizes a member is in the room while the idea is still being drawn. Graduates sit beside principals and carry their own packages inside a year. We build across eleven countries, we send people to site to watch their own details go in, and we buy the tools our engineers ask for, from parametric modelling through to the digital twin the operator keeps.</p>
+      <p>Our engineers join a project at the first sketch rather than the final check, so whoever sizes a member is in the room while the idea is still being drawn. Graduates sit beside principals and carry their own packages inside a year. We work from downtown towers to tank farms, wharves and the Gulf, we send people to site to watch their own details go in, and we buy the tools our engineers ask for, from parametric modelling to the dive spread.</p>
     </div>
   </section>
   <section class="section-pad alt">
@@ -273,11 +273,10 @@ const contactContent = `
     <div class="wrap contact-grid">
       <div class="contact-info" data-reveal>
         <div class="contact-detail">
+          <div class="row"><div class="k">Telephone</div><div class="val"><a href="tel:${site.phone.replace(/[^+\d]/g, '')}" data-site="phone">${site.phone}</a></div></div>
           <div class="row"><div class="k">Email</div><div class="val"><a href="mailto:${site.email}" data-site="email">${site.email}</a></div></div>
-          <!-- Address and telephone are blank until the desk sets them under
-               Settings, so each row appears only once there is something to
-               put in it rather than showing an empty label. -->
-          <div class="row" data-site-row="phone" hidden><div class="k">Telephone</div><div class="val"><a href="tel:" data-site="phone"></a></div></div>
+          <!-- The address is blank until the desk sets one under Settings, so
+               its row appears only once there is something to put in it. -->
           <div class="row" data-site-row="address" hidden><div class="k">Studio</div><div class="val" data-site="address"></div></div>
           <div class="row"><div class="k">Hours</div><div class="val" data-site="hours">${site.hours}</div></div>
         </div>
@@ -394,10 +393,10 @@ const notFoundContent = `
   </section>`;
 
 module.exports = [
-  { file: 'index.html', active: '', bodyClass: 'page-home', title: 'Meridian Construction | Engineered to hold', description: 'Meridian Construction is an engineer-led construction practice: structural, civil, mechanical and digital engineering, plus delivery on site, for buildings and infrastructure.', content: indexContent },
-  { file: 'projects.html', active: 'projects', bodyClass: 'page-projects', title: 'Projects | Meridian Construction', description: 'Selected Meridian Construction projects: towers, crossings, process plant, transit and industrial delivery.', content: projectsContent, extraScripts: ['/js/projects.js'] },
+  { file: 'index.html', active: '', bodyClass: 'page-home', title: 'Meridian Construction | Engineered to hold', description: 'Meridian Construction is an engineer-led construction practice: commercial building, major civil engineering, oil and gas facilities, and underwater and marine welding, delivered by the people who engineered them.', content: indexContent },
+  { file: 'projects.html', active: 'projects', bodyClass: 'page-projects', title: 'Projects | Meridian Construction', description: 'Selected Meridian Construction projects across commercial, oil and gas, marine and underwater, major civil and energy work.', content: projectsContent, extraScripts: ['/js/projects.js'] },
   { file: 'project.html', active: 'projects', bodyClass: 'page-project', title: 'Project | Meridian Construction', description: 'Project detail.', content: projectContent, extraScripts: ['/js/project.js'] },
-  { file: 'services.html', active: 'services', bodyClass: 'page-services', title: 'Services | Meridian Construction', description: 'Eight disciplines: structural, civil, mechanical, digital engineering, steel, groundworks, plant construction and commissioning.', content: servicesContent, extraScripts: ['/js/services.js'] },
+  { file: 'services.html', active: 'services', bodyClass: 'page-services', title: 'Services | Meridian Construction', description: 'Ten disciplines: commercial construction, structural and major civil engineering, oil and gas facilities, underwater and marine welding, steel, groundworks, mechanical, digital engineering and commissioning.', content: servicesContent, extraScripts: ['/js/services.js'] },
   { file: 'service.html', active: 'services', bodyClass: 'page-service', title: 'Service | Meridian Construction', description: 'Service detail.', content: serviceContent, extraScripts: ['/js/service.js'] },
   { file: 'apply.html', active: 'careers', bodyClass: 'page-apply', title: 'Apply | Meridian Construction', description: 'Apply to Meridian Construction. One form, read by the engineers you would sit with.', content: applyContent, extraScripts: ['/js/apply.js'] },
   { file: 'careers.html', active: 'careers', bodyClass: 'page-careers', title: 'Careers | Meridian Construction', description: 'Open engineering and site roles at Meridian Construction, across structural, civil, mechanical and digital teams.', content: careersContent, extraScripts: ['/js/careers.js'] },

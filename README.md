@@ -24,9 +24,9 @@ live-chat endpoint.
 | ---------------- | ------------------------------------------------------- |
 | `/`              | Landing: six full-height chapters, ending in the enquiry form |
 | `/projects`      | Filterable project listing with images                  |
-| `/projects/:id`  | Full project page with image, overview and key facts    |
-| `/services`      | The eight disciplines, each linking to its own page      |
-| `/services/:id`  | One discipline: what it covers, what you get, where it shows |
+| `/projects/:id`  | A page per project: hero, overview, key facts and an on-site gallery |
+| `/services`      | The ten disciplines, each linking to its own page        |
+| `/services/:id`  | A page per discipline: what it covers, what you get, where it shows |
 | `/careers`       | Open roles and studio culture                           |
 | `/apply`         | Recruitment form, with the role prefilled from the careers page |
 | `/contact`       | Dedicated contact page with image, form and live chat   |
@@ -55,6 +55,19 @@ all of it stops under `prefers-reduced-motion`.
 
 The form in chapter 6 is the same component as the one on `/contact`: both post
 to `/api/contact`, so both land in `enquiries` and appear on the studio desk.
+
+## Project and service pages
+
+Every project and every discipline is rendered to its own static file at build
+time — `public/projects/pier-j-berth.html`, `public/services/underwater.html` —
+so `/projects/pier-j-berth` is a document with its own title, description and
+content, not a shell that fills itself in once JavaScript has run. `src/site/detail.js`
+builds them from the same JSON the API serves, and `project.html` / `service.html`
+stay behind as the client-rendered fallback for an id added after the last build.
+
+The portfolio spans commercial building, major civil engineering, oil and gas
+facilities, marine and underwater welding, and energy work; each project carries
+two or three gallery frames under the fold, and each discipline two.
 
 ## Careers and applications
 
@@ -188,12 +201,14 @@ npm run test:browser                    # CHROME_PATH=... if it is not on the de
 
 - Pages share one layout (`src/site/layout.js`) rendered to static HTML at build
   time, so the nav, footer and chat widget stay consistent with no client-side flash.
-- The palette is four colours, set as `--meridian-ink` / `-paper` / `-signal` /
-  `-flare` at the foot of `public/css/styles.css`: deep marine, warm limestone,
-  a signal teal for anything that points, and brass for anything that measures
-  (scale bars, the practice readout, the rules under the section artwork).
-  Change them there and the whole site follows. Type is Archivo over Inter, with
-  IBM Plex Mono standing in for drawing annotation.
+- The palette is set at the foot of `public/css/styles.css` as `--meridian-ink`
+  (deep teal, for type and the two dark bands), `-paper`, `-sand` and `-mist`
+  (the tints that keep a long page from being one flat sheet), `-signal` (teal,
+  for anything that points) and `-flare` (construction yellow, for anything
+  measured: scale bars, the practice readout, the primary button, the rules
+  under the section artwork). Change them there and the whole site follows.
+  Type is Archivo over Inter, with IBM Plex Mono standing in for drawing
+  annotation.
 - Imagery runs at full strength, and where words sit over a picture the ground
   fades in behind them rather than a dark sheet being laid over the picture.
   `--bg-rgb` is the one token every one of those washes reads from.
@@ -293,8 +308,21 @@ Two generators draw what ships in the meantime. Both are deterministic, so
 re-running one changes nothing unless the source changed:
 
 ```bash
-npm run artwork   # public/assets/img/*.svg  — page bands, services, projects
+npm run artwork   # public/assets/img/*.svg  — page bands, 10 services, 12 projects
 npm run icons     # favicon.svg, favicon.png, apple-touch-icon.png
+```
+
+`npm run artwork` reads `projects.json` and `services.json` and draws a sheet for
+every `.svg` they point at, so a new project cannot ship with a broken image.
+
+**Replacing the drawings with photography.** `docs/IMAGE-PROMPTS.md` is the shot
+list: one prompt per image, written for documentary site photography rather than
+stock, with the filename each one belongs at. Save the photograph beside the
+drawing it replaces, then:
+
+```bash
+npm run adopt-photos   # rewrites the data files to use the photographs
+npm run build
 ```
 
 ## Configuration

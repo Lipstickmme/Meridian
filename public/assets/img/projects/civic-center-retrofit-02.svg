@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" preserveAspectRatio="xMidYMid slice" role="img" aria-label="CIVIC CENTER SEISMIC RETROFIT · DETAIL">
+  <defs>
+    <linearGradient id="ground" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0" stop-color="#f6f4ec"/><stop offset="0.6" stop-color="#eceee7"/><stop offset="1" stop-color="#dfe7e6"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="rgba(18,54,66,0.11)" stroke-width="1"/>
+    </pattern>
+    <pattern id="grid-fine" width="8" height="8" patternUnits="userSpaceOnUse">
+      <path d="M8 0H0V8" fill="none" stroke="rgba(18,54,66,0.055)" stroke-width="0.6"/>
+    </pattern>
+    <linearGradient id="wash" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f6d84" stop-opacity="0.34"/><stop offset="1" stop-color="#0f6d84" stop-opacity="0.06"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="820" fill="url(#ground)"/>
+  <rect width="1200" height="820" fill="url(#grid-fine)"/>
+  <rect width="1200" height="820" fill="url(#grid)"/>
+  <rect x="14" y="14" width="1172" height="792" fill="none" stroke="rgba(18,54,66,0.34)" stroke-width="1.4"/>
+  <text x="34" y="46" fill="#0f6d84" font-family="'IBM Plex Mono',monospace" font-size="13" letter-spacing="3">P-03/2</text>
+  <text x="1166" y="46" text-anchor="end" fill="rgba(18,54,66,0.45)" font-family="'IBM Plex Mono',monospace" font-size="12" letter-spacing="2">SCALE 1:50</text>
+  <rect x="360" y="98.4" width="480" height="557.6" fill="url(#wash)" stroke="#123642" stroke-width="2.4"/>
+  <path d="M360 98.4V656" fill="none" stroke="#123642" stroke-width="2.6" opacity="1"/>
+  <path d="M440 98.4V656" fill="none" stroke="#123642" stroke-width="1.6" opacity="0.6"/>
+  <path d="M520 98.4V656" fill="none" stroke="#123642" stroke-width="1.6" opacity="0.6"/>
+  <path d="M600 98.4V656" fill="none" stroke="#123642" stroke-width="2.6" opacity="1"/>
+  <path d="M680 98.4V656" fill="none" stroke="#123642" stroke-width="1.6" opacity="0.6"/>
+  <path d="M760 98.4V656" fill="none" stroke="#123642" stroke-width="1.6" opacity="0.6"/>
+  <path d="M840 98.4V656" fill="none" stroke="#123642" stroke-width="2.6" opacity="1"/>
+  <path d="M352 112.4H848" fill="none" stroke="#f2a900" stroke-width="2" stroke-linecap="round"/>
+  <path d="M352 130.4H848" fill="none" stroke="#f2a900" stroke-width="2" stroke-linecap="round"/>
+  <path d="M352 148.4H848" fill="none" stroke="#f2a900" stroke-width="2" stroke-linecap="round"/>
+  <path d="M352 166.4H848" fill="none" stroke="#f2a900" stroke-width="2" stroke-linecap="round"/>
+  <path d="M352 184.4H848" fill="none" stroke="#f2a900" stroke-width="2" stroke-linecap="round"/>
+  <path d="M352 202.4H848" fill="none" stroke="#f2a900" stroke-width="2" stroke-linecap="round"/>
+  <path d="M352 220.4H848" fill="none" stroke="#0f6d84" stroke-width="2" stroke-linecap="round"/>
+  <path d="M352 254.4H848" fill="none" stroke="#0f6d84" stroke-width="2" stroke-linecap="round"/>
+  <path d="M352 288.4H848" fill="none" stroke="#0f6d84" stroke-width="2" stroke-linecap="round"/>
+  <path d="M352 322.4H848" fill="none" stroke="#0f6d84" stroke-width="2" stroke-linecap="round"/>
+  <path d="M352 356.4H848" fill="none" stroke="#0f6d84" stroke-width="2" stroke-linecap="round"/>
+  <path d="M352 390.4H848" fill="none" stroke="#0f6d84" stroke-width="2" stroke-linecap="round"/>
+  <path d="M352 424.4H848" fill="none" stroke="#0f6d84" stroke-width="2" stroke-linecap="round"/>
+  <path d="M352 458.4H848" fill="none" stroke="#0f6d84" stroke-width="2" stroke-linecap="round"/>
+  <path d="M352 492.4H848" fill="none" stroke="#0f6d84" stroke-width="2" stroke-linecap="round"/>
+  <path d="M352 526.4H848" fill="none" stroke="#0f6d84" stroke-width="2" stroke-linecap="round"/>
+  <path d="M352 560.4H848" fill="none" stroke="#f2a900" stroke-width="2" stroke-linecap="round"/>
+  <path d="M352 578.4H848" fill="none" stroke="#f2a900" stroke-width="2" stroke-linecap="round"/>
+  <path d="M352 596.4H848" fill="none" stroke="#f2a900" stroke-width="2" stroke-linecap="round"/>
+  <path d="M352 614.4H848" fill="none" stroke="#f2a900" stroke-width="2" stroke-linecap="round"/>
+  <path d="M352 632.4H848" fill="none" stroke="#f2a900" stroke-width="2" stroke-linecap="round"/>
+  <path d="M352 650.4H848" fill="none" stroke="#f2a900" stroke-width="2" stroke-linecap="round"/>
+  <line x1="360" y1="686" x2="840" y2="686" stroke="#0f6d84" stroke-width="2"/>
+  <line x1="360" y1="678" x2="360" y2="694" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="440" y1="678" x2="440" y2="694" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="520" y1="678" x2="520" y2="694" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="600" y1="678" x2="600" y2="694" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="680" y1="678" x2="680" y2="694" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="760" y1="678" x2="760" y2="694" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="840" y1="678" x2="840" y2="694" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="0" y1="710" x2="1200" y2="710" stroke="#123642" stroke-width="2" opacity="0.8"/>
+  <line x1="-34" y1="744" x2="0" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="-8" y1="744" x2="26" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="18" y1="744" x2="52" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="44" y1="744" x2="78" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="70" y1="744" x2="104" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="96" y1="744" x2="130" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="122" y1="744" x2="156" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="148" y1="744" x2="182" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="174" y1="744" x2="208" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="200" y1="744" x2="234" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="226" y1="744" x2="260" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="252" y1="744" x2="286" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="278" y1="744" x2="312" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="304" y1="744" x2="338" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="330" y1="744" x2="364" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="356" y1="744" x2="390" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="382" y1="744" x2="416" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="408" y1="744" x2="442" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="434" y1="744" x2="468" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="460" y1="744" x2="494" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="486" y1="744" x2="520" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="512" y1="744" x2="546" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="538" y1="744" x2="572" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="564" y1="744" x2="598" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="590" y1="744" x2="624" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="616" y1="744" x2="650" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="642" y1="744" x2="676" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="668" y1="744" x2="702" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="694" y1="744" x2="728" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="720" y1="744" x2="754" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="746" y1="744" x2="780" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="772" y1="744" x2="806" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="798" y1="744" x2="832" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="824" y1="744" x2="858" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="850" y1="744" x2="884" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="876" y1="744" x2="910" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="902" y1="744" x2="936" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="928" y1="744" x2="962" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="954" y1="744" x2="988" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="980" y1="744" x2="1014" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="1006" y1="744" x2="1040" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="1032" y1="744" x2="1066" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="1058" y1="744" x2="1092" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="1084" y1="744" x2="1118" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="1110" y1="744" x2="1144" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="1136" y1="744" x2="1170" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="1162" y1="744" x2="1196" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <line x1="1188" y1="744" x2="1222" y2="710" stroke="rgba(18,54,66,0.34)" stroke-width="1"/>
+  <rect x="14" y="752" width="1172" height="54" fill="#f2a900"/>
+  <rect x="14" y="752" width="1172" height="3" fill="#123642"/>
+  <text x="34" y="785" fill="#123642" font-family="'IBM Plex Mono',monospace" font-size="15" letter-spacing="2.4" font-weight="500">CIVIC CENTER SEISMIC RETROFIT · DETAIL</text>
+  <text x="1166" y="785" text-anchor="end" fill="#123642" font-family="'IBM Plex Mono',monospace" font-size="13" letter-spacing="3" opacity="0.72">MERIDIAN</text>
+</svg>
