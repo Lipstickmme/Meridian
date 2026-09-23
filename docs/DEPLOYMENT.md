@@ -71,18 +71,20 @@ type, in `src/site/layout.js` and styled under `.brand-lockup` in
 **Site icon.** `npm run icons` redraws `favicon.svg`, `favicon.png` and
 `apple-touch-icon.png` from the same geometry, in `scripts/make-icons.js`.
 
-**Placeholder drawings.** `npm run artwork` redraws every placeholder in
-`public/assets/img/` from `scripts/make-artwork.js`: seven page bands and the
-twenty-nine plates in `public/assets/img/lib/` that every project and discipline
-shares. Change the palette at the top of that file and they all follow. The
-script also checks the data — a missing drawing, a plate used twice on one page,
-or two projects sharing a hero all fail it.
+**The plate library.** Every image on the site comes from
+`public/assets/img/lib/`: twenty-four plates shared across projects, disciplines
+and page bands. Fifteen are photographs; nine are drawings from
+`scripts/make-artwork.js`, which also checks the data — a missing drawing, a
+plate used twice on one page, or two projects sharing a hero all fail it.
 
-**Photography.** `docs/IMAGE-PROMPTS.md` carries thirty-five prompts, one per
-image: six page images and the twenty-nine library plates. Save the photograph
-beside the drawing it replaces (`lib/diver-underwater.jpg` next to
+**Photography.** `docs/IMAGE-PROMPTS.md` lists what is photographed and where it
+appears, and carries a complete prompt for each frame still outstanding. Save the
+photograph beside the drawing it replaces (`lib/diver-underwater.jpg` next to
 `lib/diver-underwater.svg`), then run `npm run adopt-photos` to point the data
 files at it and `npm run build`.
+
+Nothing in the library may carry a company name, a logo or a hard-hat decal, and
+no portrait goes up unless the person is actually at the practice.
 
 Notes:
 

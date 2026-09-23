@@ -1,51 +1,80 @@
 {
-  "_comment": "Page-level image slots. Each slot lists the files it would like, best first, and the drawing it falls back on if none is there. Names are matched without regard to case and any of .webp .avif .jpg .jpeg .png works, with .webp preferred, so adding photography is a file drop into public/assets/img/ and needs no code change: name your pictures meridian1 to meridian5. Until they arrive every slot shows a Meridian drawing from scripts/make-artwork.js rather than somebody else's photograph. Per-project images live in projects.json; the leadership portrait lives in leadership.json.",
+  "_comment": "Page-level image slots. Each slot lists the files it would like, best first, and what it falls back on. Names are matched without regard to case and any of .webp .avif .jpg .jpeg .png works, so replacing a page image is a file drop into public/assets/img/: name your pictures meridian1 to meridian5. Until they arrive each slot runs a plate from the shared library in /assets/img/lib/, which is the same photography the project and service pages use. Per-project and per-service images live in projects.json and services.json; the leadership portrait lives in leadership.json.",
   "slots": {
     "underlay": {
-      "prefer": ["meridian1"],
-      "fallback": "/assets/img/site-underlay.svg"
+      "prefer": [
+        "meridian1"
+      ],
+      "fallback": "/assets/img/lib/site-overview.webp"
     },
     "capabilities": {
-      "prefer": ["meridian2", "meridian1"],
-      "fallback": "/assets/img/capabilities.svg"
+      "prefer": [
+        "meridian2",
+        "meridian1"
+      ],
+      "fallback": "/assets/img/lib/steel-erection.webp"
     },
     "metrics": {
-      "prefer": ["meridian3", "meridian1"],
-      "fallback": "/assets/img/practice.svg"
+      "prefer": [
+        "meridian3",
+        "meridian1"
+      ],
+      "fallback": "/assets/img/lib/rig-inspection.webp"
     },
     "work": {
-      "prefer": ["meridian4", "meridian2"],
-      "fallback": "/assets/img/selected-work.svg"
+      "prefer": [
+        "meridian4",
+        "meridian2"
+      ],
+      "fallback": "/assets/img/lib/process-plant.webp"
     },
     "contact": {
-      "prefer": ["meridian5", "meridian3"],
-      "fallback": "/assets/img/contact.svg"
+      "prefer": [
+        "meridian5",
+        "meridian3"
+      ],
+      "fallback": "/assets/img/lib/engineers-laptop.webp"
     },
     "projectsHeader": {
-      "prefer": ["meridian4", "meridian1"],
-      "fallback": "/assets/img/selected-work.svg"
+      "prefer": [
+        "meridian4",
+        "meridian1"
+      ],
+      "fallback": "/assets/img/lib/concrete-pour.webp"
     },
     "careersHeader": {
-      "prefer": ["meridian3", "meridian2"],
-      "fallback": "/assets/img/careers.svg"
+      "prefer": [
+        "meridian3",
+        "meridian2"
+      ],
+      "fallback": "/assets/img/lib/drawings-table.webp"
     },
     "contactHeader": {
-      "prefer": ["meridian5", "meridian4"],
-      "fallback": "/assets/img/contact.svg"
+      "prefer": [
+        "meridian5",
+        "meridian4"
+      ],
+      "fallback": "/assets/img/lib/interior-fitout.webp"
     }
   },
   "heroSlides": [
     {
-      "prefer": ["meridian1"],
-      "fallback": "/assets/slides/blueprint-01.webp"
+      "prefer": [
+        "meridian1"
+      ],
+      "fallback": "/assets/img/lib/site-overview.webp"
     },
     {
-      "prefer": ["meridian2"],
-      "fallback": "/assets/slides/blueprint-02.webp"
+      "prefer": [
+        "meridian2"
+      ],
+      "fallback": "/assets/img/lib/steel-erection.webp"
     },
     {
-      "prefer": ["meridian3"],
-      "fallback": "/assets/slides/blueprint-03.webp"
+      "prefer": [
+        "meridian3"
+      ],
+      "fallback": "/assets/img/lib/highway-works.webp"
     }
   ]
 }

@@ -30,7 +30,29 @@ for (const def of all) {
   if (!def.file.includes('/')) console.log(`  built ${def.file} (${html.length} bytes)`);
 }
 console.log(`  built ${detailPages.length} project and service pages`);
-console.log(`[build] wrote ${count} pages`);
+
+/* Renaming a project leaves its old page on disk, still served, still linking
+   to images the rename deleted. So the build owns these two directories: a
+   page in them that this run did not write is not ours any more. */
+let pruned = 0;
+for (const dir of ['projects', 'services']) {
+  const abs = path.join(publicDir, dir);
+  const keep = new Set(detailPages.filter((d) => d.file.startsWith(`${dir}/`)).map((d) => path.basename(d.file)));
+  let entries = [];
+  try {
+    entries = fs.readdirSync(abs);
+  } catch (err) {
+    continue;
+  }
+  for (const file of entries) {
+    if (!file.endsWith('.html') || keep.has(file)) continue;
+    fs.unlinkSync(path.join(abs, file));
+    console.log(`  pruned ${dir}/${file}`);
+    pruned += 1;
+  }
+}
+
+console.log(`[build] wrote ${count} pages${pruned ? `, pruned ${pruned}` : ''}`);
 
 // Say out loud which real artwork was picked up, so a deploy that is still
 // running on placeholders is obvious from the build log rather than the page.

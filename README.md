@@ -69,11 +69,18 @@ The portfolio spans commercial building, major civil engineering, oil and gas
 facilities, marine and underwater welding, and energy work; each project carries
 two gallery frames under the fold, and each discipline one.
 
-Pictures come from a **shared library of twenty-nine plates** rather than one
-photograph per slot, so the whole site runs on thirty-five images instead of
-seventy-seven. `npm run artwork` enforces the two rules that keep reuse from
-reading as a mistake — no plate twice on the same page, and no two projects
-sharing a hero — and fails the build if either is broken. In the galleries,
+Pictures come from a **shared library of twenty-four plates** in
+`public/assets/img/lib/`, reused across projects, disciplines and page bands
+rather than one photograph per slot. Fifteen are photographs; the nine that are
+still drawings are the frames no photograph covers (the diving, the subsea work,
+the tank shell, the switchyard). Nothing in the library carries a company name,
+a logo or a hard-hat decal, and there is no portrait of a named person.
+
+`npm run artwork` enforces the rules that keep reuse from reading as a mistake —
+no plate twice on the same page, no two projects sharing a hero, no plate
+pointing at a drawing that does not exist — and fails the build if one breaks.
+`npm run build` prunes any project or service page whose id has gone from the
+data, so a renamed project cannot leave a stale page behind. In the galleries,
 alternate frames are cropped off-centre so a repeated plate reads as another
 frame from the same job.
 
@@ -312,22 +319,22 @@ whose `name` is deliberately empty until a real principal fills it in: while it 
 the leadership chapter credits the practice rather than inventing a person. See the
 table in [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md#step-1-add-your-images).
 
-Two generators draw what ships in the meantime. Both are deterministic, so
+Two generators draw what is not photographed yet. Both are deterministic, so
 re-running one changes nothing unless the source changed:
 
 ```bash
-npm run artwork   # 7 page bands + 29 library plates in public/assets/img/
+npm run artwork   # the leadership plate + the 9 library drawings
 npm run icons     # favicon.svg, favicon.png, apple-touch-icon.png
 ```
 
 `npm run artwork` checks every image the data points at, so a new project cannot
 ship with a broken image or an accidental duplicate.
 
-**Replacing the drawings with photography.** `docs/IMAGE-PROMPTS.md` is the shot
-list: thirty-five prompts — six page images and the twenty-nine library plates —
-each one complete with its camera settings, written for documentary site
-photography rather than stock, and headed with the filename it belongs at. Save
-the photograph beside the drawing it replaces, then:
+**Replacing the remaining drawings.** `docs/IMAGE-PROMPTS.md` lists what is
+already photographed and where each plate appears, then carries a complete
+prompt — scene, camera settings, house style, aspect ratio — for each of the ten
+frames still outstanding. Save the photograph beside the drawing it replaces,
+then:
 
 ```bash
 npm run adopt-photos   # rewrites the data files to use the photographs

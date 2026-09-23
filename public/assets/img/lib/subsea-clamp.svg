@@ -17,7 +17,7 @@
   <rect width="1200" height="820" fill="url(#grid-fine)"/>
   <rect width="1200" height="820" fill="url(#grid)"/>
   <rect x="14" y="14" width="1172" height="792" fill="none" stroke="rgba(18,54,66,0.34)" stroke-width="1.4"/>
-  <text x="34" y="46" fill="#0f6d84" font-family="'IBM Plex Mono',monospace" font-size="13" letter-spacing="3">L-17</text>
+  <text x="34" y="46" fill="#0f6d84" font-family="'IBM Plex Mono',monospace" font-size="13" letter-spacing="3">L-06</text>
   <text x="1166" y="46" text-anchor="end" fill="rgba(18,54,66,0.45)" font-family="'IBM Plex Mono',monospace" font-size="12" letter-spacing="2">SCALE 1:100</text>
   <rect x="0" y="131.2" width="1200" height="459.2" fill="url(#wash)" opacity="0.5"/>
   <path d="M0 131.2H1200" fill="none" stroke="#0f6d84" stroke-width="2.4" stroke-linecap="round"/>

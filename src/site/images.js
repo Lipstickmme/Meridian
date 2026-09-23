@@ -18,7 +18,7 @@ const PUBLIC_DIR = path.join(__dirname, '..', '..', 'public');
 // Preference order, best format first. WebP wins, so a converted copy is used
 // in place of a heavy original without anyone having to delete the original.
 const EXTENSIONS = ['.webp', '.avif', '.jpg', '.jpeg', '.png', '.svg'];
-const DIRS = ['/assets/img/', '/assets/slides/'];
+const DIRS = ['/assets/img/', '/assets/img/lib/'];
 
 const found = [];
 

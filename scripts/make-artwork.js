@@ -812,57 +812,37 @@ const LAND = { w: 1200, h: 820 };
 const WIDE = { w: 1920, h: 660 };
 const TALL = { w: 760, h: 900 };
 
-/* The page-level slots, which images.json falls back on. */
+/* The page-level slots now fall back to photographs in the library, so the
+   only page drawing left is the leadership plate: there is no portrait of a
+   principal to run, and inventing one is worse than drawing the frame it will
+   sit in. */
 const pageSheets = [
-  { file: 'site-underlay.svg', motif: 'plan', title: 'MERIDIAN · SITE SURVEY', code: 'GA-00', scale: 'SCALE 1:2500', size: WIDE },
-  { file: 'capabilities.svg', motif: 'model', title: 'FEDERATED MODEL · AXONOMETRIC', code: 'DE-01', scale: 'SCALE 1:200', size: WIDE },
-  { file: 'practice.svg', motif: 'loads', title: 'LOAD PATH · TEST CASE', code: 'ST-02', scale: 'SCALE 1:100', size: WIDE },
-  { file: 'selected-work.svg', motif: 'skyline', title: 'SELECTED WORK · ELEVATION', code: 'GA-03', scale: 'SCALE 1:500', size: WIDE },
-  { file: 'contact.svg', motif: 'contact', title: 'MERIDIAN STUDIO · SITE PLAN', code: 'GA-05', scale: 'SCALE 1:400', size: LAND },
-  { file: 'careers.svg', motif: 'studio', title: 'THE STUDIO · SECTION', code: 'HR-01', scale: 'SCALE 1:75', size: LAND },
   { file: 'leadership.svg', motif: 'portrait', title: 'PRINCIPAL-LED DELIVERY', code: 'LDR-01', scale: 'PORTRAIT PLATE', size: TALL },
 ];
 
 /**
- * The shared plate library.
+ * The drawings the library still needs.
  *
- * Every project and every discipline draws from these rather than owning a
- * picture each: a wharf repair looks like a wharf repair whichever job it was
- * on, and twenty-nine plates is a set somebody can actually go and shoot.
- * Two rules keep the reuse from reading as a mistake — no plate appears twice
- * on the same page, and no two projects share a hero — and both are checked
- * below rather than trusted.
+ * Most of the plate library is photography now (public/assets/img/lib/*.webp).
+ * These nine are the frames no photograph covers — the diving, the subsea work,
+ * the tank shell, the switchyard — and they are drawn rather than left blank or
+ * filled with a picture of somebody else's job. Replace one by dropping a
+ * photograph beside it and running `npm run adopt-photos`.
+ *
+ * Two rules still hold across the whole library, drawn or photographed, and are
+ * checked below rather than trusted: no plate appears twice on the same page,
+ * and no two projects share a hero.
  */
 const libSheets = [
-  { file: 'lib/steel-frame-erection.svg', motif: 'crane', title: 'STEEL FRAME ERECTION', code: 'L-01' },
-  { file: 'lib/bolt-up-height.svg', motif: 'weld', title: 'BOLTED CONNECTION · DETAIL', code: 'L-02' },
-  { file: 'lib/core-slipform.svg', motif: 'tower', title: 'CORE SLIPFORM · ELEVATION', code: 'L-03' },
-  { file: 'lib/rebar-cage.svg', motif: 'rebar', title: 'REINFORCEMENT · SECTION', code: 'L-04' },
-  { file: 'lib/curtain-wall.svg', motif: 'facade', title: 'CURTAIN WALL · ELEVATION', code: 'L-05' },
-  { file: 'lib/night-pour.svg', motif: 'loads', title: 'DECK POUR · LOAD CASE', code: 'L-06' },
-  { file: 'lib/crane-lift.svg', motif: 'tower', title: 'MODULE LIFT · RIGGING', code: 'L-07' },
-  { file: 'lib/fabrication-shop.svg', motif: 'canopy', title: 'SHOP FABRICATION · JOINT', code: 'L-08' },
-  { file: 'lib/retrofit-interior.svg', motif: 'facade', title: 'EXISTING FRAME · SURVEY', code: 'L-09' },
-  { file: 'lib/pipe-rack.svg', motif: 'plant', title: 'PIPE RACK · GENERAL ARRANGEMENT', code: 'L-10' },
-  { file: 'lib/tank-shell.svg', motif: 'tankfarm', title: 'TANK SHELL · ELEVATION', code: 'L-11' },
-  { file: 'lib/weld-habitat-tent.svg', motif: 'weld', title: 'WELD PROCEDURE · JOINT DETAIL', code: 'L-12' },
-  { file: 'lib/turnaround-scaffold.svg', motif: 'refinery', title: 'PROCESS UNIT · TURNAROUND', code: 'L-13' },
-  { file: 'lib/diver-underwater.svg', motif: 'diver', title: 'DIVE REPAIR · SECTION', code: 'L-14' },
-  { file: 'lib/dive-spread-deck.svg', motif: 'platform', title: 'SURFACE SPREAD · DIVE STATION', code: 'L-15' },
-  { file: 'lib/dive-bell-moonpool.svg', motif: 'lock', title: 'SATURATION SPREAD · MOON POOL', code: 'L-16' },
-  { file: 'lib/subsea-clamp.svg', motif: 'pipeline', title: 'SUBSEA CLAMP · SECTION', code: 'L-17' },
-  { file: 'lib/wharf-underdeck.svg', motif: 'piles', title: 'WHARF UNDERDECK · SECTION', code: 'L-18' },
-  { file: 'lib/offshore-platform.svg', motif: 'platform', title: 'FIXED PLATFORM · ELEVATION', code: 'L-19' },
-  { file: 'lib/port-wharf-cranes.svg', motif: 'portal', title: 'CONTAINER BERTH · SECTION', code: 'L-20' },
-  { file: 'lib/bridge-girder-set.svg', motif: 'bridge', title: 'GIRDER ERECTION · ELEVATION', code: 'L-21' },
-  { file: 'lib/deck-rebar-falsework.svg', motif: 'viaduct', title: 'DECK AND FALSEWORK · ELEVATION', code: 'L-22' },
-  { file: 'lib/dam-cofferdam.svg', motif: 'dam', title: 'DAM OUTLET · SECTION', code: 'L-23' },
-  { file: 'lib/channel-earthworks.svg', motif: 'plan', title: 'CHANNEL WORKS · SITE PLAN', code: 'L-24' },
-  { file: 'lib/switchyard-lattice.svg', motif: 'substation', title: 'SWITCHYARD · ELEVATION', code: 'L-25' },
-  { file: 'lib/transformer-set.svg', motif: 'crane', title: 'TRANSFORMER · SETTING OUT', code: 'L-26' },
-  { file: 'lib/piling-rig.svg', motif: 'piles', title: 'PILING · SECTION', code: 'L-27' },
-  { file: 'lib/plant-room.svg', motif: 'portal', title: 'PLANT ROOM · LAYOUT', code: 'L-28' },
-  { file: 'lib/model-review.svg', motif: 'model', title: 'FEDERATED MODEL · REVIEW', code: 'L-29' },
+  { file: 'lib/tank-shell.svg', motif: 'tankfarm', title: 'TANK SHELL · ELEVATION', code: 'L-01' },
+  { file: 'lib/weld-habitat-tent.svg', motif: 'weld', title: 'WELD PROCEDURE · JOINT DETAIL', code: 'L-02' },
+  { file: 'lib/diver-underwater.svg', motif: 'diver', title: 'DIVE REPAIR · SECTION', code: 'L-03' },
+  { file: 'lib/dive-spread-deck.svg', motif: 'platform', title: 'SURFACE SPREAD · DIVE STATION', code: 'L-04' },
+  { file: 'lib/dive-bell-moonpool.svg', motif: 'lock', title: 'SATURATION SPREAD · MOON POOL', code: 'L-05' },
+  { file: 'lib/subsea-clamp.svg', motif: 'pipeline', title: 'SUBSEA CLAMP · SECTION', code: 'L-06' },
+  { file: 'lib/wharf-underdeck.svg', motif: 'piles', title: 'WHARF UNDERDECK · SECTION', code: 'L-07' },
+  { file: 'lib/switchyard-lattice.svg', motif: 'substation', title: 'SWITCHYARD · ELEVATION', code: 'L-08' },
+  { file: 'lib/transformer-set.svg', motif: 'crane', title: 'TRANSFORMER · SETTING OUT', code: 'L-09' },
 ].map((s) => ({ ...s, scale: 'SCALE 1:100', size: LAND }));
 
 const projects = require('../src/data/projects.json');

@@ -10,10 +10,10 @@
       "Core and shell",
       "Seismic retrofit"
     ],
-    "image": "/assets/img/lib/curtain-wall.svg",
+    "image": "/assets/img/lib/interior-fitout.webp",
     "gallery": [
       {
-        "src": "/assets/img/lib/steel-frame-erection.svg",
+        "src": "/assets/img/lib/steel-erection.webp",
         "caption": "Frame and deck ahead of the envelope"
       }
     ],
@@ -45,11 +45,11 @@
       "Steel, concrete and timber",
       "Retrofit and assessment"
     ],
-    "image": "/assets/img/lib/bolt-up-height.svg",
+    "image": "/assets/img/lib/steel-erection.webp",
     "gallery": [
       {
-        "src": "/assets/img/lib/rebar-cage.svg",
-        "caption": "Rebar cage tied out before the pour"
+        "src": "/assets/img/lib/rebar-mat.webp",
+        "caption": "Reinforcement tied out before the pour"
       }
     ],
     "lede": "Every scheme starts with the load path. Get that right and the rest of the building gets lighter, cheaper and easier to build.",
@@ -80,11 +80,11 @@
       "Highway and transit",
       "Stormwater and flood"
     ],
-    "image": "/assets/img/lib/deck-rebar-falsework.svg",
+    "image": "/assets/img/lib/highway-works.webp",
     "gallery": [
       {
-        "src": "/assets/img/lib/channel-earthworks.svg",
-        "caption": "Channel and levee works"
+        "src": "/assets/img/lib/concrete-pour.webp",
+        "caption": "Channel and culvert works"
       }
     ],
     "lede": "Ground is the least forgiving part of any project. We survey it, model it, and design what sits on it.",
@@ -115,7 +115,7 @@
       "Turnaround and tie-ins",
       "API inspection support"
     ],
-    "image": "/assets/img/lib/pipe-rack.svg",
+    "image": "/assets/img/lib/process-plant.webp",
     "gallery": [
       {
         "src": "/assets/img/lib/tank-shell.svg",
@@ -185,11 +185,11 @@
       "Erection sequencing",
       "Temporary works"
     ],
-    "image": "/assets/img/lib/fabrication-shop.svg",
+    "image": "/assets/img/lib/fabrication-shop.webp",
     "gallery": [
       {
-        "src": "/assets/img/lib/bolt-up-height.svg",
-        "caption": "Bolt-up on the erection front"
+        "src": "/assets/img/lib/portal-frame.webp",
+        "caption": "Frame going up on the erection front"
       }
     ],
     "lede": "Steel is decided in the connections. Design them early and the frame goes up in the order the crane wants.",
@@ -220,11 +220,11 @@
       "Ground improvement",
       "Liquefaction mitigation"
     ],
-    "image": "/assets/img/lib/piling-rig.svg",
+    "image": "/assets/img/lib/rebar-mat.webp",
     "gallery": [
       {
-        "src": "/assets/img/lib/rebar-cage.svg",
-        "caption": "Pile cap reinforcement before the pour"
+        "src": "/assets/img/lib/site-overview.webp",
+        "caption": "Platform and pads before the structure"
       }
     ],
     "lede": "The cheapest foundation is the one that matches the ground investigation, not the one that matches the last job.",
@@ -255,11 +255,11 @@
       "Energy modelling",
       "Plant layout"
     ],
-    "image": "/assets/img/lib/plant-room.svg",
+    "image": "/assets/img/lib/rig-inspection.webp",
     "gallery": [
       {
-        "src": "/assets/img/lib/pipe-rack.svg",
-        "caption": "Process piping on the rack"
+        "src": "/assets/img/lib/weld-habitat-tent.svg",
+        "caption": "Spool fit-up under a weld tent"
       }
     ],
     "lede": "Process plant lives or dies on layout. Pipe runs, access and maintenance decide the operating cost for the next thirty years.",
@@ -290,11 +290,11 @@
       "Digital twins",
       "Clash and 4D scheduling"
     ],
-    "image": "/assets/img/lib/model-review.svg",
+    "image": "/assets/img/lib/engineers-laptop.webp",
     "gallery": [
       {
-        "src": "/assets/img/lib/retrofit-interior.svg",
-        "caption": "Scan of the existing structure, before modelling"
+        "src": "/assets/img/lib/drawings-table.webp",
+        "caption": "Model checked against the drawing set"
       }
     ],
     "lede": "A model is worth having when the site team opens it. Everything else is a picture of a building.",
@@ -325,11 +325,11 @@
       "Operator training",
       "As-built and asset data"
     ],
-    "image": "/assets/img/lib/plant-room.svg",
+    "image": "/assets/img/lib/power-plant.webp",
     "gallery": [
       {
-        "src": "/assets/img/lib/model-review.svg",
-        "caption": "Records and model walked through at handover"
+        "src": "/assets/img/lib/switchyard-lattice.svg",
+        "caption": "Switchyard proved bay by bay"
       }
     ],
     "lede": "A project ends when the operator can run it without ringing us, not when the last valve is fitted.",
