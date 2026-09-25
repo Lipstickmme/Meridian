@@ -18,7 +18,7 @@
   }
 
   function render(project, next) {
-    document.title = project.name + ' | Meridian Construction';
+    document.title = project.name + ' | Meridian Constructions';
     const facts = (project.facts || []).map((f) => `<div class="fact"><span class="k">${esc(f.k)}</span><span class="v">${esc(f.v)}</span></div>`).join('');
     const services = (project.services || []).map((s) => `<span>${esc(s)}</span>`).join('');
     const gallery = (project.gallery || []).map((g, i) => `

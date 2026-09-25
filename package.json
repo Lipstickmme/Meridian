@@ -1,7 +1,7 @@
 {
   "name": "meridian-construction",
   "version": "1.0.0",
-  "description": "Meridian Construction corporate website and API server",
+  "description": "Meridian Constructions corporate website and API server",
   "main": "server.js",
   "type": "commonjs",
   "scripts": {
@@ -10,7 +10,6 @@
     "build": "node scripts/build-pages.js",
     "prestart": "node scripts/build-pages.js",
     "artwork": "node scripts/make-artwork.js",
-    "icons": "node scripts/make-icons.js",
     "adopt-photos": "node scripts/adopt-photos.js",
     "check:vercel": "node scripts/check-vercel-upload.js",
     "test": "node test/api.test.js",
@@ -25,7 +24,7 @@
     "express",
     "website"
   ],
-  "author": "Meridian Construction",
+  "author": "Meridian Constructions",
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {

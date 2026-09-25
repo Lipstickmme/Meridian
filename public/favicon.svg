@@ -1,5 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img" aria-label="Meridian Construction">
-  <rect width="48" height="48" rx="6" fill="#0a1a24"/>
-  <path d="M8 38V12l16 13 16-13v26" fill="none" stroke="#f4f2ec" stroke-width="3.8" stroke-linejoin="round" stroke-linecap="round"/>
-  <path d="M4 43h40" stroke="#d9a441" stroke-width="3.2" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img" aria-label="Meridian Constructions">
+  <rect width="48" height="48" rx="6" fill="#0a2b34"/>
+  <g fill="none" stroke="#b8860b" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M22 37V12l6-4v29"/>
+    <path d="M28 37V16l5 3v18"/>
+    <path d="M17 37V23l5-3"/>
+    <path d="M11 37h26"/>
+  </g>
 </svg>

@@ -195,7 +195,7 @@ function projectPages() {
       file: `projects/${project.id}.html`,
       active: 'projects',
       bodyClass: 'page-project',
-      title: `${project.name} | Meridian Construction`,
+      title: `${project.name} | Meridian Constructions`,
       description: summarise(`${project.blurb} ${project.location}, ${project.status || project.year}.`),
       content: projectContent(project, next),
     };
@@ -208,7 +208,7 @@ function servicePages() {
     file: `services/${service.id}.html`,
     active: 'services',
     bodyClass: 'page-service',
-    title: `${service.title} | Meridian Construction`,
+    title: `${service.title} | Meridian Constructions`,
     description: summarise(service.summary),
     content: serviceContent(service),
   }));

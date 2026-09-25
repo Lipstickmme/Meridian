@@ -1,7 +1,7 @@
 'use strict';
 
 /* =========================================================================
-   Meridian Construction shared frontend.
+   Meridian Constructions shared frontend.
    Exposes helpers on window.MERIDIAN for per-page scripts, drives shared UI
    (nav, hero slideshow, reveals, counters, enquiry form) and hydrates the
    home page. Data comes from the Express API, with the seed data below as a

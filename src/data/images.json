@@ -47,7 +47,7 @@
         "meridian3",
         "meridian2"
       ],
-      "fallback": "/assets/img/lib/drawings-table.webp"
+      "fallback": "/assets/img/lib/portal-frame.webp"
     },
     "contactHeader": {
       "prefer": [

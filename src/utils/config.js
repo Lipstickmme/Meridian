@@ -58,7 +58,7 @@ const forwardTo = () => pick('FORWARD_TO');
  * The name a recipient sees beside the address. Without one, mail clients fall
  * back to the local part, so a reply from contact@ shows up as "contact".
  */
-const studioName = () => pick('STUDIO_NAME') || 'Meridian Construction';
+const studioName = () => pick('STUDIO_NAME') || 'Meridian Constructions';
 
 /** Bare address out of "Name <a@b.c>". */
 function parseAddress(value) {

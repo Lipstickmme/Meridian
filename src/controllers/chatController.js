@@ -14,7 +14,7 @@ function autoReply(text) {
   const has = (...words) => words.some((w) => t.includes(w));
 
   if (has('hello', 'hi ', 'hey', 'good morning', 'good afternoon') || t === 'hi') {
-    return "Hi, you're through to Meridian Construction. What are you building, and where does it get difficult?";
+    return "Hi, you're through to Meridian Constructions. What are you building, and where does it get difficult?";
   }
   if (has('career', 'job', 'hiring', 'vacancy', 'apply', 'position', 'role')) {
     return 'We are hiring across the structural, civil, mechanical and digital teams, on site, and in the dive locker. Open roles are on our Careers page, or tell me which discipline you work in.';

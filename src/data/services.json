@@ -185,7 +185,7 @@
       "Erection sequencing",
       "Temporary works"
     ],
-    "image": "/assets/img/lib/fabrication-shop.webp",
+    "image": "/assets/img/lib/steel-stack.webp",
     "gallery": [
       {
         "src": "/assets/img/lib/portal-frame.webp",
@@ -293,8 +293,8 @@
     "image": "/assets/img/lib/engineers-laptop.webp",
     "gallery": [
       {
-        "src": "/assets/img/lib/drawings-table.webp",
-        "caption": "Model checked against the drawing set"
+        "src": "/assets/img/lib/model-review.svg",
+        "caption": "Model checked against the issued drawing set"
       }
     ],
     "lede": "A model is worth having when the site team opens it. Everything else is a picture of a building.",

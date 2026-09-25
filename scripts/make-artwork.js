@@ -843,6 +843,7 @@ const libSheets = [
   { file: 'lib/wharf-underdeck.svg', motif: 'piles', title: 'WHARF UNDERDECK · SECTION', code: 'L-07' },
   { file: 'lib/switchyard-lattice.svg', motif: 'substation', title: 'SWITCHYARD · ELEVATION', code: 'L-08' },
   { file: 'lib/transformer-set.svg', motif: 'crane', title: 'TRANSFORMER · SETTING OUT', code: 'L-09' },
+  { file: 'lib/model-review.svg', motif: 'model', title: 'FEDERATED MODEL · REVIEW', code: 'L-10' },
 ].map((s) => ({ ...s, scale: 'SCALE 1:100', size: LAND }));
 
 const projects = require('../src/data/projects.json');

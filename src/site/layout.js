@@ -82,19 +82,24 @@ function head({ title, description, noindex = false, styles = [] }) {
 }
 
 /**
- * The wordmark. Drawn rather than uploaded: an inline mark plus type in the
- * site's own faces, so it is sharp at any size, takes the colour of whatever
- * surface it sits on, and costs no image request. One definition, used by the
- * nav and the footer, so the two can never drift apart.
+ * The wordmark.
+ *
+ * The practice's own logo, keyed off the white card it was supplied on so the
+ * gold sits on any surface. Two forms: the nav pairs the building mark with
+ * type set in the site's own faces, because a stacked logo shrunk into a 64px
+ * bar leaves the wordmark unreadable; the footer, which has the room, carries
+ * the full lockup as drawn.
  */
-function brandLockup(size = 36) {
+function brandLockup(size = 42) {
   return `<span class="brand-lockup">
-      <svg class="brand-mark" viewBox="0 0 48 48" width="${size}" height="${size}" aria-hidden="true" focusable="false">
-        <path d="M8 38V12l16 13 16-13v26" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>
-        <path d="M4 43h40" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
-      </svg>
-      <span class="brand-word"><b>Meridian</b><span>Construction</span></span>
+      <img class="brand-mark" src="/assets/brand/meridian-mark.webp" alt="" width="${size}" height="${size}" aria-hidden="true" />
+      <span class="brand-word"><b>Meridian</b><span>Constructions</span></span>
     </span>`;
+}
+
+/** The supplied logo, whole, for surfaces with vertical room. */
+function brandLogo(cls = 'brand-logo') {
+  return `<img class="${cls}" src="/assets/brand/meridian-logo-light.webp" alt="Meridian Constructions" width="656" height="551" />`;
 }
 
 function nav(active = '') {
@@ -102,7 +107,7 @@ function nav(active = '') {
     `<a href="${href}"${key === active ? ' class="is-active"' : ''}>${label}</a>`;
   return `
   <header class="nav" id="nav">
-    <a class="brand" href="/" aria-label="Meridian Construction home">${brandLockup()}</a>
+    <a class="brand" href="/" aria-label="Meridian Constructions home">${brandLockup()}</a>
     <nav class="nav-links" id="navlinks">
       ${link('/projects', 'Projects', 'projects')}
       ${link('/services', 'Services', 'services')}
@@ -121,7 +126,7 @@ function footer() {
   <footer class="footer">
     <div class="wrap footer-top">
       <div class="footer-brand">
-        <span class="brand footer-brand-mark">${brandLockup(34)}</span>
+        <a class="brand footer-brand-mark" href="/" aria-label="Meridian Constructions home">${brandLogo('footer-logo')}</a>
         <p>Engineering and construction for the things that have to keep working.</p>
       </div>
       <div class="col">
@@ -139,7 +144,7 @@ function footer() {
       </div>
     </div>
     <div class="wrap footer-bottom">
-      <span>&copy; ${YEAR} Meridian Construction Group</span>
+      <span>&copy; ${YEAR} Meridian Constructions</span>
       <span class="footer-note">Drawn, engineered and built in-house.</span>
     </div>
   </footer>`;
@@ -157,7 +162,7 @@ function chatWidget() {
         <div class="chat-head-id">
           <span class="dot"></span>
           <div>
-            <strong>Meridian Construction</strong>
+            <strong>Meridian Constructions</strong>
             <small>An engineer usually answers within minutes</small>
           </div>
         </div>
@@ -212,4 +217,4 @@ function page(opts) {
   ].join('\n');
 }
 
-module.exports = { page, nav, footer, chatWidget, head, contactForm, underlay, brandLockup };
+module.exports = { page, nav, footer, chatWidget, head, contactForm, underlay, brandLockup, brandLogo };

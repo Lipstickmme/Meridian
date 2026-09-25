@@ -9,20 +9,42 @@
     "metricLabel": "storeys above grade",
     "image": "/assets/img/lib/steel-erection.webp",
     "gallery": [
-      { "src": "/assets/img/lib/rebar-mat.webp", "caption": "Podium deck reinforcement, tied out before the pour" },
-      { "src": "/assets/img/lib/drawings-table.webp", "caption": "Erection sequence walked through on site" }
+      {
+        "src": "/assets/img/lib/rebar-mat.webp",
+        "caption": "Podium deck reinforcement, tied out before the pour"
+      },
+      {
+        "src": "/assets/img/lib/deck-pour.webp",
+        "caption": "The pour that followed, screeded in one shift"
+      }
     ],
     "client": "Coastal development partnership",
     "status": "Completed 2025",
     "duration": "32 months",
-    "services": ["Commercial Construction", "Structural Engineering", "Digital Engineering"],
+    "services": [
+      "Commercial Construction",
+      "Structural Engineering",
+      "Digital Engineering"
+    ],
     "blurb": "A 28-storey office tower on soft coastal ground, framed to ride a magnitude 7 event with its core intact.",
     "overview": "Crescent Bay sits on reclaimed ground within a mile of the fault trace, which put seismic demand, not gravity, in charge of every member size. We ran a buckling-restrained braced frame against a full non-linear time history, tuned the core wall to take the drift, and drove the foundations through liquefiable fill to competent material. The tower went up over a parking structure that stayed open throughout.",
     "facts": [
-      { "k": "Frame", "v": "BRB steel + concrete core" },
-      { "k": "Gross area", "v": "540,000 sq ft" },
-      { "k": "Seismic", "v": "Risk Category II, SDC E" },
-      { "k": "Foundation", "v": "132 driven piles to 90 ft" }
+      {
+        "k": "Frame",
+        "v": "BRB steel + concrete core"
+      },
+      {
+        "k": "Gross area",
+        "v": "540,000 sq ft"
+      },
+      {
+        "k": "Seismic",
+        "v": "Risk Category II, SDC E"
+      },
+      {
+        "k": "Foundation",
+        "v": "132 driven piles to 90 ft"
+      }
     ]
   },
   {
@@ -35,20 +57,42 @@
     "metricLabel": "days the clinic closed",
     "image": "/assets/img/lib/interior-fitout.webp",
     "gallery": [
-      { "src": "/assets/img/lib/concrete-pour.webp", "caption": "Structure poured alongside the running clinic" },
-      { "src": "/assets/img/lib/engineers-laptop.webp", "caption": "Fit-out coordinated floor by floor" }
+      {
+        "src": "/assets/img/lib/concrete-pour.webp",
+        "caption": "Structure poured alongside the running clinic"
+      },
+      {
+        "src": "/assets/img/lib/engineers-laptop.webp",
+        "caption": "Fit-out coordinated floor by floor"
+      }
     ],
     "client": "Regional health system",
     "status": "Completed 2024",
     "duration": "24 months",
-    "services": ["Commercial Construction", "Mechanical and Process", "Commissioning and Handover"],
+    "services": [
+      "Commercial Construction",
+      "Mechanical and Process",
+      "Commissioning and Handover"
+    ],
     "blurb": "An outpatient pavilion built hard against a working clinic, with every consulting room in use throughout.",
     "overview": "The pavilion shares a wall, a plant room and an ambulance route with a clinic that could not lose a single room. Noise, vibration and infection control governed the programme more than the structure did: heavy work ran nights, the tie-in to the central plant was staged across four two-hour windows, and every penetration was sealed and pressure-tested before the shift ended.",
     "facts": [
-      { "k": "Gross area", "v": "162,000 sq ft" },
-      { "k": "Structure", "v": "Special moment frame" },
-      { "k": "Utility tie-ins", "v": "9, all in live systems" },
-      { "k": "Agency review", "v": "Cleared in one cycle" }
+      {
+        "k": "Gross area",
+        "v": "162,000 sq ft"
+      },
+      {
+        "k": "Structure",
+        "v": "Special moment frame"
+      },
+      {
+        "k": "Utility tie-ins",
+        "v": "9, all in live systems"
+      },
+      {
+        "k": "Agency review",
+        "v": "Cleared in one cycle"
+      }
     ]
   },
   {
@@ -61,20 +105,42 @@
     "metricLabel": "storeys added",
     "image": "/assets/img/lib/concrete-pour.webp",
     "gallery": [
-      { "src": "/assets/img/lib/rebar-mat.webp", "caption": "Shear wall reinforcement threaded through the old frame" },
-      { "src": "/assets/img/lib/interior-fitout.webp", "caption": "Occupied floors kept open behind hoarding" }
+      {
+        "src": "/assets/img/lib/rebar-mat.webp",
+        "caption": "Shear wall reinforcement threaded through the old frame"
+      },
+      {
+        "src": "/assets/img/lib/interior-fitout.webp",
+        "caption": "Occupied floors kept open behind hoarding"
+      }
     ],
     "client": "City facilities department",
     "status": "On site",
     "duration": "22 months",
-    "services": ["Structural Engineering", "Commercial Construction", "Digital Engineering"],
+    "services": [
+      "Structural Engineering",
+      "Commercial Construction",
+      "Digital Engineering"
+    ],
     "blurb": "A 1971 concrete frame strengthened to current code and given two more floors, with staff at their desks throughout.",
     "overview": "The existing frame had capacity nobody had ever calculated, so we started with a laser scan, core samples and a load test rather than an assumption. Strengthening was targeted at fourteen columns and two transfer beams, which was enough to carry the new floors and the code-level drift without touching the occupied levels. Work ran floor by floor behind temporary partitions.",
     "facts": [
-      { "k": "Built", "v": "1971, non-ductile concrete" },
-      { "k": "Retrofit", "v": "14 column jackets, 2 shear walls" },
-      { "k": "Drift reduction", "v": "38 percent" },
-      { "k": "Occupancy", "v": "Continuous" }
+      {
+        "k": "Built",
+        "v": "1971, non-ductile concrete"
+      },
+      {
+        "k": "Retrofit",
+        "v": "14 column jackets, 2 shear walls"
+      },
+      {
+        "k": "Drift reduction",
+        "v": "38 percent"
+      },
+      {
+        "k": "Occupancy",
+        "v": "Continuous"
+      }
     ]
   },
   {
@@ -87,20 +153,42 @@
     "metricLabel": "barrels of storage",
     "image": "/assets/img/lib/process-plant.webp",
     "gallery": [
-      { "src": "/assets/img/lib/tank-shell.svg", "caption": "Shell courses going up by shell jacking" },
-      { "src": "/assets/img/lib/weld-habitat-tent.svg", "caption": "Seam welding under cover" }
+      {
+        "src": "/assets/img/lib/tank-shell.svg",
+        "caption": "Shell courses going up by shell jacking"
+      },
+      {
+        "src": "/assets/img/lib/weld-habitat-tent.svg",
+        "caption": "Seam welding under cover"
+      }
     ],
     "client": "Terminal operator",
     "status": "Completed 2024",
     "duration": "19 months",
-    "services": ["Oil and Gas Facilities", "Steel Fabrication and Erection", "Groundworks and Foundations"],
+    "services": [
+      "Oil and Gas Facilities",
+      "Steel Fabrication and Erection",
+      "Groundworks and Foundations"
+    ],
     "blurb": "Four API 650 tanks, their containment and the manifold that ties them in, built inside a terminal that never stopped shipping.",
     "overview": "Two tanks came down and four went up on the same footprint, with the terminal loading trucks through the whole programme. Ring wall foundations were designed for liquefiable fill with stone columns beneath; shells were built by the shell-jacking method to keep the welding at ground level. Every seam was vacuum-box and radiograph tested, and the manifold was hydrotested before the first tie-in was cut.",
     "facts": [
-      { "k": "Tanks", "v": "4 x 105,000 bbl, API 650" },
-      { "k": "Weld NDE", "v": "100 percent shell seams" },
-      { "k": "Ground improvement", "v": "1,180 stone columns" },
-      { "k": "Lost production", "v": "None" }
+      {
+        "k": "Tanks",
+        "v": "4 x 105,000 bbl, API 650"
+      },
+      {
+        "k": "Weld NDE",
+        "v": "100 percent shell seams"
+      },
+      {
+        "k": "Ground improvement",
+        "v": "1,180 stone columns"
+      },
+      {
+        "k": "Lost production",
+        "v": "None"
+      }
     ]
   },
   {
@@ -113,20 +201,42 @@
     "metricLabel": "installed capacity",
     "image": "/assets/img/lib/power-plant.webp",
     "gallery": [
-      { "src": "/assets/img/lib/switchyard-lattice.svg", "caption": "Switchyard structures set and bussed" },
-      { "src": "/assets/img/lib/transformer-set.svg", "caption": "Transformer landed on its pad" }
+      {
+        "src": "/assets/img/lib/switchyard-lattice.svg",
+        "caption": "Switchyard structures set and bussed"
+      },
+      {
+        "src": "/assets/img/lib/transformer-set.svg",
+        "caption": "Transformer landed on its pad"
+      }
     ],
     "client": "Independent power producer",
     "status": "On site",
     "duration": "27 months",
-    "services": ["Commissioning and Handover", "Mechanical and Process", "Steel Fabrication and Erection"],
+    "services": [
+      "Commissioning and Handover",
+      "Mechanical and Process",
+      "Steel Fabrication and Erection"
+    ],
     "blurb": "A combined-cycle plant and its switchyard, tied into a transmission line that stayed energised throughout.",
     "overview": "The plant adds 48 MW and a heat recovery loop to a site that already exports power, so the connection could not be dropped for longer than a single planned window. Structures sit on drilled piers below the active zone of soils that swell through a forty degree annual range. Steel was galvanised and match-marked in the shop, and energisation was staged bay by bay against the live line.",
     "facts": [
-      { "k": "Capacity", "v": "48 MW combined cycle" },
-      { "k": "Switchyard", "v": "230 kV / 34.5 kV" },
-      { "k": "Foundations", "v": "Drilled piers to 28 ft" },
-      { "k": "Outage taken", "v": "One 6-hour window" }
+      {
+        "k": "Capacity",
+        "v": "48 MW combined cycle"
+      },
+      {
+        "k": "Switchyard",
+        "v": "230 kV / 34.5 kV"
+      },
+      {
+        "k": "Foundations",
+        "v": "Drilled piers to 28 ft"
+      },
+      {
+        "k": "Outage taken",
+        "v": "One 6-hour window"
+      }
     ]
   },
   {
@@ -139,20 +249,42 @@
     "metricLabel": "working depth",
     "image": "/assets/img/lib/offshore-platform.webp",
     "gallery": [
-      { "src": "/assets/img/lib/dive-bell-moonpool.svg", "caption": "Saturation bell on the moon pool" },
-      { "src": "/assets/img/lib/diver-underwater.svg", "caption": "Habitat welding on the riser clamp" }
+      {
+        "src": "/assets/img/lib/dive-bell-moonpool.svg",
+        "caption": "Saturation bell on the moon pool"
+      },
+      {
+        "src": "/assets/img/lib/diver-underwater.svg",
+        "caption": "Habitat welding on the riser clamp"
+      }
     ],
     "client": "Offshore operator",
     "status": "Completed 2023",
     "duration": "14 months",
-    "services": ["Underwater and Marine Welding", "Oil and Gas Facilities", "Structural Engineering"],
+    "services": [
+      "Underwater and Marine Welding",
+      "Oil and Gas Facilities",
+      "Structural Engineering"
+    ],
     "blurb": "A subsea tieback and riser clamp repair at 412 feet, welded dry inside a habitat by a saturation dive team.",
     "overview": "Inspection found fatigue cracking in two riser clamps on a fixed platform, in water too deep and too cold for a wet weld to meet the class. We designed the repair around a welding habitat: the clamp was dewatered, preheated and welded dry, to AWS D3.6M class A, by a saturation team living at depth for eighteen days. Every pass was video-logged and ultrasonically verified before the habitat came off.",
     "facts": [
-      { "k": "Depth", "v": "412 ft, saturation" },
-      { "k": "Weld class", "v": "AWS D3.6M class A, dry habitat" },
-      { "k": "Bottom time", "v": "18 days, 6 divers" },
-      { "k": "Production impact", "v": "Zero deferred barrels" }
+      {
+        "k": "Depth",
+        "v": "412 ft, saturation"
+      },
+      {
+        "k": "Weld class",
+        "v": "AWS D3.6M class A, dry habitat"
+      },
+      {
+        "k": "Bottom time",
+        "v": "18 days, 6 divers"
+      },
+      {
+        "k": "Production impact",
+        "v": "Zero deferred barrels"
+      }
     ]
   },
   {
@@ -165,20 +297,42 @@
     "metricLabel": "total shutdown",
     "image": "/assets/img/lib/rig-inspection.webp",
     "gallery": [
-      { "src": "/assets/img/lib/weld-habitat-tent.svg", "caption": "Spool fit-up under a weld tent" },
-      { "src": "/assets/img/lib/process-plant.webp", "caption": "Onshore fabrication ahead of the window" }
+      {
+        "src": "/assets/img/lib/weld-habitat-tent.svg",
+        "caption": "Spool fit-up under a weld tent"
+      },
+      {
+        "src": "/assets/img/lib/process-plant.webp",
+        "caption": "Onshore fabrication ahead of the window"
+      }
     ],
     "client": "Offshore operator",
     "status": "Completed 2025",
     "duration": "18 months",
-    "services": ["Oil and Gas Facilities", "Mechanical and Process", "Commissioning and Handover"],
+    "services": [
+      "Oil and Gas Facilities",
+      "Mechanical and Process",
+      "Commissioning and Handover"
+    ],
     "blurb": "A process upgrade with 38 tie-ins into live systems, executed inside an eleven-day window offshore.",
     "overview": "The upgrade needed 38 cuts into systems that could only be opened during the annual shutdown, on a platform where every tonne of spare deck space had to be booked in advance. Spools were fabricated, tested and laid down in erection order onshore, each tie-in was rehearsed against the scan-registered model, and the sequence was written so no two cuts competed for the same crane.",
     "facts": [
-      { "k": "Tie-ins", "v": "38, all in live systems" },
-      { "k": "Pipe installed", "v": "3.4 miles" },
-      { "k": "Weld reject rate", "v": "0.7 percent" },
-      { "k": "Return to spec", "v": "First pass" }
+      {
+        "k": "Tie-ins",
+        "v": "38, all in live systems"
+      },
+      {
+        "k": "Pipe installed",
+        "v": "3.4 miles"
+      },
+      {
+        "k": "Weld reject rate",
+        "v": "0.7 percent"
+      },
+      {
+        "k": "Return to spec",
+        "v": "First pass"
+      }
     ]
   },
   {
@@ -191,20 +345,42 @@
     "metricLabel": "of berth kept open",
     "image": "/assets/img/lib/offshore-walkway.webp",
     "gallery": [
-      { "src": "/assets/img/lib/wharf-underdeck.svg", "caption": "Underdeck survey before the repair scheme" },
-      { "src": "/assets/img/lib/dive-spread-deck.svg", "caption": "Dive control on the barge alongside" }
+      {
+        "src": "/assets/img/lib/wharf-underdeck.svg",
+        "caption": "Underdeck survey before the repair scheme"
+      },
+      {
+        "src": "/assets/img/lib/dive-spread-deck.svg",
+        "caption": "Dive control on the barge alongside"
+      }
     ],
     "client": "Port authority",
     "status": "On site",
     "duration": "26 months",
-    "services": ["Underwater and Marine Welding", "Groundworks and Foundations", "Major Civil Engineering"],
+    "services": [
+      "Underwater and Marine Welding",
+      "Groundworks and Foundations",
+      "Major Civil Engineering"
+    ],
     "blurb": "Rebuilding a fuel jetty and repairing 186 piles beneath it, without taking the berth out of service.",
     "overview": "Deepening to take a larger class of vessel undermined the existing pile embedment, so every pile in the affected bay needed a jacket and a structural weld before the dredger could pass. Dive crews worked surface-supplied between vessel calls, welding wet to class B where the repair allowed and setting habitats where it did not. The jetty handled ships through the entire programme.",
     "facts": [
-      { "k": "Piles repaired", "v": "186" },
-      { "k": "Dredge depth", "v": "-52 ft MLLW" },
-      { "k": "Dive hours", "v": "5,800" },
-      { "k": "Berth downtime", "v": "None" }
+      {
+        "k": "Piles repaired",
+        "v": "186"
+      },
+      {
+        "k": "Dredge depth",
+        "v": "-52 ft MLLW"
+      },
+      {
+        "k": "Dive hours",
+        "v": "5,800"
+      },
+      {
+        "k": "Berth downtime",
+        "v": "None"
+      }
     ]
   },
   {
@@ -217,20 +393,42 @@
     "metricLabel": "sq ft floor area",
     "image": "/assets/img/lib/portal-frame.webp",
     "gallery": [
-      { "src": "/assets/img/lib/steel-erection.webp", "caption": "Frame erection, bay by bay" },
-      { "src": "/assets/img/lib/site-overview.webp", "caption": "Platform and pads ahead of the steel" }
+      {
+        "src": "/assets/img/lib/steel-erection.webp",
+        "caption": "Frame erection, bay by bay"
+      },
+      {
+        "src": "/assets/img/lib/site-overview.webp",
+        "caption": "Platform and pads ahead of the steel"
+      }
     ],
     "client": "Logistics developer",
     "status": "Completed 2024",
     "duration": "16 months",
-    "services": ["Steel Fabrication and Erection", "Groundworks and Foundations", "Commercial Construction"],
+    "services": [
+      "Steel Fabrication and Erection",
+      "Groundworks and Foundations",
+      "Commercial Construction"
+    ],
     "blurb": "A portal framed distribution centre taken from ground investigation to handover in sixteen months.",
     "overview": "A large shed is a simple structure with an unforgiving programme. Connections were detailed to the fabricator's shop standards rather than a generic library, steel arrived in erection sequence, and the slab was poured in bays that followed the frame rather than the other way round. The ground beneath it needed 40,000 cubic yards of engineered fill before any of that could start.",
     "facts": [
-      { "k": "Floor area", "v": "640,000 sq ft" },
-      { "k": "Clear height", "v": "40 ft" },
-      { "k": "Engineered fill", "v": "40,000 cu yd" },
-      { "k": "Programme", "v": "16 months, ground to handover" }
+      {
+        "k": "Floor area",
+        "v": "640,000 sq ft"
+      },
+      {
+        "k": "Clear height",
+        "v": "40 ft"
+      },
+      {
+        "k": "Engineered fill",
+        "v": "40,000 cu yd"
+      },
+      {
+        "k": "Programme",
+        "v": "16 months, ground to handover"
+      }
     ]
   },
   {
@@ -243,20 +441,42 @@
     "metricLabel": "three-span crossing",
     "image": "/assets/img/lib/highway-works.webp",
     "gallery": [
-      { "src": "/assets/img/lib/rebar-mat.webp", "caption": "Deck reinforcement over the falsework" },
-      { "src": "/assets/img/lib/drawings-table.webp", "caption": "Setting out checked against the survey" }
+      {
+        "src": "/assets/img/lib/rebar-mat.webp",
+        "caption": "Deck reinforcement over the falsework"
+      },
+      {
+        "src": "/assets/img/lib/deck-pour.webp",
+        "caption": "Deck pour over the falsework"
+      }
     ],
     "client": "County transportation authority",
     "status": "On site",
     "duration": "30 months",
-    "services": ["Major Civil Engineering", "Structural Engineering", "Groundworks and Foundations"],
+    "services": [
+      "Major Civil Engineering",
+      "Structural Engineering",
+      "Groundworks and Foundations"
+    ],
     "blurb": "A three-span replacement crossing built over a flood control channel that has to stay clear through storm season.",
     "overview": "The existing crossing was scour-critical and two lanes short. The replacement is a three-span prestressed girder bridge on drilled shafts set back from the channel, so nothing new stands in the waterway. Falsework had to be out of the channel before each storm season, which set the pour sequence, and traffic stayed on the old structure until the new one carried load.",
     "facts": [
-      { "k": "Spans", "v": "3, 640 ft total" },
-      { "k": "Foundations", "v": "Drilled shafts, 8 ft diameter" },
-      { "k": "Design flood", "v": "100-year, clear waterway" },
-      { "k": "Lanes added", "v": "2, plus shared-use path" }
+      {
+        "k": "Spans",
+        "v": "3, 640 ft total"
+      },
+      {
+        "k": "Foundations",
+        "v": "Drilled shafts, 8 ft diameter"
+      },
+      {
+        "k": "Design flood",
+        "v": "100-year, clear waterway"
+      },
+      {
+        "k": "Lanes added",
+        "v": "2, plus shared-use path"
+      }
     ]
   },
   {
@@ -269,20 +489,42 @@
     "metricLabel": "of levee raised",
     "image": "/assets/img/lib/site-overview.webp",
     "gallery": [
-      { "src": "/assets/img/lib/concrete-pour.webp", "caption": "Culvert walls poured in sections" },
-      { "src": "/assets/img/lib/highway-works.webp", "caption": "Haul road and channel works running together" }
+      {
+        "src": "/assets/img/lib/concrete-pour.webp",
+        "caption": "Culvert walls poured in sections"
+      },
+      {
+        "src": "/assets/img/lib/highway-works.webp",
+        "caption": "Haul road and channel works running together"
+      }
     ],
     "client": "Regional flood control district",
     "status": "Completed 2024",
     "duration": "29 months",
-    "services": ["Major Civil Engineering", "Groundworks and Foundations", "Digital Engineering"],
+    "services": [
+      "Major Civil Engineering",
+      "Groundworks and Foundations",
+      "Digital Engineering"
+    ],
     "blurb": "Three miles of levee raised and re-armoured, with the channel kept live through two storm seasons.",
     "overview": "The levee was built to a rainfall record that no longer holds. We modelled the channel against the flow it will see in fifty years, raised and re-armoured three miles of embankment, and rebuilt eleven outfall structures along it. Everything in the channel had to be out or flood-ready by the first of November each year, which set the programme more than any other constraint.",
     "facts": [
-      { "k": "Levee raised", "v": "3.1 miles" },
-      { "k": "Outfalls rebuilt", "v": "11" },
-      { "k": "Design storm", "v": "Capital flood, 50-year horizon" },
-      { "k": "Channel closures", "v": "None" }
+      {
+        "k": "Levee raised",
+        "v": "3.1 miles"
+      },
+      {
+        "k": "Outfalls rebuilt",
+        "v": "11"
+      },
+      {
+        "k": "Design storm",
+        "v": "Capital flood, 50-year horizon"
+      },
+      {
+        "k": "Channel closures",
+        "v": "None"
+      }
     ]
   },
   {
@@ -295,20 +537,42 @@
     "metricLabel": "of pipeline surveyed",
     "image": "/assets/img/lib/subsea-clamp.svg",
     "gallery": [
-      { "src": "/assets/img/lib/dive-spread-deck.svg", "caption": "Survey spread on the support vessel" },
-      { "src": "/assets/img/lib/diver-underwater.svg", "caption": "Diver on the repaired section" }
+      {
+        "src": "/assets/img/lib/dive-spread-deck.svg",
+        "caption": "Survey spread on the support vessel"
+      },
+      {
+        "src": "/assets/img/lib/diver-underwater.svg",
+        "caption": "Diver on the repaired section"
+      }
     ],
     "client": "Regional water district",
     "status": "Completed 2023",
     "duration": "9 months",
-    "services": ["Underwater and Marine Welding", "Mechanical and Process", "Major Civil Engineering"],
+    "services": [
+      "Underwater and Marine Welding",
+      "Mechanical and Process",
+      "Major Civil Engineering"
+    ],
     "blurb": "A damaged subsea outfall located, clamped and welded in place, with the discharge never taken off line.",
     "overview": "A dropped anchor had dented and cracked a section of outfall in 90 feet of water. We surveyed the full run by ROV, designed a split clamp that could be set and welded by divers against a live flow, and installed it in four dive days. Post-repair ultrasonic testing and a pressure survey confirmed the line back to full rated flow.",
     "facts": [
-      { "k": "Depth", "v": "90 ft, surface supplied" },
-      { "k": "Repair", "v": "Split clamp, wet weld class B" },
-      { "k": "Survey", "v": "ROV, full 1.3-mile run" },
-      { "k": "Service outage", "v": "None" }
+      {
+        "k": "Depth",
+        "v": "90 ft, surface supplied"
+      },
+      {
+        "k": "Repair",
+        "v": "Split clamp, wet weld class B"
+      },
+      {
+        "k": "Survey",
+        "v": "ROV, full 1.3-mile run"
+      },
+      {
+        "k": "Service outage",
+        "v": "None"
+      }
     ]
   }
 ]

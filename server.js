@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Meridian Construction server entry point.
+ * Meridian Constructions server entry point.
  * Boots the HTTP server and wires graceful shutdown.
  */
 

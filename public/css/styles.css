@@ -1,5 +1,5 @@
 /* =========================================================================
-   Meridian Construction
+   Meridian Constructions
    Limestone ground, deep marine ink, one signal teal and a brass accent for
    the things that are measured: rules, scale bars and the practice readout.
    Type is Archivo over Inter, with IBM Plex Mono for anything that stands in
@@ -142,7 +142,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing:
    own faces, so it stays sharp at any size, follows the colour it sits on, and
    never waits on an image request. */
 .brand-lockup { display: inline-flex; align-items: center; gap: 12px; color: inherit; }
-.brand-mark { display: block; flex: none; transition: width .4s var(--ease), height .4s var(--ease); }
+.brand-mark { display: block; flex: none; width: 42px; height: auto; transition: width .4s var(--ease); }
 .brand-word { display: flex; flex-direction: column; line-height: 1; }
 .brand-word b {
   font-family: var(--font-display); font-weight: 700; font-size: 21px;
@@ -152,7 +152,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing:
   font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.32em;
   text-transform: uppercase; opacity: 0.72; margin-top: 4px;
 }
-.nav.scrolled .brand-mark { width: 30px; height: 30px; }
+.nav.scrolled .brand-mark { width: 31px; }
 .footer-brand-mark { margin-bottom: 20px; }
 
 .nav-links { display: flex; align-items: center; gap: 30px; }
@@ -2119,4 +2119,21 @@ form .btn:not(.ghost):hover { background: var(--meridian-flare-soft) !important;
   top: 0; bottom: auto;
   border-top: 0;
   border-bottom: 3px solid var(--meridian-ink);
+}
+
+/* =========================================================================
+   The supplied logo
+   The nav pairs the building mark with type set in the site's own faces; the
+   footer, which has the room, carries the lockup as drawn. The mark is a
+   keyed image rather than an inline SVG now, so it no longer takes its colour
+   from the surface — the gold is the gold on the logo sheet.
+   ========================================================================= */
+.footer-logo { display: block; width: clamp(150px, 15vw, 186px); height: auto; margin-bottom: 20px; }
+.footer-brand-mark { display: inline-block; text-decoration: none; }
+.nav .brand-word > span,
+.footer .brand-word > span { color: #c39320; }
+.admin-brand .brand-mark { width: 26px; height: auto; }
+@media (max-width: 720px) {
+  .brand-mark { width: 32px; }
+  .footer-logo { width: 156px; }
 }

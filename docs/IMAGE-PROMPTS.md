@@ -1,8 +1,8 @@
 # Images
 
-The site runs on **24 plates**, shared across every project,
+The site runs on **25 plates**, shared across every project,
 every discipline and every page band. 15 of them are photographs and are
-already in the repository; 9 are still drawings, and this file is the shot
+already in the repository; 10 are still drawings, and this file is the shot
 list for those.
 
 Photography is in `public/assets/img/lib/`. Nothing in it carries a company
@@ -14,20 +14,20 @@ every frame that did was left out.
 | Plate | Appears on |
 | ----- | ---------- |
 | `lib/concrete-pour.webp` | Palm Ridge Outpatient Pavilion, Mesa Civic Hall Retrofit, Arroyo Seco Levee Works, Major Civil Engineering (service), /projects header |
-| `lib/drawings-table.webp` | Crescent Bay Tower, Coyote Creek Crossing, Digital Engineering (service), /careers header |
+| `lib/deck-pour.webp` | Crescent Bay Tower, Coyote Creek Crossing |
 | `lib/engineers-laptop.webp` | Palm Ridge Outpatient Pavilion, Digital Engineering (service), contact band |
-| `lib/fabrication-shop.webp` | Steel Fabrication and Erection (service) |
 | `lib/highway-works.webp` | Coyote Creek Crossing, Arroyo Seco Levee Works, Major Civil Engineering (service), hero slide 3 |
 | `lib/interior-fitout.webp` | Palm Ridge Outpatient Pavilion, Mesa Civic Hall Retrofit, Commercial Construction (service), /contact header |
 | `lib/offshore-platform.webp` | Sable Ridge Platform Tieback |
 | `lib/offshore-walkway.webp` | Harborside Jetty Rebuild |
-| `lib/portal-frame.webp` | Canyon Ridge Logistics Centre, Steel Fabrication and Erection (service) |
+| `lib/portal-frame.webp` | Canyon Ridge Logistics Centre, Steel Fabrication and Erection (service), /careers header |
 | `lib/power-plant.webp` | Sierra Vista Cogeneration Plant, Commissioning and Handover (service) |
 | `lib/process-plant.webp` | Vista Bay Tank Terminal, Kestrel Field Turnaround, Oil and Gas Facilities (service), selected work band |
 | `lib/rebar-mat.webp` | Crescent Bay Tower, Mesa Civic Hall Retrofit, Coyote Creek Crossing, Structural Engineering (service), Groundworks and Foundations (service) |
 | `lib/rig-inspection.webp` | Kestrel Field Turnaround, Mechanical and Process (service), practice band |
 | `lib/site-overview.webp` | Canyon Ridge Logistics Centre, Arroyo Seco Levee Works, Groundworks and Foundations (service), site underlay + hero, hero slide 1 |
 | `lib/steel-erection.webp` | Crescent Bay Tower, Canyon Ridge Logistics Centre, Commercial Construction (service), Structural Engineering (service), capabilities band + hero, hero slide 2 |
+| `lib/steel-stack.webp` | Steel Fabrication and Erection (service) |
 
 **Page images.** The five landing-page slots (`meridian1` … `meridian5`) run on
 library plates until you drop your own in. To override one, put a file named
@@ -36,7 +36,7 @@ library plates until you drop your own in. To override one, put a file named
 
 ---
 
-# Still to shoot (10)
+# Still to shoot (11)
 
 These slots run a Meridian drawing until a photograph replaces them. Each prompt
 below is complete — scene, camera settings, house style, aspect ratio — so it can
@@ -211,6 +211,23 @@ leadership portrait needs `npm run adopt-photos` too.
 > surfaces. Candid imperfect framing, nobody posing for the camera. Unbranded
 > workwear: no company name, logo or decal on any hard hat, vest or hoarding.
 > No HDR, no gloss, no lens flare, no text, no watermark. Aspect ratio 3:2.
+
+### `public/assets/img/lib/model-review.jpg` — Model review
+*Replaces the drawing at `lib/model-review.svg`. Appears on: Digital Engineering (service).*
+
+> Two engineers in a site trailer comparing a federated 3D model on a large
+> monitor against a printed drawing pinned to the wall, a tablet on the desk
+> showing the same detail, both mid-conversation and not looking at the
+> camera. Model visible as shapes rather than legible data. Window light from
+> the side. Shot on a full-frame camera, 50 mm lens at f/2, 1/160s, ISO 800,
+> available light only, shallow depth of field falling off behind the subject.
+> Documentary construction photography, real working site, natural available
+> light, native grain retained, muted mid-tones, honest neutral whites.
+> Worn-in PPE, dusty hi-vis, greasy gloves, muddy boots; weld spatter, chalk
+> marks and rust bloom on the surfaces. Candid imperfect framing, nobody
+> posing for the camera. Unbranded workwear: no company name, logo or decal on
+> any hard hat, vest or hoarding. No HDR, no gloss, no lens flare, no text, no
+> watermark. Aspect ratio 3:2.
 
 ### `public/assets/img/leadership.jpg` — Leadership portrait
 *Replaces the drawing at `leadership.svg`. Appears on: leadership chapter.*

@@ -10,7 +10,7 @@
   const id = decodeURIComponent(window.location.pathname.split('/').filter(Boolean).pop() || '');
 
   function render(s, projects) {
-    document.title = `${s.title} | Meridian Construction`;
+    document.title = `${s.title} | Meridian Constructions`;
     const related = projects.filter((p) => (p.services || []).includes(s.title)).slice(0, 3);
 
     root.removeAttribute('data-loading');

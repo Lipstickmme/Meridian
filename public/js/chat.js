@@ -28,7 +28,7 @@
   const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
   const POLL_MS = 4000;
   const COLUMNS = 'id,created_at,sender,body';
-  const GREETING = "Hi, you're through to Meridian Construction. What are you building, and where does it get difficult?";
+  const GREETING = "Hi, you're through to Meridian Constructions. What are you building, and where does it get difficult?";
 
   const store = {
     get(key) {

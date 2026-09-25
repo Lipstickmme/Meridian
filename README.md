@@ -1,6 +1,6 @@
-# Meridian Construction
+# Meridian Constructions
 
-Corporate website and API server for **Meridian Construction**, a multidisciplinary
+Corporate website and API server for **Meridian Constructions**, a multidisciplinary
 construction and engineering practice. A dependency-light Node/Express backend serves a
 multi-page frontend and a small JSON API that powers the content, plus a working
 live-chat endpoint.
@@ -233,10 +233,16 @@ npm run test:browser                    # CHROME_PATH=... if it is not on the de
   photographs with no other change.
 - Projects, careers and leadership content are rendered from the API, with embedded
   seed data as a fallback so pages never render empty.
-- The wordmark is drawn rather than uploaded: an inline SVG mark plus type in the
-  site's own faces (`.brand-lockup`), so it stays sharp at any size, takes the
-  colour of the surface it sits on, and costs no image request. The same geometry
-  is rasterised into the site icon by `npm run icons`.
+- The wordmark is the practice's own logo, in `public/assets/brand/`. It was
+  supplied on a white card, so the artwork is keyed off it — alpha from how dark
+  each pixel is, then the colour un-premultiplied off the paper — which is what
+  lets the gold sit on the ink nav and the limestone page alike. Two forms: the
+  nav pairs the building mark with type set in the site's own faces, because a
+  stacked logo shrunk into a 64px bar leaves the wordmark unreadable, and the
+  footer carries the full lockup. `meridian-logo.webp` is the dark-type version
+  for light surfaces, `meridian-logo-light.webp` the paper-type version for dark
+  ones, and `meridian-mark.webp` the building on its own. The site icon
+  (`favicon.svg`, `favicon.png`, `apple-touch-icon.png`) is the same mark.
 - Headings reveal with transform and opacity, never a `clip-path` wipe: clipping a
   heading to nothing leaves it with no rendered area, and IntersectionObserver then
   never reports it visible, so the reveal never fires. A browser test asserts every
@@ -319,13 +325,15 @@ whose `name` is deliberately empty until a real principal fills it in: while it 
 the leadership chapter credits the practice rather than inventing a person. See the
 table in [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md#step-1-add-your-images).
 
-Two generators draw what is not photographed yet. Both are deterministic, so
-re-running one changes nothing unless the source changed:
+One generator draws what is not photographed yet. It is deterministic, so
+re-running it changes nothing unless the source changed:
 
 ```bash
-npm run artwork   # the leadership plate + the 9 library drawings
-npm run icons     # favicon.svg, favicon.png, apple-touch-icon.png
+npm run artwork   # the leadership plate + the 10 library drawings
 ```
+
+The site icons are the logo's building mark and live in `public/`, so nothing
+regenerates them; replacing the logo means replacing them too.
 
 `npm run artwork` checks every image the data points at, so a new project cannot
 ship with a broken image or an accidental duplicate.

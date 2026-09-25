@@ -37,7 +37,7 @@ function chapter({ id, label, image, tone = '', inner }) {
    principal's own name is filled in there, the chapter credits the practice
    rather than inventing a person, so nothing on the page is made up. */
 const principal = leadership[0];
-const principalName = principal.name || principal.attribution || 'Meridian Construction';
+const principalName = principal.name || principal.attribution || 'Meridian Constructions';
 
 const heroSection = `
   <section class="hero chapter" id="top" data-chapter="Meridian">
@@ -104,7 +104,7 @@ const leadershipSection = chapter({
   inner: `
       <div class="leadership">
         <div class="leadership-media" data-reveal>
-          <img src="${principal.image}" alt="${principal.name ? `Portrait of ${principal.name}` : 'Meridian Construction, principal-led delivery'}" loading="lazy" />
+          <img src="${principal.image}" alt="${principal.name ? `Portrait of ${principal.name}` : 'Meridian Constructions, principal-led delivery'}" loading="lazy" />
           <span class="leadership-badge">${principal.role}</span>
         </div>
         <div class="leadership-body" data-reveal>
@@ -323,10 +323,7 @@ const adminContent = `
     <div class="admin-shell" id="admin-shell" hidden>
       <header class="admin-bar">
         <a class="admin-brand" href="/">
-          <svg class="brand-mark" viewBox="0 0 48 48" width="28" height="28" aria-hidden="true" focusable="false">
-            <path d="M8 38V12l16 13 16-13v26" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>
-            <path d="M4 43h40" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
-          </svg>
+          <img class="brand-mark" src="/assets/brand/meridian-mark.webp" alt="" width="26" height="26" aria-hidden="true" />
           <b class="admin-brand-word">Meridian</b>
           <span>Studio desk</span>
         </a>
@@ -393,17 +390,17 @@ const notFoundContent = `
   </section>`;
 
 module.exports = [
-  { file: 'index.html', active: '', bodyClass: 'page-home', title: 'Meridian Construction | Engineered to hold', description: 'Meridian Construction is an engineer-led construction practice: commercial building, major civil engineering, oil and gas facilities, and underwater and marine welding, delivered by the people who engineered them.', content: indexContent },
-  { file: 'projects.html', active: 'projects', bodyClass: 'page-projects', title: 'Projects | Meridian Construction', description: 'Selected Meridian Construction projects across commercial, oil and gas, marine and underwater, major civil and energy work.', content: projectsContent, extraScripts: ['/js/projects.js'] },
-  { file: 'project.html', active: 'projects', bodyClass: 'page-project', title: 'Project | Meridian Construction', description: 'Project detail.', content: projectContent, extraScripts: ['/js/project.js'] },
-  { file: 'services.html', active: 'services', bodyClass: 'page-services', title: 'Services | Meridian Construction', description: 'Ten disciplines: commercial construction, structural and major civil engineering, oil and gas facilities, underwater and marine welding, steel, groundworks, mechanical, digital engineering and commissioning.', content: servicesContent, extraScripts: ['/js/services.js'] },
-  { file: 'service.html', active: 'services', bodyClass: 'page-service', title: 'Service | Meridian Construction', description: 'Service detail.', content: serviceContent, extraScripts: ['/js/service.js'] },
-  { file: 'apply.html', active: 'careers', bodyClass: 'page-apply', title: 'Apply | Meridian Construction', description: 'Apply to Meridian Construction. One form, read by the engineers you would sit with.', content: applyContent, extraScripts: ['/js/apply.js'] },
-  { file: 'careers.html', active: 'careers', bodyClass: 'page-careers', title: 'Careers | Meridian Construction', description: 'Open engineering and site roles at Meridian Construction, across structural, civil, mechanical and digital teams.', content: careersContent, extraScripts: ['/js/careers.js'] },
-  { file: 'contact.html', active: 'contact', bodyClass: 'page-contact', title: 'Contact us | Meridian Construction', description: 'Contact Meridian Construction to start a project. A principal engineer answers within two working days.', content: contactContent },
+  { file: 'index.html', active: '', bodyClass: 'page-home', title: 'Meridian Constructions | Engineered to hold', description: 'Meridian Constructions is an engineer-led construction practice: commercial building, major civil engineering, oil and gas facilities, and underwater and marine welding, delivered by the people who engineered them.', content: indexContent },
+  { file: 'projects.html', active: 'projects', bodyClass: 'page-projects', title: 'Projects | Meridian Constructions', description: 'Selected Meridian Constructions projects across commercial, oil and gas, marine and underwater, major civil and energy work.', content: projectsContent, extraScripts: ['/js/projects.js'] },
+  { file: 'project.html', active: 'projects', bodyClass: 'page-project', title: 'Project | Meridian Constructions', description: 'Project detail.', content: projectContent, extraScripts: ['/js/project.js'] },
+  { file: 'services.html', active: 'services', bodyClass: 'page-services', title: 'Services | Meridian Constructions', description: 'Ten disciplines: commercial construction, structural and major civil engineering, oil and gas facilities, underwater and marine welding, steel, groundworks, mechanical, digital engineering and commissioning.', content: servicesContent, extraScripts: ['/js/services.js'] },
+  { file: 'service.html', active: 'services', bodyClass: 'page-service', title: 'Service | Meridian Constructions', description: 'Service detail.', content: serviceContent, extraScripts: ['/js/service.js'] },
+  { file: 'apply.html', active: 'careers', bodyClass: 'page-apply', title: 'Apply | Meridian Constructions', description: 'Apply to Meridian Constructions. One form, read by the engineers you would sit with.', content: applyContent, extraScripts: ['/js/apply.js'] },
+  { file: 'careers.html', active: 'careers', bodyClass: 'page-careers', title: 'Careers | Meridian Constructions', description: 'Open engineering and site roles at Meridian Constructions, across structural, civil, mechanical and digital teams.', content: careersContent, extraScripts: ['/js/careers.js'] },
+  { file: 'contact.html', active: 'contact', bodyClass: 'page-contact', title: 'Contact us | Meridian Constructions', description: 'Contact Meridian Constructions to start a project. A principal engineer answers within two working days.', content: contactContent },
   { file: 'admin.html', active: '', bodyClass: 'page-admin', bare: true, noindex: true,
     styles: ['/css/admin.css'],
-    title: 'Studio desk | Meridian Construction', description: 'Staff dashboard.',
+    title: 'Studio desk | Meridian Constructions', description: 'Staff dashboard.',
     content: adminContent, extraScripts: ['/js/supabase-lite.js', '/js/admin.js'] },
-  { file: '404.html', active: '', bodyClass: 'page-404', title: 'Page not found | Meridian Construction', description: 'Page not found.', content: notFoundContent },
+  { file: '404.html', active: '', bodyClass: 'page-404', title: 'Page not found | Meridian Constructions', description: 'Page not found.', content: notFoundContent },
 ];

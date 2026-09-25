@@ -1,4 +1,4 @@
-# Deploying Meridian Construction to Vercel
+# Deploying Meridian Constructions to Vercel
 
 A step-by-step guide for the workflow: replace the images, fork to your GitHub,
 deploy on Vercel, then switch the backend on.
@@ -62,14 +62,19 @@ name in `name`, their words in `quote`, and a portrait in `image`. Suggested siz
 760 x 950 (4:5 portrait). While `name` is empty the chapter credits the
 `attribution` line instead, so the page never invents a person.
 
-**Logo.** The wordmark is drawn in the page, not uploaded: an inline mark plus
-type, in `src/site/layout.js` and styled under `.brand-lockup` in
-`public/css/styles.css`. To use your own logo file instead, put it in
-`public/assets/brand/` and swap the `<span class="brand-lockup">` block for an
-`<img>`; nothing else depends on it.
+**Logo.** `public/assets/brand/` holds the practice's logo in three forms:
+`meridian-logo.webp` (dark type, for light surfaces), `meridian-logo-light.webp`
+(paper type, for the nav and footer) and `meridian-mark.webp` (the building on
+its own). All three are keyed off the white card the logo was supplied on, so
+they sit on any background. `brandLockup()` and `brandLogo()` in
+`src/site/layout.js` place them; `.brand-lockup` and `.footer-logo` in
+`public/css/styles.css` size them.
 
-**Site icon.** `npm run icons` redraws `favicon.svg`, `favicon.png` and
-`apple-touch-icon.png` from the same geometry, in `scripts/make-icons.js`.
+To swap in a new logo, replace those three files at the same names and paths —
+no code change. Keep them transparent, or the white card will show.
+
+**Site icon.** `favicon.svg` traces the building mark; `favicon.png` and
+`apple-touch-icon.png` are the mark on the ink ground.
 
 **The plate library.** Every image on the site comes from
 `public/assets/img/lib/`: twenty-four plates shared across projects, disciplines

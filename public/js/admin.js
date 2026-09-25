@@ -255,7 +255,7 @@
       }
       facts.appendChild(dd);
     };
-    fact('Email', row.email, `mailto:${row.email}?subject=${encodeURIComponent('Re: your enquiry to Meridian Construction')}`);
+    fact('Email', row.email, `mailto:${row.email}?subject=${encodeURIComponent('Re: your enquiry to Meridian Constructions')}`);
     fact('Company', row.company);
     fact('Discipline', row.service);
     fact('Received', when(row.created_at));
@@ -331,7 +331,7 @@
       facts.appendChild(dd);
     };
     fact('Role', row.role_title);
-    fact('Email', row.email, `mailto:${row.email}?subject=${encodeURIComponent(`Your application: ${row.role_title || 'Meridian Construction'}`)}`);
+    fact('Email', row.email, `mailto:${row.email}?subject=${encodeURIComponent(`Your application: ${row.role_title || 'Meridian Constructions'}`)}`);
     fact('Phone', row.phone, row.phone ? `tel:${row.phone}` : null);
     fact('Experience', row.experience);
     fact('Portfolio', row.portfolio, row.portfolio);
