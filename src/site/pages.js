@@ -102,15 +102,16 @@ const leadershipSection = chapter({
   id: 'leadership',
   label: 'Leadership',
   inner: `
-      <div class="leadership">
-        <div class="leadership-media" data-reveal>
+      <div class="leadership${principal.image ? '' : ' is-textonly'}">
+        ${principal.image ? `<div class="leadership-media" data-reveal>
           <img src="${principal.image}" alt="${principal.name ? `Portrait of ${principal.name}` : 'Meridian Constructions, principal-led delivery'}" loading="lazy" />
           <span class="leadership-badge">${principal.role}</span>
-        </div>
+        </div>` : ''}
         <div class="leadership-body" data-reveal>
           <span class="eyebrow">03 / Leadership</span>
           <blockquote>&ldquo;${principal.quote}&rdquo;</blockquote>
           <h3>${principalName}</h3>
+          ${principal.image ? '' : `<p class="leadership-role">${principal.role}</p>`}
           <p>${principal.bio}</p>
           <a href="/careers" class="link-arrow">Work with us <span class="arw">&rsaquo;</span></a>
         </div>

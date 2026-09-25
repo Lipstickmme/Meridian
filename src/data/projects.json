@@ -154,12 +154,12 @@
     "image": "/assets/img/lib/process-plant.webp",
     "gallery": [
       {
-        "src": "/assets/img/lib/tank-shell.svg",
-        "caption": "Shell courses going up by shell jacking"
+        "src": "/assets/img/lib/site-overview.webp",
+        "caption": "Ring walls and containment across the terminal"
       },
       {
-        "src": "/assets/img/lib/weld-habitat-tent.svg",
-        "caption": "Seam welding under cover"
+        "src": "/assets/img/lib/steel-stack.webp",
+        "caption": "Structural steel staged for the manifold racks"
       }
     ],
     "client": "Terminal operator",
@@ -202,12 +202,12 @@
     "image": "/assets/img/lib/power-plant.webp",
     "gallery": [
       {
-        "src": "/assets/img/lib/switchyard-lattice.svg",
-        "caption": "Switchyard structures set and bussed"
+        "src": "/assets/img/lib/process-plant.webp",
+        "caption": "Plant structures and pipework going up"
       },
       {
-        "src": "/assets/img/lib/transformer-set.svg",
-        "caption": "Transformer landed on its pad"
+        "src": "/assets/img/lib/portal-frame.webp",
+        "caption": "Turbine hall frame closed in"
       }
     ],
     "client": "Independent power producer",
@@ -250,12 +250,12 @@
     "image": "/assets/img/lib/offshore-platform.webp",
     "gallery": [
       {
-        "src": "/assets/img/lib/dive-bell-moonpool.svg",
-        "caption": "Saturation bell on the moon pool"
+        "src": "/assets/img/lib/rig-inspection.webp",
+        "caption": "Topsides walkdown before the dive window"
       },
       {
-        "src": "/assets/img/lib/diver-underwater.svg",
-        "caption": "Habitat welding on the riser clamp"
+        "src": "/assets/img/lib/offshore-walkway.webp",
+        "caption": "Access out to the riser bay"
       }
     ],
     "client": "Offshore operator",
@@ -298,8 +298,8 @@
     "image": "/assets/img/lib/rig-inspection.webp",
     "gallery": [
       {
-        "src": "/assets/img/lib/weld-habitat-tent.svg",
-        "caption": "Spool fit-up under a weld tent"
+        "src": "/assets/img/lib/offshore-platform.webp",
+        "caption": "The platform the spools were built for"
       },
       {
         "src": "/assets/img/lib/process-plant.webp",
@@ -346,12 +346,12 @@
     "image": "/assets/img/lib/offshore-walkway.webp",
     "gallery": [
       {
-        "src": "/assets/img/lib/wharf-underdeck.svg",
-        "caption": "Underdeck survey before the repair scheme"
+        "src": "/assets/img/lib/site-overview.webp",
+        "caption": "Landside works alongside the berth"
       },
       {
-        "src": "/assets/img/lib/dive-spread-deck.svg",
-        "caption": "Dive control on the barge alongside"
+        "src": "/assets/img/lib/rig-inspection.webp",
+        "caption": "Deck walkdown between vessel calls"
       }
     ],
     "client": "Port authority",
@@ -523,54 +523,6 @@
       },
       {
         "k": "Channel closures",
-        "v": "None"
-      }
-    ]
-  },
-  {
-    "id": "seabright-outfall",
-    "name": "Seabright Outfall Repair",
-    "sector": "Marine",
-    "location": "Monterey Bay, CA",
-    "year": 2023,
-    "metric": "1.3 miles",
-    "metricLabel": "of pipeline surveyed",
-    "image": "/assets/img/lib/subsea-clamp.svg",
-    "gallery": [
-      {
-        "src": "/assets/img/lib/dive-spread-deck.svg",
-        "caption": "Survey spread on the support vessel"
-      },
-      {
-        "src": "/assets/img/lib/diver-underwater.svg",
-        "caption": "Diver on the repaired section"
-      }
-    ],
-    "client": "Regional water district",
-    "status": "Completed 2023",
-    "duration": "9 months",
-    "services": [
-      "Underwater and Marine Welding",
-      "Mechanical and Process",
-      "Major Civil Engineering"
-    ],
-    "blurb": "A damaged subsea outfall located, clamped and welded in place, with the discharge never taken off line.",
-    "overview": "A dropped anchor had dented and cracked a section of outfall in 90 feet of water. We surveyed the full run by ROV, designed a split clamp that could be set and welded by divers against a live flow, and installed it in four dive days. Post-repair ultrasonic testing and a pressure survey confirmed the line back to full rated flow.",
-    "facts": [
-      {
-        "k": "Depth",
-        "v": "90 ft, surface supplied"
-      },
-      {
-        "k": "Repair",
-        "v": "Split clamp, wet weld class B"
-      },
-      {
-        "k": "Survey",
-        "v": "ROV, full 1.3-mile run"
-      },
-      {
-        "k": "Service outage",
         "v": "None"
       }
     ]

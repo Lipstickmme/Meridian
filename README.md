@@ -69,20 +69,21 @@ The portfolio spans commercial building, major civil engineering, oil and gas
 facilities, marine and underwater welding, and energy work; each project carries
 two gallery frames under the fold, and each discipline one.
 
-Pictures come from a **shared library of twenty-four plates** in
+Pictures come from a **shared library of fifteen photographs** in
 `public/assets/img/lib/`, reused across projects, disciplines and page bands
-rather than one photograph per slot. Fifteen are photographs; the nine that are
-still drawings are the frames no photograph covers (the diving, the subsea work,
-the tank shell, the switchyard). Nothing in the library carries a company name,
-a logo or a hard-hat decal, and there is no portrait of a named person.
+rather than one picture per slot. Every image on the site is one of them: there
+are no placeholder drawings. Nothing carries a company name, a logo or a
+hard-hat decal, and no portrait of a named person appears anywhere.
 
-`npm run artwork` enforces the rules that keep reuse from reading as a mistake —
-no plate twice on the same page, no two projects sharing a hero, no plate
-pointing at a drawing that does not exist — and fails the build if one breaks.
-`npm run build` prunes any project or service page whose id has gone from the
-data, so a renamed project cannot leave a stale page behind. In the galleries,
-alternate frames are cropped off-centre so a repeated plate reads as another
-frame from the same job.
+Where a subject has no photograph the site says nothing rather than drawing it —
+the leadership chapter runs as text alone, and a project with no picture of its
+own work does not ship. `npm run check:images`, which the build runs first,
+fails on a path that points at nothing, the same plate twice on one page, or two
+projects sharing a hero, and reports anything in `lib/` that nothing uses.
+`npm run build` also prunes any project or service page whose id has gone from
+the data, so a renamed project cannot leave a stale page behind. In the
+galleries, alternate frames are cropped off-centre so a repeated plate reads as
+another frame from the same job.
 
 ## Careers and applications
 
@@ -325,23 +326,16 @@ whose `name` is deliberately empty until a real principal fills it in: while it 
 the leadership chapter credits the practice rather than inventing a person. See the
 table in [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md#step-1-add-your-images).
 
-One generator draws what is not photographed yet. It is deterministic, so
-re-running it changes nothing unless the source changed:
-
-```bash
-npm run artwork   # the leadership plate + the 10 library drawings
-```
-
 The site icons are the logo's building mark and live in `public/`, so nothing
 regenerates them; replacing the logo means replacing them too.
 
 `npm run artwork` checks every image the data points at, so a new project cannot
 ship with a broken image or an accidental duplicate.
 
-**Replacing the remaining drawings.** `docs/IMAGE-PROMPTS.md` lists what is
-already photographed and where each plate appears, then carries a complete
-prompt — scene, camera settings, house style, aspect ratio — for each of the ten
-frames still outstanding. Save the photograph beside the drawing it replaces,
+**Adding photography.** `docs/IMAGE-PROMPTS.md` lists every plate and where it
+appears, then carries a complete prompt — scene, camera settings, house style,
+aspect ratio — for the ten frames that would let the site show work it currently
+cannot. Save the photograph into `public/assets/img/lib/`, point the data at it,
 then:
 
 ```bash

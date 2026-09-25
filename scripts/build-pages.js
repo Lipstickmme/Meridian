@@ -7,6 +7,8 @@
 
 const fs = require('fs');
 const path = require('path');
+require('./check-images'); // a broken or duplicated picture fails the build
+
 const { page } = require('../src/site/layout');
 const pages = require('../src/site/pages');
 const images = require('../src/site/images');

@@ -118,8 +118,8 @@
     "image": "/assets/img/lib/process-plant.webp",
     "gallery": [
       {
-        "src": "/assets/img/lib/tank-shell.svg",
-        "caption": "Tank shell under construction"
+        "src": "/assets/img/lib/rig-inspection.webp",
+        "caption": "Walkdown on a facility that stays in production"
       }
     ],
     "lede": "Nobody builds a refinery from scratch any more. The work is adding to one while it runs, and the shutdown window is the whole programme.",
@@ -150,11 +150,11 @@
       "Subsea pipeline tie-ins",
       "Dive inspection and NDT"
     ],
-    "image": "/assets/img/lib/diver-underwater.svg",
+    "image": "/assets/img/lib/offshore-walkway.webp",
     "gallery": [
       {
-        "src": "/assets/img/lib/dive-spread-deck.svg",
-        "caption": "Surface spread and dive control"
+        "src": "/assets/img/lib/offshore-platform.webp",
+        "caption": "The fixed structures the dive teams work from"
       }
     ],
     "lede": "A wharf does not come out of the water to be repaired. The repair goes down to it, and the weld has to pass the same inspection as one made in a shop.",
@@ -258,8 +258,8 @@
     "image": "/assets/img/lib/rig-inspection.webp",
     "gallery": [
       {
-        "src": "/assets/img/lib/weld-habitat-tent.svg",
-        "caption": "Spool fit-up under a weld tent"
+        "src": "/assets/img/lib/process-plant.webp",
+        "caption": "Process piping on the rack"
       }
     ],
     "lede": "Process plant lives or dies on layout. Pipe runs, access and maintenance decide the operating cost for the next thirty years.",
@@ -293,8 +293,8 @@
     "image": "/assets/img/lib/engineers-laptop.webp",
     "gallery": [
       {
-        "src": "/assets/img/lib/model-review.svg",
-        "caption": "Model checked against the issued drawing set"
+        "src": "/assets/img/lib/interior-fitout.webp",
+        "caption": "Scan of the existing structure, before modelling"
       }
     ],
     "lede": "A model is worth having when the site team opens it. Everything else is a picture of a building.",
@@ -328,8 +328,8 @@
     "image": "/assets/img/lib/power-plant.webp",
     "gallery": [
       {
-        "src": "/assets/img/lib/switchyard-lattice.svg",
-        "caption": "Switchyard proved bay by bay"
+        "src": "/assets/img/lib/engineers-laptop.webp",
+        "caption": "Records and model walked through at handover"
       }
     ],
     "lede": "A project ends when the operator can run it without ringing us, not when the last valve is fitted.",

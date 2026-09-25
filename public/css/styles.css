@@ -2137,3 +2137,14 @@ form .btn:not(.ghost):hover { background: var(--meridian-flare-soft) !important;
   .brand-mark { width: 32px; }
   .footer-logo { width: 156px; }
 }
+
+/* The leadership chapter holds no space for a portrait it does not have: with
+   no image the quote runs as a single measured column instead of one half of
+   a two-column grid with a blank beside it. */
+.chapter:not(.hero) .leadership.is-textonly { display: block !important; }
+.leadership.is-textonly .leadership-body { max-width: 46rem !important; }
+.leadership.is-textonly blockquote { font-size: clamp(24px, 3.2vw, 40px); }
+.leadership-role {
+  font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--meridian-signal); margin: 6px 0 18px;
+}

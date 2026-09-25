@@ -77,16 +77,16 @@ no code change. Keep them transparent, or the white card will show.
 `apple-touch-icon.png` are the mark on the ink ground.
 
 **The plate library.** Every image on the site comes from
-`public/assets/img/lib/`: twenty-four plates shared across projects, disciplines
-and page bands. Fifteen are photographs; nine are drawings from
-`scripts/make-artwork.js`, which also checks the data — a missing drawing, a
-plate used twice on one page, or two projects sharing a hero all fail it.
+`public/assets/img/lib/`: fifteen photographs shared across projects,
+disciplines and page bands, and nothing else. `npm run check:images` — which the
+build runs first — fails on a missing file, a plate used twice on one page, or
+two projects sharing a hero, and lists anything in `lib/` that nothing uses.
 
-**Photography.** `docs/IMAGE-PROMPTS.md` lists what is photographed and where it
-appears, and carries a complete prompt for each frame still outstanding. Save the
-photograph beside the drawing it replaces (`lib/diver-underwater.jpg` next to
-`lib/diver-underwater.svg`), then run `npm run adopt-photos` to point the data
-files at it and `npm run build`.
+**Photography.** `docs/IMAGE-PROMPTS.md` lists what is there and where it
+appears, and carries a complete prompt for each frame worth shooting next. Save
+the photograph into `public/assets/img/lib/` and point the data at it, or drop
+it beside a plate of the same name and run `npm run adopt-photos`, then
+`npm run build`.
 
 Nothing in the library may carry a company name, a logo or a hard-hat decal, and
 no portrait goes up unless the person is actually at the practice.
